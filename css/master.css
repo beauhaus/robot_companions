@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+}
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+
+
+body {
+    position: relative;
+    font-family: 'Quicksand', sans-serif;
+  }
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: grey;
+    height: 9vh;
+    width: 100vw;
+    border-bottom: 1px solid black;
+    padding-top: 1vh;
+  }
+  /* grid-def */
+  .inner-nav-grid-container { 
+    margin: auto 12vh;   
+    display: grid;
+    grid-template-columns: auto 25vw auto;
+    grid-template-rows: 1fr;
+    /* border: 1px solid fuchsia; */
+  }
+  nav .header-right-links {
+    grid-column: 3;
+    text-align: right;
+    margin-top: 1.2vh;
+    /* border: 1px solid black; */
+  }
+
+li {
+    display: inline;
+    margin-left: 1vw;
+}
+li a {
+    cursor:pointer;
+    display: inline;
+    text-decoration: none;
+    color: navy;
+    font-size: .5em;
+    font-weight: bold;
+    letter-spacing: .4vh;
+}
+a:hover {
+    cursor:pointer;
+}
+
+  .hero-section {
+    margin-top: 9vh;
+    width: 100vw;
+    height: 52vh;
+    background: #3f4b4e;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 1fr auto 1fr;
+    overflow: hidden;
+  }
+  video#hero-bg-vid {
+      width: 100vw;
+      max-height: 52vh;
+      mix-blend-mode: multiply;
+      object-fit: cover;
+      object-position: top 75%;
+      }
+  
+.hero-overlay-text {
+    /* grid-column: 2;
+    grid-row: 2;  */
+    opacity: 1;
+    mix-blend-mode: color-dodge;
+    color: #ecc7c7;
+    /* position: absolute; */
+    /* top: 20vh;
+    left: 30vw; */
+    font-size: 1.5em;
+    /* border: 1px solid green; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.hero-overlay-text span {
+    color: #b6abab;
+    font-size: inherit;
+    font-style: oblique;
+}
+  .hero-section svg {
+      grid-column: 2;
+      grid-row: 2; 
+      position: absolute;
+      top: 0;
+      left: 50vw;
+      border: 1px solid green;
+  }
+  
+  .carousel {
+    height: 57.5vh;
+    background: white;
+    z-index: 5;
+  }
+  .partnership {
+    height: 86vh;
+    background: slategray;
+  }
+  .groups { 
+    height: 53vh;
+    background: burlywood;
+  }
+  .profile {
+    height: 73.5vh;
+    background: #cfcfcf;
+  }
+  footer {
+    height: 20.5vh;
+    background: darkgrey;
+  }

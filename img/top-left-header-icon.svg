@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="50" version="1">
+  <linearGradient id="a" x2="150" y1="25" y2="25" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#c69c6d"/>
+    <stop offset="1" stop-color="#0071bc"/>
+  </linearGradient>
+  <path fill="url(#a)" d="M0 0h150v50H0z"/>
+  <path fill="none" d="M23 7h110v42H23z"/>
+  <text transform="translate(53 15)">
+    <tspan x="0" y="0" font-family="'MyriadPro-It'" font-size="12">150x50 px</tspan><tspan x="-2" y="31" font-family="'MyriadPro-Regular'" font-size="7">top-left-head-icon</tspan>
+  </text>
+</svg>
