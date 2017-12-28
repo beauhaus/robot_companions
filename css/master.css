@@ -183,13 +183,6 @@ button:hover {
     background: darkgrey;
   }
   /*********************** Onboarding Modal ***********************/
-  body {
-    background: slategrey;
-    color: wheat;
-    font-family: Arial, sans-serif;
-    font-size: 15px;
-    line-height: 1.5;
-  }
   .button {
     background: coral;
     color: white;
