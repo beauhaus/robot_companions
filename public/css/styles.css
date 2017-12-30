@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+* {
+  box-sizing: border-box;
+  font-size: 24px;
+  padding: 0;
+  margin: 0;
+}
+
+
+body {
+  background: rgb(53, 77, 102);
+  position: relative;
+  font-family: 'Orbitron', sans-serif;
+  color: wheat;
+  /* line-height: 1.5; */
+}
+
+nav {
+position: fixed;
+top: 0;
+left: 0;
+background-color: green;
+height: 9vh;
+width: 100vw;
+display: grid;
+z-index: 30;
+/* border-bottom: 1px solid coral; */
+}
+.inner-nav-grid-container {   /* grid-def */
+  width: 80vw;
+  margin: auto;   
+  display: grid;
+  grid-template-columns: 1fr  auto;
+  grid-template-rows: repeat(3, auto);
+  /* border: 1px solid fuchsia; */
+}
+#header-left-icon {
+  grid-row: 1/-1;
+  grid-column: 1;
+}
+ul, li{
+  list-style-type: none;
+}
+
+ul.header-right-links {
+  grid-column: 2;
+  grid-row: 2;
+  text-align: right;
+  /* border: 1px solid yellow; */
+}
+
+li {
+  display: inline;
+  margin-left: 1vw;
+}
+li a {
+  cursor:pointer;
+  display: inline;
+  text-decoration: none;
+  color: navy;
+  font-size: .5em;
+  font-weight: bold;
+  letter-spacing: .3vh;
+}
+a:hover {
+  cursor:pointer;
+}
+
+.hero-section {
+  font-family: 'Orbitron', sans-serif;
+  margin-top: 9vh;
+  width: 100vw;
+  height: 57vh;
+  background: #5e2318;
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto 1fr auto;
+  overflow: hidden;
+}
+video#hero-bg-vid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  max-height: 52vh;
+  mix-blend-mode: multiply;
+  object-fit: cover;
+  /* object-position: top 75%; */
+  height: initial; 
+  display: initial;
+}
+
+.hero-overlay-text {
+  mix-blend-mode: color-dodge;
+  color: #ecc7c7;
+  font-size: 2.3em;
+  margin: auto;
+  grid-row: 2;
+  grid-column: 2;  
+  margin-top: 18vh;
+}
+button:hover {
+cursor: pointer;
+}
+#watch-vid-btn {
+
+  background-color: transparent;
+  color: white;
+  font-size: .6em;
+  border: 1px solid white;
+  border-radius: 200px;
+  font-weight: bold;
+
+  position: absolute;
+  width: 24vw;
+  height: 10vh;
+  padding: 2vh;
+
+  top: 50%;
+  left: 50%;
+
+  margin: 5vh 0 0 -12vw;
+  z-index: 12;
+}
+.carousel {
+  height: 63vh;
+  background: white;
+  z-index: 5;
+  display: grid;
+  position: relative;
+}
+.carousel-inner-container {
+  margin: auto;
+  /* border: 1px solid black; */
+  width: 80vw;
+  height: 40vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 10px;
+  /* background-color: darkolivegreen; */
+}
+#rwd-arrow {
+  font-size: 2em;
+  position: absolute;
+  left: 7vw;
+  top: 35%;
+}
+#fwd-arrow {
+  font-size: 2em;
+  position: absolute;
+  right: 7vw;
+  top: 35%;  
+}
+section.vid-container {
+  display: inline-block;
+  /* height: 40vh; */
+  /* background: darkgray; */
+  border: 1px solid orangered;
+}
+.partnership {
+  height: 86vh;
+  background: slategray;
+  display: grid;
+}
+.partnership-inner-grid {
+  margin: auto;
+  border: 1px solid maroon;
+  height: 50vh;
+  width: 70vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+}
+.groups { 
+  height: 53vh;
+  background: burlywood;
+}
+.profile {
+  height: 73.5vh;
+  background: #cfcfcf;
+}
+footer {
+  height: 20.5vh;
+  background: darkgrey;
+}
+
+.button {
+  background: coral;
+  color: white;
+  padding: 1em 2em;
+  border: 0;
+}
+
+.button:hover {
+  background: slateblue;
+}
+
+.modal {
+  /* display: none; */
+  position: fixed;
+  z-index: 30;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh; /*100%*/
+  overflow: auto; /*enables scrollbar if needed*/
+  background-color: rgba(0,0,0, 0.3);
+}
+.modal-content {
+  background-color: #6f6f6f;
+  margin: 10% auto;
+  padding: 20px;
+  width: 80vw;
+  height: 80vh;
+  box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 5px 20px 0 rgba(0,0,0,0.2);
+  animation: modalAppear 1s;
+}
+#close-btn {
+  color: #ccc;
+  float: right;
+  margin: -2vh;
+  font-size: 2em;
+  background: transparent;
+  border: 0;
+}
+
+button:hover, button:focus {
+ cursor: pointer;
+ transform: scale(1.1);
+ transition: transform .2s, background .2s;
+ box-shadow: 0 0 3px rgba(0,0,0,.75);
+}
+
+#close-btn:hover, #close-btn:focus {
+  color: brown;
+}
+
+@keyframes modalAppear {
+  0%{opacity: 0}
+  100%{opacity: 1}
+}
+
+
+/*************/
+.viz-box {
+  width: 200px;
+  height: 100px;
+  border:2px solid lightgreen;
+}
+
+  /*********************** Onboarding Modal ***********************/
+  .button {
+    background: coral;
+    color: white;
+    padding: 1em 2em;
+    border: 0;
+  }
+  .button:hover {
+    background: slateblue;
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 30;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh; /*100%*/
+    overflow: auto; /*enables scrollbar if needed*/
+    background-color: rgba(0,0,0, 0.3);
+  }
+  .modal-content {
+    background-color: #6f6f6f;
+    margin: 20% auto;
+    padding: 20px;
+    width: 80vw;
+    height: 50vh;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 5px 20px 0 rgba(0,0,0,0.2);
+    animation: modalAppear 1s;
+  }
+  #close-btn {
+    color: #ccc;
+    float: right;
+    margin: -2vh;
+    font-size: 2em;
+    background: transparent;
+    border: 0;
+  }
+  button:hover, button:focus {
+   cursor: pointer; 
+  }
+  #close-btn:hover, #close-btn:focus {
+    color: brown;
+  }
+  
+  @keyframes modalAppear {
+    0%{opacity: 0}
+    100%{opacity: 1}
+  }
+
+  /***********************IPAD MEDIA QUERY ***********************/
+
+  @media screen and (max-width: 959px) {
+nav {
+  height: 8vh;
+  background-color: aqua;
+}
+
+.inner-nav-grid-container { 
+  border: 1px solid brown;
+}
+.hero-section {
+  margin-top: 8vh;
+  height: 28vh;
+}
+.hero-overlay-text {
+  font-size: 1.3em;  
+  margin-top: 8vh;
+}
+#watch-vid-btn {
+  font-size: .5em;
+  border: 1px solid white;
+  border-radius: 200px;
+
+  position: absolute;
+ 
+  width: 24vw;
+  height: 5vh;
+  padding: 1vh;
+
+  top: 50%;
+  left: 50%;
+
+  margin: 0 0 0 -12vw;
+}
+    
+  }
+  /*********************** PHONE MEDIA QUERY ***********************/
+
+@media (max-width: 375px) {
+  nav {
+    background-color: #15ff7e;
+    height: 10vh;
+  }
+  .inner-nav-grid-container {   /* grid-def */
+    width: 90vw;
+  }
+  ul {
+    display: none;
+  }
+  /* #header-left-icon {
+
+  } */
+  
+}
