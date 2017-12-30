@@ -1,9 +1,8 @@
 /*
 
 
+
 */
-
-
 
 class RightLinks extends React.Component {
     render() {
@@ -32,50 +31,56 @@ class Nav extends React.Component {
         )
     }
 }
-const video_ended = () => {
 
+class HeroVid extends React.Component {
+    constructor (props) {
+        super(props);
+
+        this.state = {
+            videoURL: 'https://dl.dropbox.com/s/ln84nmt3ty2zy2v/lipstickrobot.mp4?dl=0'
+        }
+    }
+
+    render () {
+        return (
+            <video id="hero-bg-vid" loop autoPlay>
+                <source src={this.state.videoURL} type="video/mp4" />
+                <source src={this.state.videoURL} type="video/ogg" />
+                Your browser does not support the video tag.
+            </video>
+        )
+    }
 }
+
 class Hero extends React.Component {
     render() {
         return (
             <div className="hero-section">
                 <div className="hero-overlay-text">OUR ROBOT COMPANIONS</div>
                 <button id="watch-vid-btn">WATCH VIDEO</button>
-                <video id="hero-bg-vid" autoPlay="" loop="" muted="" src="https://dl.dropbox.com/s/ln84nmt3ty2zy2v/lipstickrobot.mp4?dl=0"
-                    type="video/mp4" onEnded={video_ended}>
-                </video>
+                <HeroVid/>
             </div>
         )
     }
 }
-class CarouselInner extends React.Component {
+class CarVid extends React.Component {
     render() {
         return (
             <div className="carousel-inner-container">
-                <section id="video-1" className="vid-container desk-vid-1">vid1</section>
-                <section id="video-2" className="vid-container desk-vid-2">vid2</section>
-                <section id="video-3" className="vid-container desk-vid-3">vid3</section>
-                <section id="video-4" className="vid-container desk-vid-4">vid4</section>
-                { /*<section id="video-5" className="vid-container"></section>
-            <section id="video-6" className="vid-container"></section>
-            <section id="video-7" className="vid-container"></section>
-            <section id="video-8" className="vid-container"></section>
-            <section id="video-9" className="vid-container"></section>
-            <section id="video-10" className="vid-container"></section>
-            <section id="video-11" className="vid-container"></section>
-            <section id="video-12" className="vid-container"></section>
-            <section id="video-13" className="vid-container"></section>
-            <section id="video-14" className="vid-container"></section>
-            <section id="video-15" className="vid-container"></section>
-            <section id="video-16" className="vid-container"></section>
-            <section id="video-17" className="vid-container"></section>
-            <section id="video-18" className="vid-container"></section>
-            <section id="video-19" className="vid-container"></section>
-            <section id="video-20" className="vid-container"></section>
-            <section id="video-21" className="vid-container"></section>
-            <section id="video-22" className="vid-container"></section>
-            <section id="video-23" className="vid-container"></section>
-        <section id="video-24" className="vid-container"></section>   */}
+                {this.props.carvids.filter((item, idx) => idx <= 3).map(item => <section className="vid-container" key={item}>{item}</section>)}
+            </div>
+        )
+    }
+}
+
+class CarouselInner extends React.Component {
+    render() {
+        const carvids = ["vid1", "vid2", "vid3", "vid4", "vid5", "vid6", "vid7", "vid8", "vid9", "vid10", "vid11", "vid12", "vid13", "vid14", "vid15"];
+        return (
+            <div>
+                <span id="fwd-arrow">&gt;</span>
+                     <CarVid carvids={carvids} />
+                <span id="rwd-arrow">&lt;</span>
             </div>
 
         )
@@ -85,9 +90,7 @@ class Carousel extends React.Component {
     render() {
         return (
             <div className="carousel">
-                <span id="fwd-arrow">{">"}</span>
                 <CarouselInner />
-                <span id="rwd-arrow"> {"<"} </span>
             </div>
         )
     }
