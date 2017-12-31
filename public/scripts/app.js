@@ -166,7 +166,7 @@ var CarVid = function (_React$Component5) {
                     return React.createElement(
                         "section",
                         { className: "vid-container", key: item },
-                        item
+                        React.createElement("img", { src: "./img/carousel-" + item + ".png", alt: "carousel-" + item })
                     );
                 })
             );
@@ -209,7 +209,6 @@ var CarouselInner = function (_React$Component6) {
                     count: prevState.count - 1
                 };
             });
-            console.log("decrementVid");
         }
     }, {
         key: "render",
@@ -218,11 +217,6 @@ var CarouselInner = function (_React$Component6) {
             return React.createElement(
                 "div",
                 null,
-                React.createElement(
-                    "span",
-                    null,
-                    this.state.count
-                ),
                 React.createElement(
                     "button",
                     { onClick: this.incrementVid, className: "unicodeBtn", id: "fwd-arrow" },

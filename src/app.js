@@ -67,7 +67,9 @@ class CarVid extends React.Component {
     render() {
         return (
             <div className="carousel-inner-container">
-                {this.props.carvids.filter((item, idx) => idx <= 3).map(item => <section className="vid-container" key={item}>{item}</section>)}
+                {this.props.carvids.filter((item, idx) => idx <= 3).map(item => <section className="vid-container" key={item}>
+                <img src={`./img/carousel-${item}.png`} alt={`carousel-${item}`}/>
+                </section>)}
             </div>
         )
     }
@@ -95,12 +97,11 @@ class CarouselInner extends React.Component {
                 count: prevState.count - 1 
             }
         })
-        console.log("decrementVid");
     }
     render() {
         const carvids = ["vid1", "vid2", "vid3", "vid4", "vid5", "vid6", "vid7", "vid8", "vid9", "vid10", "vid11", "vid12", "vid13", "vid14", "vid15"];
         return (
-            <div><span>{this.state.count}</span>
+            <div>
                 <button onClick={this.incrementVid} className="unicodeBtn" id="fwd-arrow">&gt;</button>
                 <CarVid carvids={carvids} />
                 <button onClick={this.decrementVid} className="unicodeBtn" id="rwd-arrow">&lt;</button>

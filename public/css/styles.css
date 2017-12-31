@@ -22,7 +22,7 @@ position: fixed;
 top: 0;
 left: 0;
 background-color: green;
-height: 9vh;
+height: 8vh;
 width: 100vw;
 display: grid;
 z-index: 30;
@@ -72,9 +72,9 @@ a:hover {
 
 .hero-section {
   font-family: 'Orbitron', sans-serif;
-  margin-top: 9vh;
+  margin-top: 8vh;
   width: 100vw;
-  height: 57vh;
+  height: 52vh;
   background: #5e2318;
   position: relative;
   display: grid;
@@ -133,7 +133,7 @@ cursor: pointer;
 }    
 
 .carousel div {
-  height: 63vh;
+  height: 57.5vh;
   background: white;
   z-index: 5;
   display: grid;
@@ -154,8 +154,14 @@ cursor: pointer;
 section.vid-container {
   display: inline-block;
   /* height: 40vh; */
-  background: darkgray;
-  border: 1px solid orangered;
+  /* background: darkgray; */
+  /* border: 1px solid orangered; */
+  position: relative;
+}
+section img {
+  position: absolute;
+  top: 10vh;
+  width: 100%;
 }
 .partnership {
   height: 86vh;
@@ -235,7 +241,7 @@ button:hover, button:focus {
   color: brown;
 }
 #rwd-arrow {
-  font-size: 2em;
+  font-size: 1.2em;
   position: absolute;
   left: 7vw;
   top: 35%;
@@ -243,7 +249,7 @@ button:hover, button:focus {
 }
 #fwd-arrow {
   background: transparent;
-  font-size: 2em;
+  font-size: 1.2em;
   position: absolute;
   right: 7vw;
   top: 35%;
@@ -252,7 +258,11 @@ button:hover, button:focus {
 #fwd-arrow:hover, #rwd-arrow:hover {
   transform: scale(1.4);
   transition: transform .2s;   
-  color: #360f0f;
+  
+  -webkit-text-stroke: 1px red; 
+  -webkit-text-fill-color:   lightgreen; 
+  text-fill-color:  lightgreen; 
+  text-stroke: 1px red; 
 }
 .unicodeBtn {
   background: transparent;
