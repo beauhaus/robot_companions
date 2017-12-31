@@ -33,7 +33,7 @@ class Nav extends React.Component {
 }
 
 class HeroVid extends React.Component {
-    constructor (props) {
+    constructor(props) {
         super(props);
 
         this.state = {
@@ -41,7 +41,7 @@ class HeroVid extends React.Component {
         }
     }
 
-    render () {
+    render() {
         return (
             <video id="hero-bg-vid" loop autoPlay>
                 <source src={this.state.videoURL} type="video/mp4" />
@@ -58,7 +58,7 @@ class Hero extends React.Component {
             <div className="hero-section">
                 <div className="hero-overlay-text">OUR ROBOT COMPANIONS</div>
                 <button id="watch-vid-btn">WATCH VIDEO</button>
-                <HeroVid/>
+                <HeroVid />
             </div>
         )
     }
@@ -74,13 +74,36 @@ class CarVid extends React.Component {
 }
 
 class CarouselInner extends React.Component {
+    constructor(props) {
+        super(props);
+        this.incrementVid = this.incrementVid.bind(this);
+        this.decrementVid = this.decrementVid.bind(this);
+        this.state = {
+            count: 0
+        };
+    }
+    incrementVid() {
+        this.setState((prevState) => {
+            return { 
+                count: prevState.count + 1 
+            }
+        })
+    }
+    decrementVid() {
+        this.setState((prevState) => {
+            return { 
+                count: prevState.count - 1 
+            }
+        })
+        console.log("decrementVid");
+    }
     render() {
         const carvids = ["vid1", "vid2", "vid3", "vid4", "vid5", "vid6", "vid7", "vid8", "vid9", "vid10", "vid11", "vid12", "vid13", "vid14", "vid15"];
         return (
-            <div>
-                <button className="unicodeBtn" id="fwd-arrow">&gt;</button>
-                     <CarVid carvids={carvids} />
-                <button className="unicodeBtn" id="rwd-arrow">&lt;</button>
+            <div><span>{this.state.count}</span>
+                <button onClick={this.incrementVid} className="unicodeBtn" id="fwd-arrow">&gt;</button>
+                <CarVid carvids={carvids} />
+                <button onClick={this.decrementVid} className="unicodeBtn" id="rwd-arrow">&lt;</button>
             </div>
 
         )

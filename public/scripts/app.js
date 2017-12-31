@@ -179,13 +179,39 @@ var CarVid = function (_React$Component5) {
 var CarouselInner = function (_React$Component6) {
     _inherits(CarouselInner, _React$Component6);
 
-    function CarouselInner() {
+    function CarouselInner(props) {
         _classCallCheck(this, CarouselInner);
 
-        return _possibleConstructorReturn(this, (CarouselInner.__proto__ || Object.getPrototypeOf(CarouselInner)).apply(this, arguments));
+        var _this6 = _possibleConstructorReturn(this, (CarouselInner.__proto__ || Object.getPrototypeOf(CarouselInner)).call(this, props));
+
+        _this6.incrementVid = _this6.incrementVid.bind(_this6);
+        _this6.decrementVid = _this6.decrementVid.bind(_this6);
+        _this6.state = {
+            count: 0
+        };
+        return _this6;
     }
 
     _createClass(CarouselInner, [{
+        key: "incrementVid",
+        value: function incrementVid() {
+            this.setState(function (prevState) {
+                return {
+                    count: prevState.count + 1
+                };
+            });
+        }
+    }, {
+        key: "decrementVid",
+        value: function decrementVid() {
+            this.setState(function (prevState) {
+                return {
+                    count: prevState.count - 1
+                };
+            });
+            console.log("decrementVid");
+        }
+    }, {
         key: "render",
         value: function render() {
             var carvids = ["vid1", "vid2", "vid3", "vid4", "vid5", "vid6", "vid7", "vid8", "vid9", "vid10", "vid11", "vid12", "vid13", "vid14", "vid15"];
@@ -193,14 +219,19 @@ var CarouselInner = function (_React$Component6) {
                 "div",
                 null,
                 React.createElement(
+                    "span",
+                    null,
+                    this.state.count
+                ),
+                React.createElement(
                     "button",
-                    { className: "unicodeBtn", id: "fwd-arrow" },
+                    { onClick: this.incrementVid, className: "unicodeBtn", id: "fwd-arrow" },
                     ">"
                 ),
                 React.createElement(CarVid, { carvids: carvids }),
                 React.createElement(
                     "button",
-                    { className: "unicodeBtn", id: "rwd-arrow" },
+                    { onClick: this.decrementVid, className: "unicodeBtn", id: "rwd-arrow" },
                     "<"
                 )
             );
