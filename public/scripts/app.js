@@ -193,14 +193,14 @@ var CarouselInner = function (_React$Component6) {
                 "div",
                 null,
                 React.createElement(
-                    "span",
-                    { id: "fwd-arrow" },
+                    "button",
+                    { className: "unicodeBtn", id: "fwd-arrow" },
                     ">"
                 ),
                 React.createElement(CarVid, { carvids: carvids }),
                 React.createElement(
-                    "span",
-                    { id: "rwd-arrow" },
+                    "button",
+                    { className: "unicodeBtn", id: "rwd-arrow" },
                     "<"
                 )
             );
@@ -347,7 +347,7 @@ var SignUpModal = function (_React$Component11) {
                     { className: "modal-content" },
                     React.createElement(
                         "button",
-                        { id: "close-btn" },
+                        { className: "unicodeBtn", id: "close-btn" },
                         "\xD7"
                     ),
                     React.createElement(

@@ -78,9 +78,9 @@ class CarouselInner extends React.Component {
         const carvids = ["vid1", "vid2", "vid3", "vid4", "vid5", "vid6", "vid7", "vid8", "vid9", "vid10", "vid11", "vid12", "vid13", "vid14", "vid15"];
         return (
             <div>
-                <span id="fwd-arrow">&gt;</span>
+                <button className="unicodeBtn" id="fwd-arrow">&gt;</button>
                      <CarVid carvids={carvids} />
-                <span id="rwd-arrow">&lt;</span>
+                <button className="unicodeBtn" id="rwd-arrow">&lt;</button>
             </div>
 
         )
@@ -137,7 +137,7 @@ class SignUpModal extends React.Component {
         return (
             <div id="simple-modal" className="modal">
                 <div className="modal-content">
-                    <button id="close-btn">&times;</button>
+                    <button className="unicodeBtn" id="close-btn">&times;</button>
                     <p>Hello...I'm a modal</p>
                 </div>
             </div>
