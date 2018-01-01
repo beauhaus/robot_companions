@@ -4,11 +4,11 @@
 
 |Terminal Command|Tools|Status|
 |:-----------|:-------|:-------|
-|**Carousel**|jquery plugin|*pending*|
+|**Slider**|jquery plugin|*pending*|
 |**Responsivity**|media queries|*pending*|
 |**layout**|CSS Grid|*pending*|
 |**Authentification**|jquery plugin|*pending*|
-|**Carousel**|jquery plugin|*pending*|
+|**Slider**|jquery plugin|*pending*|
 
 
 ## CLI commands

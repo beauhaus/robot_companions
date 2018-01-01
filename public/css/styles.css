@@ -132,14 +132,22 @@ cursor: pointer;
  transition: transform .2s; 
 }    
 
-.carousel div {
+.slider div {
   height: 57.5vh;
   background: white;
   z-index: 5;
   display: grid;
   position: relative;
 }
-.carousel-inner-container {
+.range {
+  color: black;
+  position: absolute;
+  left: 20vw;
+  top: 0;
+  font-size: 40px;
+  z-index: 90;
+}
+.slider-inner-container {
   margin: auto;
   /* border: 1px solid black; */
   width: 80vw;

@@ -1,7 +1,4 @@
 /*
-
-
-
 */
 
 class RightLinks extends React.Component {
@@ -63,19 +60,21 @@ class Hero extends React.Component {
         )
     }
 }
-class CarVid extends React.Component {
+
+class SliderVid extends React.Component {
     render() {
         return (
-            <div className="carousel-inner-container">
-                {this.props.carvids.filter((item, idx) => idx <= 3).map(item => <section className="vid-container" key={item}>
-                <img src={`./img/carousel-${item}.png`} alt={`carousel-${item}`}/>
+            <div className="slider-inner-container">
+                {this.props.sliderVids.filter((item, idx) => idx <= 3)
+                    .map(item => <section className="vid-container" key={item}>
+                <img src={`./img/slider-${item}.png`} alt={`slider-${item}`}/>
                 </section>)}
             </div>
         )
     }
 }
 
-class CarouselInner extends React.Component {
+class SliderInner extends React.Component {
     constructor(props) {
         super(props);
         this.incrementVid = this.incrementVid.bind(this);
@@ -99,22 +98,23 @@ class CarouselInner extends React.Component {
         })
     }
     render() {
-        const carvids = ["vid1", "vid2", "vid3", "vid4", "vid5", "vid6", "vid7", "vid8", "vid9", "vid10", "vid11", "vid12", "vid13", "vid14", "vid15"];
+        const sliderVids = ["vid1", "vid2", "vid3", "vid4", "vid5", "vid6", "vid7", "vid8", "vid9", "vid10", "vid11", "vid12", "vid13", "vid14", "vid15"];
         return (
             <div>
                 <button onClick={this.incrementVid} className="unicodeBtn" id="fwd-arrow">&gt;</button>
-                <CarVid carvids={carvids} />
+                <span className="range">Range: </span>
+                <SliderVid sliderVids={sliderVids} />
                 <button onClick={this.decrementVid} className="unicodeBtn" id="rwd-arrow">&lt;</button>
             </div>
 
         )
     }
 }
-class Carousel extends React.Component {
+class Slider extends React.Component {
     render() {
         return (
-            <div className="carousel">
-                <CarouselInner />
+            <div className="slider">
+                <SliderInner />
             </div>
         )
     }
@@ -195,7 +195,7 @@ class JSX extends React.Component {
             <div>
                 <Nav />
                 <Hero />
-                <Carousel />
+                <Slider />
                 <Partnership />
                 <Groups />
                 <Profile />

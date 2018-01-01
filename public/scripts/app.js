@@ -9,9 +9,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 /*
-
-
-
 */
 
 var RightLinks = function (_React$Component) {
@@ -145,44 +142,44 @@ var Hero = function (_React$Component4) {
     return Hero;
 }(React.Component);
 
-var CarVid = function (_React$Component5) {
-    _inherits(CarVid, _React$Component5);
+var SliderVid = function (_React$Component5) {
+    _inherits(SliderVid, _React$Component5);
 
-    function CarVid() {
-        _classCallCheck(this, CarVid);
+    function SliderVid() {
+        _classCallCheck(this, SliderVid);
 
-        return _possibleConstructorReturn(this, (CarVid.__proto__ || Object.getPrototypeOf(CarVid)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (SliderVid.__proto__ || Object.getPrototypeOf(SliderVid)).apply(this, arguments));
     }
 
-    _createClass(CarVid, [{
+    _createClass(SliderVid, [{
         key: "render",
         value: function render() {
             return React.createElement(
                 "div",
-                { className: "carousel-inner-container" },
-                this.props.carvids.filter(function (item, idx) {
+                { className: "slider-inner-container" },
+                this.props.sliderVids.filter(function (item, idx) {
                     return idx <= 3;
                 }).map(function (item) {
                     return React.createElement(
                         "section",
                         { className: "vid-container", key: item },
-                        React.createElement("img", { src: "./img/carousel-" + item + ".png", alt: "carousel-" + item })
+                        React.createElement("img", { src: "./img/slider-" + item + ".png", alt: "slider-" + item })
                     );
                 })
             );
         }
     }]);
 
-    return CarVid;
+    return SliderVid;
 }(React.Component);
 
-var CarouselInner = function (_React$Component6) {
-    _inherits(CarouselInner, _React$Component6);
+var SliderInner = function (_React$Component6) {
+    _inherits(SliderInner, _React$Component6);
 
-    function CarouselInner(props) {
-        _classCallCheck(this, CarouselInner);
+    function SliderInner(props) {
+        _classCallCheck(this, SliderInner);
 
-        var _this6 = _possibleConstructorReturn(this, (CarouselInner.__proto__ || Object.getPrototypeOf(CarouselInner)).call(this, props));
+        var _this6 = _possibleConstructorReturn(this, (SliderInner.__proto__ || Object.getPrototypeOf(SliderInner)).call(this, props));
 
         _this6.incrementVid = _this6.incrementVid.bind(_this6);
         _this6.decrementVid = _this6.decrementVid.bind(_this6);
@@ -192,7 +189,7 @@ var CarouselInner = function (_React$Component6) {
         return _this6;
     }
 
-    _createClass(CarouselInner, [{
+    _createClass(SliderInner, [{
         key: "incrementVid",
         value: function incrementVid() {
             this.setState(function (prevState) {
@@ -213,7 +210,7 @@ var CarouselInner = function (_React$Component6) {
     }, {
         key: "render",
         value: function render() {
-            var carvids = ["vid1", "vid2", "vid3", "vid4", "vid5", "vid6", "vid7", "vid8", "vid9", "vid10", "vid11", "vid12", "vid13", "vid14", "vid15"];
+            var sliderVids = ["vid1", "vid2", "vid3", "vid4", "vid5", "vid6", "vid7", "vid8", "vid9", "vid10", "vid11", "vid12", "vid13", "vid14", "vid15"];
             return React.createElement(
                 "div",
                 null,
@@ -222,7 +219,12 @@ var CarouselInner = function (_React$Component6) {
                     { onClick: this.incrementVid, className: "unicodeBtn", id: "fwd-arrow" },
                     ">"
                 ),
-                React.createElement(CarVid, { carvids: carvids }),
+                React.createElement(
+                    "span",
+                    { className: "range" },
+                    "Range: "
+                ),
+                React.createElement(SliderVid, { sliderVids: sliderVids }),
                 React.createElement(
                     "button",
                     { onClick: this.decrementVid, className: "unicodeBtn", id: "rwd-arrow" },
@@ -232,30 +234,30 @@ var CarouselInner = function (_React$Component6) {
         }
     }]);
 
-    return CarouselInner;
+    return SliderInner;
 }(React.Component);
 
-var Carousel = function (_React$Component7) {
-    _inherits(Carousel, _React$Component7);
+var Slider = function (_React$Component7) {
+    _inherits(Slider, _React$Component7);
 
-    function Carousel() {
-        _classCallCheck(this, Carousel);
+    function Slider() {
+        _classCallCheck(this, Slider);
 
-        return _possibleConstructorReturn(this, (Carousel.__proto__ || Object.getPrototypeOf(Carousel)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (Slider.__proto__ || Object.getPrototypeOf(Slider)).apply(this, arguments));
     }
 
-    _createClass(Carousel, [{
+    _createClass(Slider, [{
         key: "render",
         value: function render() {
             return React.createElement(
                 "div",
-                { className: "carousel" },
-                React.createElement(CarouselInner, null)
+                { className: "slider" },
+                React.createElement(SliderInner, null)
             );
         }
     }]);
 
-    return Carousel;
+    return Slider;
 }(React.Component);
 
 var Partnership = function (_React$Component8) {
@@ -437,7 +439,7 @@ var JSX = function (_React$Component13) {
                 null,
                 React.createElement(Nav, null),
                 React.createElement(Hero, null),
-                React.createElement(Carousel, null),
+                React.createElement(Slider, null),
                 React.createElement(Partnership, null),
                 React.createElement(Groups, null),
                 React.createElement(Profile, null),
