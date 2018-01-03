@@ -13,6 +13,7 @@
 |**babel-core**|env,react|*Complete*|
 |**routes**|one|*Pending*|
 |**modal**|3rdParty|*Pending*|
+|**TabIndex Attrs**|a-tags and btns|*Pending*|
 
 
 
