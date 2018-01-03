@@ -1,38 +1,26 @@
-/*
-*/
 
-class RightLinks extends React.Component {
-    render() {
-        return (
-            <ul className="header-right-links">
-                <li>
-                    <a href="#">OUR PARTNERSHIP</a>
-                </li>
-                <li>
-                    <a href="#">OUR PROFILE</a>
-                </li>
-            </ul>
-        )
-    }
-}
+const RightLinks = () => (<ul className="header-right-links">
+    <li>
+        <a href="#">OUR PARTNERSHIP</a>
+    </li>
+    <li>
+        <a href="#">OUR PROFILE</a>
+    </li>
+</ul>
+)
 
-class Nav extends React.Component {
-    render() {
-        return (
-            <nav>
-                <div className="inner-nav-grid-container">
-                    <img id="header-left-icon" src="img/top-left-header-icon.svg" alt="brand-icon" />
-                    <RightLinks />
-                </div>
-            </nav>
-        )
-    }
-}
+const Nav = () => (
+    <nav>
+        <div className="inner-nav-grid-container">
+            <img id="header-left-icon" src="img/top-left-header-icon.svg" alt="brand-icon" />
+            <RightLinks />
+        </div>
+    </nav>
+)
 
 class HeroVid extends React.Component {
     constructor(props) {
         super(props);
-
         this.state = {
             videoURL: 'https://dl.dropbox.com/s/ln84nmt3ty2zy2v/lipstickrobot.mp4?dl=0'
         }
@@ -49,17 +37,13 @@ class HeroVid extends React.Component {
     }
 }
 
-class Hero extends React.Component {
-    render() {
-        return (
-            <div className="hero-section">
-                <div className="hero-overlay-text">OUR ROBOT COMPANIONS</div>
-                <button id="watch-vid-btn">WATCH VIDEO</button>
-                <HeroVid />
-            </div>
-        )
-    }
-}
+const Hero = () => (
+    <div className="hero-section">
+        <div className="hero-overlay-text">OUR ROBOT COMPANIONS</div>
+        <button id="watch-vid-btn">WATCH VIDEO</button>
+        <HeroVid />
+    </div>
+)
 
 class SliderVid extends React.Component {
     render() {
@@ -67,8 +51,8 @@ class SliderVid extends React.Component {
             <div className="slider-inner-container">
                 {this.props.sliderVids.filter((item, idx) => idx <= 3)
                     .map(item => <section className="vid-container" key={item}>
-                <img src={`./img/slider-${item}.png`} alt={`slider-${item}`}/>
-                </section>)}
+                        <img src={`./img/slider-${item}.png`} alt={`slider-${item}`} />
+                    </section>)}
             </div>
         )
     }
@@ -85,15 +69,15 @@ class SliderInner extends React.Component {
     }
     incrementVid() {
         this.setState((prevState) => {
-            return { 
-                count: prevState.count + 1 
+            return {
+                count: prevState.count + 1
             }
         })
     }
     decrementVid() {
         this.setState((prevState) => {
-            return { 
-                count: prevState.count - 1 
+            return {
+                count: prevState.count - 1
             }
         })
     }
@@ -110,6 +94,7 @@ class SliderInner extends React.Component {
         )
     }
 }
+
 class Slider extends React.Component {
     render() {
         return (
@@ -120,41 +105,30 @@ class Slider extends React.Component {
     }
 }
 
-class Partnership extends React.Component {
-    render() {
-        return (
-            <div className="partnership">
-                <article className="partnership-inner-grid">
-                    <section>
-                        <h1>HEADLINE</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptatibus tempora, officiis a sit nulla
+const Partnership = () => (
+    <div className="partnership">
+        <article className="partnership-inner-grid">
+            <section>
+                <h1>HEADLINE</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptatibus tempora, officiis a sit nulla
                     harum reprehenderit ipsa assumenda ratione nobis laborum, consectetur temporibus quos, sint rerum dolore
                     neque error.</p>
-                    </section>
-                </article>
-            </div>
-        )
-    }
-}
+            </section>
+        </article>
+    </div>
+)
 
-class Groups extends React.Component {
-    render() {
-        return (
-            <div className="groups">
-                <p>groups</p>
-            </div>
-        )
-    }
-}
-class Profile extends React.Component {
-    render() {
-        return (
-            <div className="profile">
-                <p>profile</p>
-            </div>
-        )
-    }
-}
+const Groups = () => (
+    <div className="groups">
+        <p>groups</p>
+    </div>
+)
+
+const Profile = () => (
+    <div className="profile">
+        <p>profile</p>
+    </div>
+)
 
 class SignUpModal extends React.Component {
     render() {
@@ -168,28 +142,22 @@ class SignUpModal extends React.Component {
         )
     }
 }
-
-class Footer extends React.Component {
-    render() {
-        return (
-            <div>
-                <footer>
+// {/***************** ONBOARDING MODAL DEPRECATE **************** */}
+// <button id="modal-btn" className="button">click here</button>
+// <SignUpModal />
 
 
-                    {/***************** ONBOARDING MODAL **************** */}
-                    <button id="modal-btn" className="button">click here</button>
+const Footer = () => (
+    <div>
+        <footer>
+        <p>A Fine space for a footer</p>
+        </footer>
+    </div>
 
-                    <SignUpModal />
-
-                </footer>
-            </div>
-
-        )
-    }
-}
+)
 
 
-class JSX extends React.Component {
+class RobotCompanions extends React.Component {
     render() {
         return (
             <div>
@@ -205,6 +173,6 @@ class JSX extends React.Component {
     }
 }
 
-ReactDOM.render(<JSX />, document.getElementById('app'))
+ReactDOM.render(<RobotCompanions />, document.getElementById('app'))
 
 
