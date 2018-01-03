@@ -1,4 +1,6 @@
 import React from 'react';
+import RightLinks from './RightLinks';
+
 const Nav = () => (
     <nav>
         <div className="inner-nav-grid-container">
