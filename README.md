@@ -23,11 +23,4 @@
 
 
 
-<div style="background: slategrey; border: 2px solid coral"><h3 style="color: wheat">Nota Bene:</h3>
-<p style="color: white">take note of file directory in the dist folder's refs to css & js</p>
-
-```html
-<link rel="stylesheet" href="./build/css/styles.css">
-<script src="./build/js/app.min.js"></script>
-```
 </div>

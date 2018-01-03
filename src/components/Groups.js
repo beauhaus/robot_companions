@@ -1,7 +1,15 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const StyledGroups = styled.div`
+  height: 53vh;
+  background: burlywood;
+  color: maroon;
+`
+
 const Groups = () => (
-    <div className="groups">
+    <StyledGroups className="groups">
         <p>groups</p>
-    </div>
+    </StyledGroups>
 )
 export default Groups;
