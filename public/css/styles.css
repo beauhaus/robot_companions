@@ -58,11 +58,11 @@ section.vid-container {
   /* border: 1px solid orangered; */
   position: relative;
 }
-section img {
+/* section img {
   position: absolute;
   top: 10vh;
   width: 100%;
-}
+} */
 
 button:focus {
   outline: none;

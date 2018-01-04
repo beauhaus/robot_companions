@@ -50,35 +50,32 @@ class SliderContainer extends React.Component {
         this.setState((prevState) => {
             return { count: prevState.count + 1 }
         })
-        console.log("==> right Btn")
-        // console.log(preload[this.state.count])
         const fwd = (arr) => {
-                let popped = arr.pop();
-                arr.unshift(popped);
-                return this.state.range;
-              }
-              fwd(preload)
+            let popped = arr.pop();
+            arr.unshift(popped);
+            return this.state.range;
         }
+        fwd(preload)
+    }
 
     decrementVid() {
         this.setState((prevState) => {
             return { count: prevState.count - 1 }
         })
-        const bkwd = (arr) =>{
-            console.log("<== left Btn")
+        const bkwd = (arr) => {
             let shifted = arr.shift();
             this.state.range = arr.push(shifted);
             return this.state.range;
-          }
-          bkwd(preload)
+        }
+        bkwd(preload)
     }
 
     render() {
         return (
             <StyledSliderContainer>
-                <BackBtn onClick={this.decrementVid}  id="fwd-arrow">&lt;</BackBtn>
+                <BackBtn onClick={this.decrementVid} id="fwd-arrow">&lt;</BackBtn>
                 <SliderVid range={this.nuarr} cue={this.state.range} />
-                <FwdBtn onClick={this.incrementVid}  id="rwd-arrow">&gt;</FwdBtn>
+                <FwdBtn onClick={this.incrementVid} id="rwd-arrow">&gt;</FwdBtn>
             </StyledSliderContainer>
 
         )

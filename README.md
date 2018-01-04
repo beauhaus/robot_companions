@@ -4,7 +4,7 @@
 
 |<h3>Feature</h3>|<h3>Notes</h3>|<h3>Status</h3>|
 |:-----------|:-------|:-------|
-|**Slider**|handcoded|*pending*|
+|**Slider**|handcoded|*done*|
 |**Responsivity**|media queries|*pending*|
 |**layout**|CSS Grid|*pending*|
 |**Authentification**|npm-validator|*pending*|

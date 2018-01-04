@@ -14,6 +14,8 @@ const StyledSliderVid = styled.div`
 `
 const PicFrame = styled.section`
     position: relative;
+    // position: absolute;
+    top: 10vh;
     grid-row: 1;
     height: 40%;
     width: 100%;
@@ -28,9 +30,7 @@ class SliderVid extends React.Component {
     render(props) {
         return (
             <StyledSliderVid className="slider-inner-container">
-            
-            <h1 className="test-indices">cue: {this.props.cue}</h1>
-                {preload.map((pic)=> (
+                    {preload.map((pic)=> (
                     <PicFrame key={pic.id}>
                      <img src={`./img/${pic.src}`}  alt={`${pic.desc}`}/>
                     </PicFrame>
