@@ -7,7 +7,8 @@ const StyledSlider = styled.div`
     background: white;
     z-index: 5;
     display: grid;
-    position: relative;`
+    position: relative;
+`
 
 class Slider extends React.Component {
     render() {

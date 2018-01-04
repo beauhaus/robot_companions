@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const StyledSliderContainer = styled.div`
     height: 57.5vh;
-    background: white;
+    background: grey;
     z-index: 5;
     display: grid;
     position: relative;
@@ -41,27 +41,24 @@ class SliderContainer extends React.Component {
             count: 0
         };
     }
+    
     incrementVid() {
         this.setState((prevState) => {
-            return {
-                count: prevState.count + 1
-            }
+            return {count: prevState.count + 1}
         })
     }
     decrementVid() {
         this.setState((prevState) => {
-            return {
-                count: prevState.count - 1
-            }
+            return { count: prevState.count - 1 }
         })
     }
+
+
     render() {
-        const sliderVids = ["vid1", "vid2", "vid3", "vid4", "vid5", "vid6", "vid7", "vid8", "vid9", "vid10", "vid11", "vid12", "vid13", "vid14", "vid15"];
         return (
             <StyledSliderContainer>
                 <BackBtn onClick={this.incrementVid} className="slider-btn" id="fwd-arrow">&lt;</BackBtn>
-                <span className="test-indicies">Range: </span>
-                <SliderVid sliderVids={sliderVids} />
+                <SliderVid cue={this.state.count} />
                 <FwdBtn onClick={this.decrementVid} className="slider-btn" id="rwd-arrow">&gt;</FwdBtn>
             </StyledSliderContainer>
 

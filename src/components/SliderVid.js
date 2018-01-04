@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import preload from './data';
 
 const StyledSliderVid = styled.div`
     margin: auto;
@@ -9,18 +10,28 @@ const StyledSliderVid = styled.div`
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
     grid-gap: 10px;
+    border: 1px solid fuchsia;
 `
-// this will be using props, so keep as a class...
-
+const PicFrame = styled.section`
+    position: relative;
+    width: 30%;
+    border: 1px solid yellow;
+    grid-column: auto;
+    grid-row: 1;
+    height: 100%;
+`
 class SliderVid extends React.Component {
-    render() {
+    render(props) {
         return (
             <StyledSliderVid className="slider-inner-container">
-                {this.props.sliderVids.filter((item, idx) => idx <= 3)
-                    .map(item =>
-                        <section className="vid-container" key={item}>
-                            <img src={`./img/slider-${item}.png`} alt={`slider-${item}`} />
-                        </section>)}
+                <h1 className="test-indices">cue: {this.props.cue}</h1>
+                {preload.map((pic)=> (
+                    <PicFrame 
+                     key={pic.id}
+                     src={`./img/${pic.src}`} 
+                     alt={`${pic.desc}`}/>
+                ))
+            }
             </StyledSliderVid>
         )
     }
