@@ -11,10 +11,12 @@ const StyledSliderContainer = styled.div`
     & > button {
         position: absolute;
         font-size: 1.2em;
+        font-weight: bold;
         top: 35%;
         transform: scaleY(1.8);
         background: transparent;
-        border: transparent;             
+        border: transparent;
+        z-index: 10;          
      &:hover {
         transform: scale(1.4);
         transition: transform .2s;
@@ -26,11 +28,11 @@ const StyledSliderContainer = styled.div`
 }
 `
 const BackBtn = styled.button`
-left: 7vw;
+left: 4vw;
 `
 
 const FwdBtn = styled.button`
-right: 7vw;
+right: 4vw;
 `
 class SliderContainer extends React.Component {
     constructor(props) {
@@ -57,9 +59,9 @@ class SliderContainer extends React.Component {
     render() {
         return (
             <StyledSliderContainer>
-                <BackBtn onClick={this.incrementVid} className="slider-btn" id="fwd-arrow">&lt;</BackBtn>
+                <BackBtn onClick={this.decrementVid} className="slider-btn" id="fwd-arrow">&lt;</BackBtn>
                 <SliderVid cue={this.state.count} />
-                <FwdBtn onClick={this.decrementVid} className="slider-btn" id="rwd-arrow">&gt;</FwdBtn>
+                <FwdBtn onClick={this.incrementVid} className="slider-btn" id="rwd-arrow">&gt;</FwdBtn>
             </StyledSliderContainer>
 
         )

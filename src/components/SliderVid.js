@@ -3,33 +3,37 @@ import styled from 'styled-components';
 import preload from './data';
 
 const StyledSliderVid = styled.div`
-    margin: auto;
-    width: 80vw;
-    height: 40vh;
+
+    margin: 0 auto;
+    width: 87vw;
+    height: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
-    grid-gap: 10px;
-    border: 1px solid fuchsia;
+    grid-auto-columns: 24.75%;
+    grid-gap: 1%;
+    overflow: hidden;
+    // border: 1px solid fuchsia;
 `
 const PicFrame = styled.section`
     position: relative;
-    width: 30%;
-    border: 1px solid yellow;
-    grid-column: auto;
     grid-row: 1;
-    height: 100%;
+    height: 40%;
+    width: 100%;
+    // border: 1px solid yellow;
+   & > img {
+       width: 100%;
+       height: 100%;
+    //    border: 1px solid red;
+}
 `
 class SliderVid extends React.Component {
     render(props) {
         return (
             <StyledSliderVid className="slider-inner-container">
-                <h1 className="test-indices">cue: {this.props.cue}</h1>
+            <h1 className="test-indices">cue: {this.props.cue}</h1>
                 {preload.map((pic)=> (
-                    <PicFrame 
-                     key={pic.id}
-                     src={`./img/${pic.src}`} 
-                     alt={`${pic.desc}`}/>
+                    <PicFrame key={pic.id}>
+                     <img src={`./img/${pic.src}`}  alt={`${pic.desc}`}/>
+                    </PicFrame>
                 ))
             }
             </StyledSliderVid>
@@ -37,3 +41,9 @@ class SliderVid extends React.Component {
     }
 }
 export default SliderVid;
+
+
+/*
+                     
+                     
+*/
