@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import preload from './data';
 
 const StyledSliderVid = styled.div`
-
     margin: 0 auto;
     width: 87vw;
     height: 100%;
@@ -29,6 +28,7 @@ class SliderVid extends React.Component {
     render(props) {
         return (
             <StyledSliderVid className="slider-inner-container">
+            
             <h1 className="test-indices">cue: {this.props.cue}</h1>
                 {preload.map((pic)=> (
                     <PicFrame key={pic.id}>

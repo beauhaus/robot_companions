@@ -1,6 +1,7 @@
 import React from 'react';
 import SliderVid from './SliderVid';
 import styled from 'styled-components';
+import preload from './data';
 
 const StyledSliderContainer = styled.div`
     height: 57.5vh;
@@ -40,28 +41,44 @@ class SliderContainer extends React.Component {
         this.incrementVid = this.incrementVid.bind(this);
         this.decrementVid = this.decrementVid.bind(this);
         this.state = {
-            count: 0
+            count: 0,
+            range: ''
         };
     }
-    
+
     incrementVid() {
         this.setState((prevState) => {
-            return {count: prevState.count + 1}
+            return { count: prevState.count + 1 }
         })
-    }
+        console.log("==> right Btn")
+        // console.log(preload[this.state.count])
+        const fwd = (arr) => {
+                let popped = arr.pop();
+                arr.unshift(popped);
+                return this.state.range;
+              }
+              fwd(preload)
+        }
+
     decrementVid() {
         this.setState((prevState) => {
             return { count: prevState.count - 1 }
         })
+        const bkwd = (arr) =>{
+            console.log("<== left Btn")
+            let shifted = arr.shift();
+            this.state.range = arr.push(shifted);
+            return this.state.range;
+          }
+          bkwd(preload)
     }
-
 
     render() {
         return (
             <StyledSliderContainer>
-                <BackBtn onClick={this.decrementVid} className="slider-btn" id="fwd-arrow">&lt;</BackBtn>
-                <SliderVid cue={this.state.count} />
-                <FwdBtn onClick={this.incrementVid} className="slider-btn" id="rwd-arrow">&gt;</FwdBtn>
+                <BackBtn onClick={this.decrementVid}  id="fwd-arrow">&lt;</BackBtn>
+                <SliderVid range={this.nuarr} cue={this.state.range} />
+                <FwdBtn onClick={this.incrementVid}  id="rwd-arrow">&gt;</FwdBtn>
             </StyledSliderContainer>
 
         )
