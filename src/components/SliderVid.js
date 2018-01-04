@@ -19,11 +19,33 @@ const PicFrame = styled.section`
     grid-row: 1;
     height: 40%;
     width: 100%;
+    text-align: center;
     // border: 1px solid yellow;
    & > img {
        width: 100%;
        height: 100%;
     //    border: 1px solid red;
+} & > h3 {
+    font-size: 0.6em;
+    margin-top: 2vh;
+
+    color: navy;
+    z-index: 20;
+    // text-align: center;
+}
+& > p {
+    // white-space: pre;
+    // margin: 0 0.5vw;
+    position: absolute;
+    bottom: -10vh;
+    // padding: 0 0.1vw;
+    font-family: sans-serif;
+    word-wrap: break-word;
+    color: white;
+    line-height: 1.5;
+    // margin-top: 1vh;
+    font-size: 0.5em;
+    z-index: 20;
 }
 `
 class SliderVid extends React.Component {
@@ -33,6 +55,8 @@ class SliderVid extends React.Component {
                     {preload.map((pic)=> (
                     <PicFrame key={pic.id}>
                      <img src={`./img/${pic.src}`}  alt={`${pic.desc}`}/>
+                     <h3>{`${pic.title}`}</h3>
+                     <p>{`${pic.desc}`}</p>
                     </PicFrame>
                 ))
             }
@@ -41,9 +65,3 @@ class SliderVid extends React.Component {
     }
 }
 export default SliderVid;
-
-
-/*
-                     
-                     
-*/
