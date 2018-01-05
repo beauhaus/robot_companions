@@ -42,21 +42,13 @@ a:hover {
   cursor:pointer;
 }
 
-.test-indices {
-  color: black;
-  position: absolute;
-  left: 20vw;
-  top: 0;
-  font-size: 40px;
-  z-index: 90;
-}
 
 section.vid-container {
-  display: inline-block;
+  /* display: inline-block; */
   /* height: 40vh; */
   /* background: darkgray; */
   /* border: 1px solid orangered; */
-  position: relative;
+  /* position: relative; */
 }
 /* section img {
   position: absolute;

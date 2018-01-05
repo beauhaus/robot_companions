@@ -5,10 +5,11 @@ import preload from './data';
 
 const StyledSliderContainer = styled.div`
     height: 57.5vh;
-    background: grey;
+    background: burlywood;
     z-index: 5;
     display: grid;
     position: relative;
+    // display: inline-block; remove(?)
     & > button {
         position: absolute;
         font-size: 1.2em;
@@ -73,9 +74,9 @@ class SliderContainer extends React.Component {
     render() {
         return (
             <StyledSliderContainer>
-                <BackBtn onClick={this.decrementVid} id="fwd-arrow">&lt;</BackBtn>
+                <BackBtn onClick={this.incrementVid} >&lt;</BackBtn>
                 <SliderVid range={this.nuarr} cue={this.state.range} />
-                <FwdBtn onClick={this.incrementVid} id="rwd-arrow">&gt;</FwdBtn>
+                <FwdBtn onClick={this.decrementVid} >&gt;</FwdBtn>
             </StyledSliderContainer>
 
         )

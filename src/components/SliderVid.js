@@ -8,7 +8,7 @@ const StyledSliderVid = styled.div`
     height: 100%;
     display: grid;
     grid-auto-columns: 24.75%;
-    grid-gap: 1%;
+    grid-gap: 0.5%;
     overflow: hidden;
     // border: 1px solid fuchsia;
 `
@@ -28,23 +28,17 @@ const PicFrame = styled.section`
 } & > h3 {
     font-size: 0.6em;
     margin-top: 2vh;
-
     color: navy;
     z-index: 20;
-    // text-align: center;
 }
 & > p {
-    // white-space: pre;
-    // margin: 0 0.5vw;
     position: absolute;
-    bottom: -10vh;
-    // padding: 0 0.1vw;
+    bottom: -12vh;
     font-family: sans-serif;
     word-wrap: break-word;
-    color: white;
+    color: #301010;
     line-height: 1.5;
-    // margin-top: 1vh;
-    font-size: 0.5em;
+    font-size: 0.6em;
     z-index: 20;
 }
 `
