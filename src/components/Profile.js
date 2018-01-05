@@ -8,7 +8,7 @@ const StyledProfile = styled.div`
 `
 const Profile = () => (
     <StyledProfile className="profile">
-        <p>profile</p>
+        
     </StyledProfile>
 )
 export default Profile;

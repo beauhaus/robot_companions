@@ -5,7 +5,7 @@ import logos from './logo.JSON'
 
 const StyledGroups = styled.div`
 height: 53vh;
-background: burlywood;
+background: grey;
 color: maroon;
 text-align: center;
 position: relative;
@@ -32,7 +32,6 @@ top: 25vh;
 margin-left: -40vw;
 color: #a1a1a1;
 padding: 0.5%;
-border: 5px solid peru;
 display: grid;
 grid-template-columns: repeat(2, 1fr);
 grid-template-rows: 1fr;
@@ -40,13 +39,15 @@ grid-template-rows: 1fr;
 const LogoFwd = styled.button`
 // display: none;
 width: 2vw;
-left: 4vw;
+position: absolute;
+right: -2vw;
 `
 
 const LogoBack = styled.button`
 // display: none;
 width: 2vw;
-right: 4vw;
+position: absolute;
+left: -2vw;
 `
 class Groups extends React.Component {
     constructor(props) {
@@ -83,7 +84,7 @@ class Groups extends React.Component {
     render() {
         return (
             <StyledGroups className="groups">
-                <h1>Robot Business Groups</h1>
+                <h1>RC Groups</h1>
                 <GroupsContainer>
                     <LogoBack onClick={this.incrementLogo} id="fwd-arrow">&lt;</LogoBack>
                     <GroupsLogos range={this.nuarr} cue={this.state.range} />

@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 const StyledSlider = styled.div`
     height: 57.5vh;
-    background: white;
     z-index: 5;
     display: grid;
     position: relative;

@@ -5,7 +5,7 @@ import preload from './data';
 
 const StyledSliderContainer = styled.div`
     height: 57.5vh;
-    background: burlywood;
+    background: #8e8e8e;
     z-index: 5;
     display: grid;
     position: relative;

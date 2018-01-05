@@ -13,6 +13,7 @@ const StyledHeroSection = styled.div`
     grid-template-columns: auto 1fr auto;
     grid-template-rows: auto 1fr auto;
     overflow: hidden;
+
 `
 
 const HeroText = styled.h1`
@@ -29,14 +30,12 @@ const HeroText = styled.h1`
   }
 `
 
-//NB: switch back to css file?
 const WatchVidBtn = styled.button`
     background-color: transparent;
     color: #ecb875;
     border: 1px solid #ecb875;
     font-size: .6em;
     border-radius: 200px;
-    font-weight: bold;
     position: absolute;
     width: 24vw;
     height: 10vh;
@@ -55,7 +54,7 @@ const WatchVidBtn = styled.button`
 `
 const Hero = () => (
     <StyledHeroSection className="hero-section">
-        <HeroText className="hero-text">OUR ROBOT COMPANIONS</HeroText>
+        <HeroText className="hero-text">ROBOT COMPANIONS</HeroText>
         <WatchVidBtn id="watch-vid-btn">WATCH VIDEO</WatchVidBtn>
         <HeroVid />
     </StyledHeroSection>

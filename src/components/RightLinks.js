@@ -6,6 +6,9 @@ const NavRightLinks = styled.ul`
   grid-row: 2;
   text-align: right;
   /* border: 1px solid yellow; */
+  & li a {
+    color: #1BA3CC;
+  }
 `
 const RightLinks = () => (
     <NavRightLinks className="header-right-links">

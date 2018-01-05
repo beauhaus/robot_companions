@@ -30,11 +30,13 @@ const PicFrame = styled.section`
     margin-top: 2vh;
     color: navy;
     z-index: 20;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: bold;
 }
 & > p {
     position: absolute;
     bottom: -12vh;
-    font-family: sans-serif;
+    font-family: Arial, sans-serif;
     word-wrap: break-word;
     color: #301010;
     line-height: 1.5;

@@ -10,55 +10,29 @@ left: 0;
     width: 100%;
     display: grid;
     grid-template-columns: auto;
-    background: wheat;
-    border: 1px solid fuchsia;
 `
 const LogoFrame = styled.div`
-    // position: relative;
+    position: relative;
     grid-row: 1;
-    height: 10vh;
-    width: 10vw;
+    height: 100%;
+    width: 8vw;
     background: transparent;
-    border: 1px solid black;
     & > img {
-        width: 100%;
+        margin-top: 2vh;
+        width: 80%;
     }
     & > p {
-        font-size: .9em;
+        font-size: .5em;
+        font-family: Verdana, sans-serif;
         color: black;
+        position: absolute;
+        bottom: -2vh;
+        width: 8vw;
+        left: 50%;
+        margin-left -4vw;
+        font-weight: bold;
     }
-    
 `
-// const LogFrame = styled.section`
-//     position: relative;
-//     // position: absolute;
-//     top: 10vh;
-//     grid-row: 1;
-//     height: 40%;
-//     width: 100%;
-//     text-align: center;
-//     // border: 1px solid yellow;
-//    & > img {
-//        width: 100%;
-//        height: 100%;
-//     //    border: 1px solid red;
-// } & > h3 {
-//     font-size: 0.6em;
-//     margin-top: 2vh;
-//     color: navy;
-//     z-index: 20;
-// }
-// & > p {
-//     position: absolute;
-//     bottom: -12vh;
-//     font-family: sans-serif;
-//     word-wrap: break-word;
-//     color: #301010;
-//     line-height: 1.5;
-//     font-size: 0.6em;
-//     z-index: 20;
-// }
-// `
 class GroupsLogos extends React.Component {
     render(props) {
         return (
