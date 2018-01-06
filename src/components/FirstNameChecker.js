@@ -5,7 +5,7 @@ import validator from 'validator';
 
 
 const StyledFirstNameChecker = styled.div`
-    height: 73.5vh;
+    height: 10vh;
     background: #cfcfcf;
     color: #1c1841;
 `
@@ -26,19 +26,19 @@ class FirstNameChecker extends React.Component {
     }
 
     handleFirstName(e) {
-        const verifiedFirstName = validator.isFirstName(e.target.value);
+        const verifiedFirstName = validator.isAlpha(e.target.value);
         this.setState({
-            FirstNameBool: verifiedFirstName
+            firstNameBool: verifiedFirstName
         });
     }
     render() {
         return (
         <StyledFirstNameChecker className="FirstNameChecker">
     {console.log(`
-        this.state.FirstNameBool: ${this.state.FirstNameBool}
+        this.state.firstNameBool: ${this.state.firstNameBool}
     `)}
-            <FirstNameLabel isTrue={this.state.FirstNameBool} 
-            >Click me 
+            <FirstNameLabel isTrue={this.state.firstNameBool} 
+            >Valid First Name 
                 <input onChange={this.handleFirstName} type="text" />
             </FirstNameLabel>
         </StyledFirstNameChecker>

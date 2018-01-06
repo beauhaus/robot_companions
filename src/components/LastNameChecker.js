@@ -5,7 +5,7 @@ import validator from 'validator';
 
 
 const StyledLastNameChecker = styled.div`
-    height: 73.5vh;
+    height: 10vh;
     background: #cfcfcf;
     color: #1c1841;
 `
@@ -38,7 +38,7 @@ class LastNameChecker extends React.Component {
         this.state.LastNameBool: ${this.state.LastNameBool}
     `)}
             <LastNameLabel isTrue={this.state.LastNameBool} 
-            >Click me 
+            >Valid Last Name 
                 <input onChange={this.handleLastName} type="text" />
             </LastNameLabel>
         </StyledLastNameChecker>

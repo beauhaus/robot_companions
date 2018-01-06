@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import FirstNameChecker from './FirstNameChecker';
 import LastNameChecker from './LastNameChecker';
 import EmailChecker from './EmailChecker';
+import ZipChecker from './ZipChecker';
 
 const StyledProfile = styled.div`
     height: 73.5vh;
@@ -41,6 +42,7 @@ class Profile extends React.Component {
             <FirstNameChecker/>
             <LastNameChecker/>
             <EmailChecker/>
+            <ZipChecker/>
         </StyledProfile>
         )
     }

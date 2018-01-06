@@ -5,7 +5,7 @@ import validator from 'validator';
 
 
 const StyledEmailChecker = styled.div`
-    height: 73.5vh;
+    height: 10vh;
     background: #cfcfcf;
     color: #1c1841;
 `
@@ -38,7 +38,7 @@ class EmailChecker extends React.Component {
         this.state.emailBool: ${this.state.emailBool}
     `)}
             <EmailLabel isTrue={this.state.emailBool} 
-            >Click me 
+            >Valid Email 
                 <input onChange={this.handleEmail} type="text" />
             </EmailLabel>
         </StyledEmailChecker>
