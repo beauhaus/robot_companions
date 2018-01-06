@@ -41,46 +41,24 @@ li a {
 a:hover {
   cursor:pointer;
 }
-
-
-section.vid-container {
-  /* display: inline-block; */
-  /* height: 40vh; */
-  /* background: darkgray; */
-  /* border: 1px solid orangered; */
-  /* position: relative; */
+.true {
+  background-color: green;
+  color: greenyellow;
+  border: 1px solid greenyellow;
 }
-/* section img {
-  position: absolute;
-  top: 10vh;
-  width: 100%;
-} */
+.false {
+  background-color: maroon;
+  color: white;
+  border: 1px solid red;
+}
+
 
 button:focus {
   outline: none;
+  color: #1d2535;
+  color: #6b1212
 }
 
-/* .partnership {
-} */
-/* .partnership-inner-grid {
-} */
-/* .groups { 
-} */
-/* .profile {
-} */
-/* footer {
-} */
-
-
-/* .slider-inner-container {
-}
- */
-
-
-/* @keyframes modalAppear {
-  0%{opacity: 0}
-  100%{opacity: 1}
-} */
 
 
 

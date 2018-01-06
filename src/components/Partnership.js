@@ -14,7 +14,7 @@ background: url(./img/buddies.jpg) no-repeat center center;
 const StyledPartnershipInnerGrid = styled.article`
 margin: auto;
 color: #1d2535;
-padding: 0.5%;
+padding: 18vh 0.5%;
 // border: 1px solid maroon;
 height: 54vh;
 width: 70vw;

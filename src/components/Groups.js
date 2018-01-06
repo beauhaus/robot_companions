@@ -19,6 +19,10 @@ margin: 0;
     margin-left: -30vw;
     font-size: 2rem;
     font-weight: lighter;
+    & > span {
+        color: #831212;
+        font-size: inherit;
+    }
 }
 `
 
@@ -84,7 +88,7 @@ class Groups extends React.Component {
     render() {
         return (
             <StyledGroups className="groups">
-                <h1>RC Groups</h1>
+                <h1>RC <span>Groups</span></h1>
                 <GroupsContainer>
                     <LogoBack onClick={this.incrementLogo} id="fwd-arrow">&lt;</LogoBack>
                     <GroupsLogos range={this.nuarr} cue={this.state.range} />
