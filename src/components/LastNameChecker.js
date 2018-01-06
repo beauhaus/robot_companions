@@ -26,7 +26,7 @@ class LastNameChecker extends React.Component {
     }
 
     handleLastName(e) {
-        const verifiedLastName = validator.isLastName(e.target.value);
+        const verifiedLastName = /(^[a-zA-Z-']*$)/.test(e.target.value);
         this.setState({
             LastNameBool: verifiedLastName
         });
