@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Nav from './Nav';
+import Header from './Header';
 import Hero from './Hero';
 import Slider from './Slider';
 import Partnership from './Partnership';
@@ -12,7 +12,7 @@ class RobotCompanions extends React.Component {
     render() {
         return (
             <div>
-                <Nav />
+                <Header />
                 <Hero />
                 <Slider />
                 <Partnership />

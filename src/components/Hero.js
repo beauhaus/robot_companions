@@ -12,14 +12,13 @@ const StyledHeroSection = styled.div`
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-template-rows: auto 1fr auto;
-    overflow: hidden;
-
+    overflow: hidden;  
 `
 
 const HeroText = styled.h1`
     mix-blend-mode: color-dodge;
     color: #ecc7c7;
-    font-size: 2.3em;
+    font-size: 2.5rem;
     font-weight: lighter;
     margin: auto;
     grid-row: 2;
@@ -28,21 +27,26 @@ const HeroText = styled.h1`
   ${StyledHeroSection}:hover & {
     color: white;
   }
+  @media screen and (max-width: 375px) {
+    font-size: 1.5rem;
+    margin-top: 5vh;
+    text-align: center;
+   }   
 `
 
 const WatchVidBtn = styled.button`
     background-color: transparent;
     color: #ecb875;
     border: 1px solid #ecb875;
-    font-size: .6em;
+    font-size: .5rem;
     border-radius: 200px;
     position: absolute;
     width: 24vw;
-    height: 10vh;
+    height: 8vh;
     padding: 2vh;
-    top: 50%;
+    top: 55%;
     left: 50%;
-    margin: 5vh 0 0 -12vw;
+    margin-left: -12vw;
     z-index: 12;
     ${StyledHeroSection}:hover & {
         color: white;
@@ -50,7 +54,14 @@ const WatchVidBtn = styled.button`
         cursor: pointer;
         transform: scale(1.1);
         transition: transform .2s; 
-       }    
+       }
+    @media screen and (max-width: 375px) {
+    top: 30%;
+    left: 50%;
+    width: 50vw;
+    text-align: center;
+    margin-left: -25vw;
+    }   
 `
 const Hero = () => (
     <StyledHeroSection className="hero-section">

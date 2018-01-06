@@ -63,7 +63,7 @@ button:focus {
 
 
   /***********************IPAD MEDIA QUERY ***********************/
-
+/* 
   @media screen and (max-width: 959px) {
 nav {
   height: 8vh;
@@ -94,24 +94,12 @@ nav {
   left: 50%;
   margin: 0 0 0 -12vw;
 }
-  }
+  } */
   /*********************** PHONE MEDIA QUERY ***********************/
 
-@media (max-width: 375px) {
-  nav {
-    background-color: #15ff7e;
-    height: 10vh;
-  }
-  .inner-nav-grid-container {   /* grid-def */
-    width: 90vw;
-  }
-  ul {
-    display: none;
-  }
-  /* #header-left-icon {
-
-  } */
-  
+@media screen and (max-width: 375px) {
+ .groups, .partnership, .slider, .profile {
+   display: none;
 }
 
 
