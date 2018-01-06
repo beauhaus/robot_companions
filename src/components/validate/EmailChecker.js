@@ -26,7 +26,7 @@ class EmailChecker extends React.Component {
     }
 
     handleEmail(e) {
-        const verifiedEmail = validator.isEmail(e.target.value);
+        const verifiedEmail = validator.isEmail(e.target.value.trim());
         this.setState({
             emailBool: verifiedEmail
         });
@@ -38,7 +38,7 @@ class EmailChecker extends React.Component {
         this.state.emailBool: ${this.state.emailBool}
     `)}
             <EmailLabel isTrue={this.state.emailBool} 
-            >Valid Email 
+            >Email 
                 <input onChange={this.handleEmail} type="text" />
             </EmailLabel>
         </StyledEmailChecker>

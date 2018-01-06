@@ -1,22 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import FirstNameChecker from './FirstNameChecker';
-import LastNameChecker from './LastNameChecker';
-import EmailChecker from './EmailChecker';
-import ZipChecker from './ZipChecker';
+import FirstNameChecker from './validate/FirstNameChecker';
+import LastNameChecker from './validate/LastNameChecker';
+import EmailChecker from './validate/EmailChecker';
+import ZipChecker from './validate/ZipChecker';
+import USStatesChecker from './validate/USStatesChecker';
 
 const StyledProfile = styled.div`
     height: 73.5vh;
     background: #cfcfcf;
     color: #1c1841;
-`
-const EmailLabel = styled.label`
-    background-color: ${props =>props.isTrue? "green":"red"};
-    color: wheat;
-    background:#brown;
-    transition:all 1s ease;
-}
 `
 class Profile extends React.Component {
     constructor(props) {
@@ -43,6 +37,7 @@ class Profile extends React.Component {
             <LastNameChecker/>
             <EmailChecker/>
             <ZipChecker/>
+            <USStatesChecker />
         </StyledProfile>
         )
     }

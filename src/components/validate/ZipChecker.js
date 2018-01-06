@@ -29,7 +29,7 @@ class ZipChecker extends React.Component {
     }
 
     handleZip(e) {
-        var verifiedZip =  /(^\d{5}$)|(^\d{5}-\d{4}$)/.test(e.target.value);
+        var verifiedZip =  /(^\d{5}$)|(^\d{5}-\d{4}$)/.test(e.target.value.trim());
         this.setState({
             zipBool: verifiedZip
         });
@@ -41,7 +41,7 @@ class ZipChecker extends React.Component {
         this.state.zipBool: ${this.state.zipBool}
     `)}
             <ZipLabel isTrue={this.state.zipBool} 
-            >Valid Zip 
+            >Zip Code 
                 <input onChange={this.handleZip} type="text" />
             </ZipLabel>
         </StyledZipChecker>

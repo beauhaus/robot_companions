@@ -26,7 +26,7 @@ class FirstNameChecker extends React.Component {
     }
 
     handleFirstName(e) {
-        const verifiedFirstName = validator.isAlpha(e.target.value);
+        const verifiedFirstName = validator.isAlpha(e.target.value.trim());
         this.setState({
             firstNameBool: verifiedFirstName
         });
@@ -38,7 +38,7 @@ class FirstNameChecker extends React.Component {
         this.state.firstNameBool: ${this.state.firstNameBool}
     `)}
             <FirstNameLabel isTrue={this.state.firstNameBool} 
-            >Valid First Name 
+            >First Name 
                 <input onChange={this.handleFirstName} type="text" />
             </FirstNameLabel>
         </StyledFirstNameChecker>
