@@ -31,19 +31,17 @@ a:hover {
 .true {
   background-color: green;
   color: greenyellow;
-  border: 1px solid greenyellow;
+  /* border: 1px solid greenyellow; */
 }
 .false {
   background-color: maroon;
-  color: white;
+  color: rgba(54, 52, 52, 0.842);
   border: 1px solid red;
 }
 
 
 button:focus {
   outline: none;
-  color: #1d2535;
-  color: #6b1212
 }
  
 /* #mobile-header {

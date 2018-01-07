@@ -10,6 +10,12 @@ const HeaderLinks = styled.nav`
     font-size: .6rem;
     color: #1BA3CC;
   }
+  // iPad Query
+  @media screen and (min-width: 768px) {
+    & > a {
+      margin-left: 3vw;
+    }
+}
   @media screen and (max-width: 375px) {
     display: none;
   }

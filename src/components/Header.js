@@ -12,9 +12,6 @@ const StyledHeader = styled.header`
     width: 100vw;
     z-index: 20;
     border-bottom: 1px solid #6b1212;
-    @media screen and (max-width: 375px) {
-        height: 10vh;
-    }
     & > div.header-content-container {
         width: 86vw;
         height: 6vh;
@@ -22,36 +19,42 @@ const StyledHeader = styled.header`
         display: grid;
         grid-template-columns: 1fr  25vw;
         grid-template-rows: repeat(3, 1fr);
-        // border: 1px solid teal;
-        & > #header-links{
-            @media screen and (max-width: 375px) {
-                display: none;
-            }
+        // border: 1px solid yellow;
+        & > img {
+            height: 100%;
+            grid-row: 1/-1;
+            grid-collumn: 1;
+            border: 1px solid grey;
         }
     }
-    
+    // tablet query
+    @media screen and (min-width: 768px) {
+        & > div.header-content-container {
+            grid-template-columns: 1fr  45vw;
+        }
+    }
+    // iPhone query
+    @media screen and (max-width: 376px) {
+        height: 10vh;
+        & > div img#header-icon {
+            position: absolute;
+            top: 0;
+            left: 1vw;
+            height: 100%;
+            border-width: 0;
+        }
+        & > #header-links{
+            display: none;
+        }
+     }
+
 }
 `
-
-const HeaderIcon = styled.img`
-    height: 100%;
-    grid-row: 1/-1;
-    grid-column: 1;
-    border: 2px solid grey;
-    @media screen and (max-width: 374px) {
-        position: absolute;
-        top: .5vh;
-        left: 2vw;
-        height: 9vh;
- }
-`
-
-
 
 const Header = () => (
     <StyledHeader className="default-header" id="default-header">
         <div className="header-content-container">
-            <HeaderIcon src="img/top-left-header-icon.svg" alt="brand-icon" />
+            <img id="header-icon" src="img/top-left-header-icon.svg" alt="brand-icon" />
             <HeaderLinks id="header-links"/>
             <Mobile/>
         </div>

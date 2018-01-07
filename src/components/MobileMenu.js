@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import HeaderLinks from './HeaderLinks';
-
-
+import MobileLinks from './MobileLinks';
 
 const StyledMenu = styled.div`
     position: fixed;
@@ -11,16 +9,15 @@ const StyledMenu = styled.div`
     right: 0;
     height: 100vh;
     width: 100vw;
-    padding: 0 3vw;
-    background: teal;
-    opacity: 0.5;
+    text-align: center;
+    background: rgba(54, 52, 52, 0.8);    
     color: wheat;
 `
 
 const MobileMenu = () => {
         return (
             <StyledMenu>
-                <HeaderLinks/>
+                <MobileLinks/>
             </StyledMenu>
         )
     }

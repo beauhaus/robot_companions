@@ -3,10 +3,9 @@ import styled from 'styled-components';
 
 import MobileMenu from './MobileMenu';
 
-
-
 const StyledMobile = styled.header`
     position: fixed;
+    height: 9.5vh;
     right: 0;
     width: 18vw;
     z-index: 50;
@@ -17,23 +16,30 @@ const StyledMobile = styled.header`
 }
 `
 
-const StyledHamburger = styled.div`
+const StyledHamburger = styled.button`
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 9.7vh;
     font-size: 2rem;
     padding: 0 3vw;
     background: teal;
     color: wheat;
     z-index: 51;
+    border-width: 0;
 `
 const CloseBtn = styled.button`
     position: fixed;
     right: 0;
     top: 0;
     width: 18vw;
+    height: 9.7vh;
     font-size: 2rem;
     padding: 0 3vw;
     background: teal;
     color: wheat;
     z-index: 52;
+    border-width: 0;
 `
 class Mobile extends React.Component {
     constructor(props) {
@@ -44,7 +50,6 @@ class Mobile extends React.Component {
         }
     }
     hamburgerHandler() {
-        console.log("HamHandled")
         this.setState((prevState) =>({
             visible:  !prevState.visible
         }))
@@ -55,8 +60,6 @@ class Mobile extends React.Component {
                 <StyledHamburger onClick={this.hamburgerHandler} className="hamburger">&#9776;</StyledHamburger>
                 {this.state.visible && <MobileMenu />}
                 {this.state.visible && <CloseBtn onClick={this.hamburgerHandler} >&times;</CloseBtn>}
-                
-            
             </StyledMobile>
         )
     }
