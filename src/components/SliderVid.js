@@ -16,9 +16,11 @@ const StyledSliderVid = styled.div`
     grid-auto-columns:33%;
     grid-gap: 1%;
     }
-    @media screen and (max-width: 375px) {
+    //phone query
+    @media screen and (max-width: 376px) {
     grid-auto-columns: 100%;
     grid-gap: 1%;
+    
     }
 `
 const PicFrame = styled.section`
@@ -33,7 +35,7 @@ const PicFrame = styled.section`
    & > img {
        width: 100%;
        height: 100%;
-       border: 1px solid red;
+    //    border: 1px solid red;
     } 
   & > h3 {
     font-size: 0.6em;
@@ -52,16 +54,26 @@ const PicFrame = styled.section`
     line-height: 1.5;
     font-size: 0.6em;
     z-index: 20;
-    // tablet query
   }
-//   @media screen and (min-width: 768px ) {
-//     top: 5vh;
-// }
-@media screen and (max-width: 376px) {
-    // width: 80vw;
-    // margin: 0 3vw;
+// tablet query
+    @media screen and (max-width: 768px) {
+      & >img#media {
+          height: 25vw;
+      }
+      & > p {
+          bottom: -10vh;
+      }
     }
-
+// phone query
+@media screen and (max-width: 376px) {
+    & > img#media {
+    width: 80vw;
+    height: 50vw;
+    } 
+    & > p {
+        bottom: -20vh;
+    }
+}
 `
 class SliderVid extends React.Component {
     render(props) {
@@ -69,7 +81,7 @@ class SliderVid extends React.Component {
             <StyledSliderVid id="slider-inner-container">
                     {preload.map((pic)=> (
                     <PicFrame key={pic.id}>
-                     <img src={`./img/${pic.src}`}  alt={`${pic.desc}`}/>
+                     <img id="media" src={`./img/${pic.src}`}  alt={`${pic.desc}`}/>
                      <h3>{`${pic.title}`}</h3>
                      <p>{`${pic.desc}`}</p>
                     </PicFrame>

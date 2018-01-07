@@ -19,7 +19,7 @@ const StyledMobile = styled.header`
 const StyledHamburger = styled.button`
     position: fixed;
     top: 0;
-    right: 0;
+    right: 4px;
     height: 9.7vh;
     font-size: 2rem;
     padding: 0 3vw;
@@ -30,7 +30,7 @@ const StyledHamburger = styled.button`
 `
 const CloseBtn = styled.button`
     position: fixed;
-    right: 0;
+    right: 1vw;
     top: 0;
     width: 18vw;
     height: 9.7vh;

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const StyledPartnership = styled.div`
 height: 86vh;
+width: 100vw;
 color: black
 background-color: grey;
 // border: 2px solid navy;
@@ -30,12 +31,15 @@ background: url(./img/buddies.jpg) no-repeat center center;
   // iPhone Query
   @media screen and (max-width: 376px) {
     height: 86vh;
+    text-align: center;
     
     // border: 1px solid fuchsia;
     & > .partnership-container {
         // background: brown;
         flex-direction: column;
+        
         width: 100vw;
+        // justify-content: space-around;
         padding-top: 6vh;
         & #text-section {
             margin: 0;
@@ -47,7 +51,8 @@ background: url(./img/buddies.jpg) no-repeat center center;
             font-size: 1rem;
         }
         & p {
-            text-align: center;
+        
+           width: 98vw;
            line-height: 2;
         }
         & #icon-section {
@@ -94,10 +99,6 @@ padding-top: 8%;
         margin: 0 10vw;
     }
 }
-// iPhone Query
-// @media screen and (max-width: 376px) {
-//     flex-direction: row;
-// }
 `
 
 const Partnership = () => (

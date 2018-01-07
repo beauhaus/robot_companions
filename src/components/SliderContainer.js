@@ -21,10 +21,10 @@ const StyledSliderContainer = styled.div`
      &:hover {
         transform: scale(1.4);
         transition: transform .2s;
-        -webkit-text-stroke: 1px red; 
-        -webkit-text-fill-color: lightgreen; 
-        text-fill-color:  lightgreen; 
-        text-stroke: 1px red; 
+        -webkit-text-stroke: 1px #420505; 
+        -webkit-text-fill-color: #1BA3CC; 
+        text-fill-color:  #1BA3CC; 
+        text-stroke: 1px #420505; 
     }
     @media screen and (min-width: 768px) {
         top: 25%;
