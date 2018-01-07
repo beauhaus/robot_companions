@@ -12,6 +12,11 @@ const HeroBGVid = styled.video`
     /* object-position: top 75%; */
     height: initial; 
     display: initial;
+    // iPhone query
+    @media screen and (max-width: 375px) {
+      top: 4vh;
+      transform: scale(1.5);
+     }   
 `
 class HeroVid extends React.Component {
     constructor(props) {

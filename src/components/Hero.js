@@ -12,7 +12,18 @@ const StyledHeroSection = styled.div`
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-template-rows: auto 1fr auto;
-    overflow: hidden;  
+    overflow: hidden;
+    // tablet query
+  @media screen and (max-width: 768px) {
+    grid-template-rows: 1vh 1vh 1fr;
+    height: 28vh;
+  }
+  // iPhone query
+  @media screen and (max-width: 375px) {
+    font-size: 1.5rem;
+    height: 45vh;
+    text-align: center;
+   }   
 `
 
 const HeroText = styled.h1`
@@ -27,9 +38,18 @@ const HeroText = styled.h1`
   ${StyledHeroSection}:hover & {
     color: white;
   }
+  // tablet query
+  @media screen and (min-width: 768px) {
+    font-size: 1.8rem;
+    grid-row: 1;
+    grid-column: 2;
+    margin-top: 8vh;
+
+  }
+  // iPhone query
   @media screen and (max-width: 375px) {
     font-size: 1.5rem;
-    margin-top: 5vh;
+    margin-top: 8vh;
     text-align: center;
    }   
 `
@@ -55,12 +75,22 @@ const WatchVidBtn = styled.button`
         transform: scale(1.1);
         transition: transform .2s; 
        }
+    // tablet query
+    @media screen and (max-width: 768px) {
+       top: 50%;
+       width: 40vw;
+       margin-left: -20vw;
+       height: 6vh;
+    }
+    // iPhone query
     @media screen and (max-width: 375px) {
-    top: 30%;
-    left: 50%;
-    width: 50vw;
-    text-align: center;
-    margin-left: -25vw;
+        
+        width: 80vw;
+        height: 10vh;
+        padding: 2vh;
+        top: 55%;
+        left: 50%;
+        margin-left: -40vw;        
     }   
 `
 const Hero = () => (
