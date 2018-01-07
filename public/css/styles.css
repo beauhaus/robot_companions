@@ -12,35 +12,22 @@ body {
   background: rgb(53, 77, 102);
   position: relative;
   font-family: 'Orbitron', sans-serif;
-  color: #47443f;
-  /* line-height: 1.5; */
-}
+  color: rgb(19, 218, 184);
 
- /*leave these as globals*/
-ul, li{
-  list-style-type: none;
 }
+a {
+text-decoration: none;
+}
+ /*leave these as globals*/
+
 button:hover {
   cursor: pointer;
-}
-
-li {
-  display: inline;
-  margin-left: 1vw;
-}
-li a {
-  cursor:pointer;
-  display: inline;
-  text-decoration: none;
-  color: navy;
-  font-size: .5em;
-  font-weight: bold;
-  letter-spacing: .3vh;
 }
 
 a:hover {
   cursor:pointer;
 }
+
 .true {
   background-color: green;
   color: greenyellow;
@@ -58,6 +45,17 @@ button:focus {
   color: #1d2535;
   color: #6b1212
 }
+ 
+/* #mobile-header {
+  display: none;
+} */
+
+/* showing hamburger */
+/* @media screen and (max-width: 375px) {
+    header#mobile-header {
+      display: block;
+  }
+} */
 
 
 
@@ -96,10 +94,4 @@ nav {
 }
   } */
   /*********************** PHONE MEDIA QUERY ***********************/
-
-@media screen and (max-width: 375px) {
- .groups, .partnership, .slider, .profile {
-   display: none;
-}
-
 

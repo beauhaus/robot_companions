@@ -1,25 +1,29 @@
 import React from 'react';
+import styled from 'styled-components';
 
-import Header from './Header';
 import Hero from './Hero';
 import Slider from './Slider';
 import Partnership from './Partnership';
 import Groups from './Groups';
 import Profile from './Profile';
 import Footer from './Footer';
+import Header from './Header'
+
+const StyledApp = styled.div`
+`
 
 class RobotCompanions extends React.Component {
     render() {
         return (
-            <div>
+            <StyledApp>
                 <Header />
                 <Hero />
                 <Slider />
-                <Partnership />
+                {/*<Partnership />*/}
                 <Groups />
                 <Profile />
                 <Footer />
-            </div>
+            </StyledApp>
         )
     }
 }

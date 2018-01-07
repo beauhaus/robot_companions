@@ -1,23 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const HeaderLinks = styled.ul`
+const HeaderLinks = styled.nav`
+  text-align: right;
   grid-column: 2;
   grid-row: 2;
-  text-align: right;
-  border: 1px solid yellow;
-  & li a {
+  & > a {
+    margin-left: 1vw;
+    font-size: .6rem;
     color: #1BA3CC;
   }
+  @media screen and (max-width: 375px) {
+    display: none;
+  }
+  
 `
+
 const NavLinks = () => (
-    <HeaderLinks className="header-right-links">
-        <li>
+    <HeaderLinks>
             <a href="#">RC PARTNERSHIP</a>
-        </li>
-        <li>
             <a href="#">RC PROFILE</a>
-        </li>
     </HeaderLinks>
 )
 export default NavLinks;
