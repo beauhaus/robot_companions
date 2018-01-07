@@ -9,7 +9,6 @@ const StyledSliderContainer = styled.div`
     z-index: 5;
     display: grid;
     position: relative;
-    // display: inline-block; remove(?)
     & > button {
         position: absolute;
         font-size: 1.2em;
@@ -18,15 +17,28 @@ const StyledSliderContainer = styled.div`
         transform: scaleY(1.8);
         background: transparent;
         border: transparent;
-        z-index: 10;          
+        z-index: 10;     
      &:hover {
         transform: scale(1.4);
         transition: transform .2s;
         -webkit-text-stroke: 1px red; 
-        -webkit-text-fill-color:   lightgreen; 
+        -webkit-text-fill-color: lightgreen; 
         text-fill-color:  lightgreen; 
         text-stroke: 1px red; 
     }
+    @media screen and (min-width: 768px) {
+        top: 25%;
+        &#fwd {
+            right: 2vw;
+        }
+        &#bkwd {
+            left: 2vw;
+        }
+
+        
+    
+   }
+
 }
 `
 const BackBtn = styled.button`
@@ -74,9 +86,9 @@ class SliderContainer extends React.Component {
     render() {
         return (
             <StyledSliderContainer>
-                <BackBtn onClick={this.incrementVid} >&lt;</BackBtn>
-                <SliderVid range={this.nuarr} cue={this.state.range} />
-                <FwdBtn onClick={this.decrementVid} >&gt;</FwdBtn>
+                <BackBtn id="bkwd"onClick={this.incrementVid} >&lt;</BackBtn>
+                <SliderVid id="slider-vid" range={this.nuarr} cue={this.state.range} />
+                <FwdBtn id="fwd" onClick={this.decrementVid} >&gt;</FwdBtn>
             </StyledSliderContainer>
 
         )

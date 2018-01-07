@@ -13,7 +13,7 @@ class Slider extends React.Component {
     render() {
         return (
             <StyledSlider className="slider">
-                <SliderContainer />
+                <SliderContainer id="sliderContainer"/>
             </StyledSlider>
         )
     }

@@ -19,7 +19,7 @@ class RobotCompanions extends React.Component {
                 <Header />
                 <Hero />
                 <Slider />
-                {/*<Partnership />*/}
+                <Partnership />
                 <Groups />
                 <Profile />
                 <Footer />
