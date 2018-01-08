@@ -25,17 +25,17 @@ background: url(./img/buddies.jpg) no-repeat center center;
             width: 40vw;
         }
         & > section#profile-pic-section {
-            // border: 2px solid skyblue;
+            
             & > img {
                 margin-left: -3vw;
-                width: 280px;
+                width: 32vw;
             }
         }
         & > section#text-section {
             height: 280px;
             margin-top: 6vh;
-            & h1, span {
-            font-size: 1.2rem;            
+            // & h1, span {
+            // font-size: 1.2rem;            
         }
         & p {
             font-size: 0.5rem;
@@ -46,38 +46,6 @@ background: url(./img/buddies.jpg) no-repeat center center;
   // iPhone Query
   @media screen and (max-width: 376px) {
     height: 90vh;
-    text-align: center;
-    // border: 1px solid fuchsia;
-    padding: 0;
-    margin: 0;
-    width: 100vw;
-    & > .profile-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(36vh, 40vh);
-        width: 98vw;
-        & #text-section {
-            grid-row: 1;
-            width: 96vw;
-        }
-        & h1, span {
-            text-align: center;
-            font-size: 1rem;
-        }
-        & p {
-           width: 96vw;
-           line-height: 2;
-        }
-        & #profile-pic-section {
-            grid-row: 2;
-            width: 98vw;
-            text-align: center;
-        }
-        & img {
-            margin: 0 auto;
-            margin-top: -10vh;
-        }
-    }
   }
 `
 const StyledProfileContainer = styled.article`
@@ -96,7 +64,6 @@ padding-top: 8%;
         padding: 5%;
     }
     width: 50%;
-    // border: 1px solid red;
     & h1 {
         font-size: 2rem;
         color: #1d2535;
@@ -118,12 +85,51 @@ padding-top: 8%;
         margin: 0;
     }
 }
+// iPhone Query
+@media screen and (max-width: 376px) {
+    height: 90vh;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+
+    // margin: 3vw auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40vh 45vh;
+    justify-content: space-between;
+    
+      & #text-section {
+          margin:0;
+          padding: 0;
+          padding-top: 5%;
+          text-align: center;
+          grid-row: 1;
+          width: 100%;
+          & h1, span {
+              font-size: 1rem;
+          }
+          & p {
+            text-align: center;
+            color: black;
+            line-height: 2;
+        }
+      }
+      & #profile-pic-section {
+          grid-row: 2;
+          width: 100%;
+            & > img#profile-image {
+                width: 90%;
+                margin:0;
+            }
+         }
+}
 `
 const Profile = () => (
     <StyledProfile className="profile">
         <StyledProfileContainer className="profile-container">
             <section id="profile-pic-section">
-                <img src="./img/profile-pic.jpg" alt="profile-pic" />
+                <img id="profile-image" src="./img/profile-pic.jpg" alt="profile-pic" />
             </section>
             <section id="text-section">
                 <h1>Our <span>Profile</span></h1>

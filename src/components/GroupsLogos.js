@@ -50,7 +50,9 @@ const LogoFrame = styled.div`
 }
 // phone query
 @media screen and (max-width: 376px) {
+    text-align: center;
     & > p {
+        border: 1px solid pink;
         top: 28vh;
         font-weight: bold;
     }
