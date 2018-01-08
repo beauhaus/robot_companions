@@ -58,6 +58,9 @@ const LogoFrame = styled.div`
     }
 }
 `
+
+//FIXME: the p tagged txt containers perhaps ought to have height 100% so that they resize for the phone
+
 class GroupsLogos extends React.Component {
     render(props) {
         return (
