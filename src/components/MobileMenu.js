@@ -8,12 +8,13 @@ const StyledMenu = styled.div`
     top: 0;
     right: 0;
     bottom: 0;
-    left:-1vw; /* FIXME: this is a hot-fix for an anomoly with centering. (<Partnership /> may be the culprit) */
+    left: 0; /* FIXME: this is a hot-fix for an anomoly with centering. (<Partnership /> may be the culprit) */
     height: 105vh;
     width: 102vw;
     text-align: center;
     background: rgba(54, 52, 52, 0.8);    
     color: wheat;
+    z-index: 20;
 `
 
 const MobileMenu = () => {

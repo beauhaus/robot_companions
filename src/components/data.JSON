@@ -1,10 +1,10 @@
 [
     {"id":0, "src": "bikeride.gif", "title": "Robot takes a ride", "desc":"Take a ride around the park with your friendly robot. Robots love recreation!"},
     {"id":1, "src": "falling.gif", "title": "Who wouldn't fall for this little guy?", "desc":"After a long hard day of walking through sand, this android just gets pooped!"},
-    {"id":2, "src": "forcefeed.gif", "title": "Helping out at mealtime!", "desc":"Your animatronic buddies love to human owners with a delicious power source!"},
+    {"id":2, "src": "forcefeed.gif", "title": "Helping out at mealtime!", "desc":"Your animatronic buddies love to help humans with with their power source!"},
     {"id":3, "src": "jogging.gif", "title": "Go for a jog!", "desc":"Cyborgs never need water or have heart-attacks!"},
     {"id":4, "src": "baby-sitter.gif", "title": "Baby-Sitting", "desc":"Innovations in child-care and home-schooling!"},
-    {"id":5, "src": "paintball.gif", "title": "For us, violence is an art!", "desc": "Post-modern performance art and/or Tactical Urban Assaault."},
+    {"id":5, "src": "paintball.gif", "title": "Robot violence is an artform!", "desc": "Post-modern performance art and/or Tactical Urban Assault."},
     {"id":6, "src": "kicked.gif", "title": "Robots love to be mistreated!", "desc":"Life got you down? Take it out on a robot. He will never hold a grudge or retaliate, ever!"},
     {"id":7, "src": "santahelpers.gif", "title": "Santa's little cyborg helpers!", "desc":"Santa cuts down on labor costs with these adorable android deer!"},
     {"id":8, "src": "scarecat.gif", "title": "Awww...Cute!", "desc":"Robots will never kill or harm your pets!"},

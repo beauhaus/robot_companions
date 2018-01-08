@@ -41,7 +41,7 @@ const PicFrame = styled.section`
     font-size: 0.6em;
     margin-top: 2vh;
     color: navy;
-    z-index: 20;
+    z-index: 8;
     font-family: 'Trebuchet MS', sans-serif;
     font-weight: bold;
   }
@@ -57,12 +57,12 @@ const PicFrame = styled.section`
   }
 // tablet query
     @media screen and (max-width: 768px) {
-      & >img#media {
+      & img#media {
           height: 25vw;
-      }
-      & > p {
-          bottom: -10vh;
-      }
+        }
+        & p {
+            bottom: -8.5vh;
+        }
     }
 // phone query
 @media screen and (max-width: 376px) {

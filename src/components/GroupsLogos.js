@@ -10,12 +10,20 @@ left: 0;
     width: 100%;
     display: grid;
     grid-template-columns: auto;
+    justify-content: space-around;
+@media screen and (max-width: 376px) {
+    height: 75vh;
+    grid-auto-columns: 50%;
+    overflow: hidden;
+
+}
 `
 const LogoFrame = styled.div`
     position: relative;
     grid-row: 1;
     height: 100%;
-    width: 8vw;
+    padding: 0;
+    width: auto;
     background: transparent;
     & > img {
         margin-top: 2vh;
@@ -32,13 +40,28 @@ const LogoFrame = styled.div`
         margin-left -4vw;
         font-weight: bold;
     }
+// tablet query
+@media screen and (max-width: 768px) {
+    // border: 2px solid blue;
+    & > p {
+        bottom: 1vh;
+        font-weight: lighter;
+    }
+}
+// phone query
+@media screen and (max-width: 376px) {
+    & > p {
+        top: 28vh;
+        font-weight: bold;
+    }
+}
 `
 class GroupsLogos extends React.Component {
     render(props) {
         return (
-            <SingleLogo className="slider-inner-container">
+            <SingleLogo id="single-logo">
                     {logos.map((logo)=> (
-                    <LogoFrame key={logo.id}>
+                    <LogoFrame id="logo-frame" key={logo.id}>
                      <img src={`./img/logo/${logo.src}`}  alt={`${logo.desc}`}/>
                      <p>{`${logo.title}`}</p>
                     </LogoFrame>

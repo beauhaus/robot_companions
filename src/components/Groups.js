@@ -24,6 +24,50 @@ margin: 0;
         font-size: inherit;
     }
 }
+& #fwd-arrow, #rwd-arrow {
+    display: none;
+}
+
+// tablet query
+  @media screen and (max-width: 768px) {
+      height: 38vw;
+      
+      & > h1 {
+          top: 5vh;
+          font-size: 1.4rem;
+      }
+      & > #groups-container {
+        //   border: 2px solid orangered;
+          top: 10vh;
+          margin: 0;
+          left: 0;
+          padding: 0;
+          width: 100vw;
+      }
+}
+// phone query
+@media screen and (max-width: 376px) {
+    height: 58vh;
+    & > #groups-container {
+        //   border: 2px solid orangered;
+          top: 15vh;
+          margin: 0;
+          left: 0;
+          width: 100vw;
+          & > #fwd-arrow, #rwd-arrow {
+            background: grey;
+            display: block;
+            z-index: 50;
+            font-size: 3rem;
+            font-weight: bold;
+            width: 2vw;
+            border-width: 0;
+            color: wheat;
+            width: 90px;
+            height: 35vh;
+          }
+  }
+}
 `
 
 const GroupsContainer = styled.div`
@@ -41,18 +85,18 @@ grid-template-columns: repeat(2, 1fr);
 grid-template-rows: 1fr;
 `
 const LogoFwd = styled.button`
-// display: none;
-width: 2vw;
 position: absolute;
-right: -2vw;
+right: 0;
+
 `
 
 const LogoBack = styled.button`
-// display: none;
-width: 2vw;
 position: absolute;
-left: -2vw;
+left: 0;
+
 `
+
+
 class Groups extends React.Component {
     constructor(props) {
         super(props);
@@ -89,7 +133,7 @@ class Groups extends React.Component {
         return (
             <StyledGroups className="groups">
                 <h1>RC <span>Groups</span></h1>
-                <GroupsContainer>
+                <GroupsContainer id="groups-container">
                     <LogoBack onClick={this.incrementLogo} id="fwd-arrow">&lt;</LogoBack>
                     <GroupsLogos range={this.nuarr} cue={this.state.range} />
                     <LogoFwd onClick={this.decrementLogo} id="rwd-arrow">&gt;</LogoFwd>
