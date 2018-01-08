@@ -58,15 +58,14 @@ background: url(./img/buddies.jpg) no-repeat center center;
         width: 98vw;
         & #text-section {
             grid-row: 1;
-            // border: 2px solid orange;
-            width: 98vw;
+            width: 96vw;
         }
         & h1, span {
             text-align: center;
             font-size: 1rem;
         }
         & p {
-           width: 98vw;
+           width: 96vw;
            line-height: 2;
         }
         & #profile-pic-section {
