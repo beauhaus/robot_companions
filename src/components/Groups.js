@@ -26,6 +26,8 @@ margin: 0;
 }
 & #fwd-arrow, #rwd-arrow {
     display: none;
+    z-index: 5; /* concealing images beneath ( in carousel on phones)*/
+    position: absolute;
 }
 
 // tablet query
@@ -49,53 +51,47 @@ margin: 0;
 @media screen and (max-width: 376px) {
     height: 58vh;
     & > #groups-container {
-        //   border: 2px solid orangered;
-          top: 15vh;
-          margin: 0;
-          left: 0;
-          width: 100vw;
-          & > #fwd-arrow, #rwd-arrow {
-            background: grey;
-            display: block;
-            z-index: 50;
-            font-size: 3rem;
-            font-weight: bold;
-            width: 2vw;
-            border-width: 0;
-            color: wheat;
-            width: 90px;
-            height: 35vh;
-          }
+   //   border: 2px solid orangered;   
+        top: 15vh;
+        margin: 0;
+        left: 0;
+        width: 100vw;
+        & > #fwd-arrow, #rwd-arrow {
+        background: grey;
+        display: block;
+        
+        font-size: 3rem;
+        font-weight: bold;
+        width: 2vw;
+        border-width: 0;
+        color: wheat;
+        width: 90px;
+        height: 35vh;
+        }
   }
 }
 `
 
 const GroupsContainer = styled.div`
-// background: grey;
-position: relative;
-width: 80vw;
-height: 18vh;
-left: 50%;
-top: 25vh;
-margin-left: -40vw;
-color: #a1a1a1;
-padding: 0.5%;
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-grid-template-rows: 1fr;
+    position: relative;
+    width: 80vw;
+    height: 18vh;
+    left: 50%;
+    top: 25vh;
+    margin-left: -40vw;
+    color: #a1a1a1;
+    padding: 0.5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
 `
 const LogoFwd = styled.button`
-position: absolute;
-right: 0;
-
+    right: 0;
 `
 
 const LogoBack = styled.button`
-position: absolute;
-left: 0;
-
+    left: 0;
 `
-
 
 class Groups extends React.Component {
     constructor(props) {

@@ -26,6 +26,7 @@ const StyledSliderContainer = styled.div`
         text-fill-color:  #1BA3CC; 
         text-stroke: 1px #420505; 
     }
+    //Tablet Query
     @media screen and (min-width: 768px) {
         top: 25%;
         &#fwd {
@@ -34,10 +35,12 @@ const StyledSliderContainer = styled.div`
         &#bkwd {
             left: 2vw;
         }
-
         
-    
-   }
+        
+        
+    }
+// iPhone Query
+@media screen and (max-width: 376px) {
 
 }
 `
@@ -86,7 +89,7 @@ class SliderContainer extends React.Component {
     render() {
         return (
             <StyledSliderContainer>
-                <BackBtn id="bkwd"onClick={this.incrementVid} >&lt;</BackBtn>
+                <BackBtn id="bkwd" onClick={this.incrementVid} >&lt;</BackBtn>
                 <SliderVid id="slider-vid" range={this.nuarr} cue={this.state.range} />
                 <FwdBtn id="fwd" onClick={this.decrementVid} >&gt;</FwdBtn>
             </StyledSliderContainer>

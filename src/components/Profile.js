@@ -92,8 +92,6 @@ padding-top: 8%;
     margin: 0 auto;
     text-align: center;
     width: 100%;
-
-    // margin: 3vw auto;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 40vh 45vh;

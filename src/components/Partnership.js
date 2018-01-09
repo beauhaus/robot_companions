@@ -102,7 +102,7 @@ padding-top: 8%;
 `
 
 const Partnership = () => (
-    <StyledPartnership className="partnership">
+    <StyledPartnership className="partnership" id="partnership">
         <StyledPartnershipContainer className="partnership-container">
             <section id="text-section">
                 <h1>RC <span>Partnership</span></h1>

@@ -11,10 +11,23 @@ left: 0;
     display: grid;
     grid-template-columns: auto;
     justify-content: space-around;
+//phone query
+
 @media screen and (max-width: 376px) {
-    height: 75vh;
-    grid-auto-columns: 50%;
+    height: 35vh;
+    grid-auto-columns: 60%;
     overflow: hidden;
+    & > #logo-frame {
+        height: 45vh;
+        & > p {
+            height: 5vh;
+            width: 20vw;
+            left: 50%;
+            margin-top: 2vh;
+            margin-left -10vw;
+            top: 28vh;
+        }
+    }
 
 }
 `
@@ -42,19 +55,9 @@ const LogoFrame = styled.div`
     }
 // tablet query
 @media screen and (max-width: 768px) {
-    // border: 2px solid blue;
     & > p {
         bottom: 1vh;
         font-weight: lighter;
-    }
-}
-// phone query
-@media screen and (max-width: 376px) {
-    text-align: center;
-    & > p {
-        border: 1px solid pink;
-        top: 28vh;
-        font-weight: bold;
     }
 }
 `
