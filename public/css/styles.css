@@ -29,13 +29,13 @@ a:hover {
 }
 
 .true {
-  background-color: green;
+  background-color: rgb(50, 76, 97);
   color: greenyellow;
   /* border: 1px solid greenyellow; */
 }
 .false {
   background-color: #420505;
-  color: rgba(54, 52, 52, 0.842);
+  color: #7a7474;
   border: 1px solid red;
 }
 
@@ -43,6 +43,8 @@ a:hover {
 button:focus {
   outline: none;
 }
+
+
  
 /* #mobile-header {
   display: none;

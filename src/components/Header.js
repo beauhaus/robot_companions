@@ -54,7 +54,7 @@ const StyledHeader = styled.header`
 const Header = () => (
     <StyledHeader className="default-header" id="default-header">
         <div className="header-content-container">
-            <img id="header-icon" src="img/top-left-header-icon.svg" alt="brand-icon" />
+            <img id="header-icon" src="img/horiz-icon.svg" alt="brand-icon" />
             <HeaderLinks id="header-links"/>
             <Mobile/>
         </div>
