@@ -5,11 +5,12 @@ const StyledMobileLinks = styled.div`
     text-align: left;
     margin-top: 12vh;
     padding: 10%;
-    & a {
+    & > a {
         margin-top: 7vh;
         display: block;
         font-size: 30px;
         color: coral;
+        text-decoration: none;
     }
 `
 

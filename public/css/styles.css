@@ -1,24 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 @import url('https://fonts.googleapis.com/css?family=Orbitron');
 
-* {
-  box-sizing: border-box;
-  font-size: 24px;
-  padding: 0;
-  margin: 0;
-}
 
-body {
-  background: rgb(53, 77, 102);
-  position: relative;
-  font-family: 'Orbitron', sans-serif;
-  color: rgb(19, 218, 184);
-
-}
-a {
-text-decoration: none;
-}
- /*leave these as globals*/
 
 button:hover {
   cursor: pointer;
@@ -35,7 +18,7 @@ a:hover {
 }
 .false {
   background-color: #420505;
-  color: #7a7474;
+  color: #b8b8b8;
   border: 1px solid red;
 }
 
