@@ -1,8 +1,8 @@
 // import validator from 'validator';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import RobotCompanions from './components/RobotCompanions';
+import RouterWrapper from './components/RouterWrapper';
 
 
 
-ReactDOM.render(<RobotCompanions />, document.getElementById('app'));
+ReactDOM.render(RouterWrapper, document.getElementById('app'));
