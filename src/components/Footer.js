@@ -18,7 +18,7 @@ font-family: "Trebuchet MS", sans-serif;
      grid-row: 1;
     }
 
-    & > #level-top {
+    & > #text-level-top {
     //  background: rgba(2,2,2,0.5);
      grid-column: 2/3;
      grid-row: 2;
@@ -54,12 +54,15 @@ font-family: "Trebuchet MS", sans-serif;
     }
 }
 
-    &>#level-secondary {
+    &>#text-level-two {
     //  background: rgba(62,62,12,0.5);
     grid-column: 2/3;
     grid-row: 3;
     text-align: right;
-    & span, a, a:visited, a:focus {
+    & div {
+        display: inline;
+    }
+    & div, span, a, a:visited, a:focus {
         color: #b8b8b8;
         margin: 0 .2vw;
         font-size: .5rem;
@@ -75,16 +78,17 @@ font-family: "Trebuchet MS", sans-serif;
      }
 
     }
-
-    &>#level-corporate , sup {
-    //  background: rgba(61,01,41,0.5);
-     grid-column: 2/3;
-     grid-row: 4;
-     text-align: right;
-     font-size: .5rem;
+    
+    &>#text-level-three{ 
+        grid-column: 2/3;
+        grid-row: 4;
+       & > div#corporate, sup {
+            text-align: right;
+            font-size: .5rem;
+        }
     }
 
-    &>#level-bottom {
+    & > #text-level-four {
     //  background: rgba(62,32,72,0.5);
      grid-column: 2/3;
      grid-row: 5;
@@ -96,9 +100,13 @@ font-family: "Trebuchet MS", sans-serif;
 
 // phone query
   @media screen and (max-width: 376px) {
-    & > #level-top {
+      text-weight: lighter;
+      height: 35vh;
+    grid-template-rows: 1fr repeat(3, 3.5vh) 8vh 1fr;
+    grid-gap: 15px;
+    & > #text-level-top {
         position: relative;
-        // text-align: center;
+        text-align: center;
         & #footer-left-icon {
             display: none;
         }
@@ -111,8 +119,6 @@ font-family: "Trebuchet MS", sans-serif;
             // border: 1px solid wheat;
             justify-content: space-between;
             & a {
-                    // margin: 0 auto;
-                    // margin-right: 0;
                     & img {
                         height: 90%;
                     }
@@ -120,14 +126,61 @@ font-family: "Trebuchet MS", sans-serif;
 
         }
     }
+    & > #text-level-two {
+        text-align: center;
+        position: relative;
+        & > span#contact-links {
+                text-align: right;
+                grid-row: 2;
+        }
+        & > #privacy {
+            display: block;
+            position: absolute;
+            margin-left: -41vw;
+            top: 5.5vh;
+            left: 41vw;
+            width: 82vw;
+            text-align: center;
+            // border: 1px solid white;
+        }
+        
+        
+    }
+    & > #text-level-three {
+        text-align: center;
+        grid-row: 4;
+        & > #corporate {
+            // color: red;
+            display: inline-block;
+            text-align: center;
+            margin-top: 3vh;
+        }
+    }
+    & > #text-level-four{
+        // position: relative;
+        // border: 1px solid yellow;
+        & p {
+            text-align: center;
+            margin-top: 2vh;
+        }
+
+    }
 }
 `
 
-
+/*
+CENTERING EXAMPLE
+.ctr-example2 {
+  width: 40vw;
+  position: absolute;
+  left: 50%;
+  margin-left: -20vw;
+}
+*/
 
 const Footer = () => (
     <StyledFooter>       
-        <div id="level-top">
+        <div id="text-level-top">
             <img id="footer-left-icon" src="./img/horiz-icon.svg" alt="horizontal icon" />
             <div id="footer-icon-links">
             <a id="git-link" href="https://github.com/Beauvelop/2-page-app"><img id="git-logo" src="./img/git-logo.png" alt="git-logo" /></a>
@@ -135,11 +188,12 @@ const Footer = () => (
             <a id="codepen-link" href="https://codepen.io/beau_dev/"><img id="codepen-logo" src="./img/codepen-logo.png" alt="git-logo" /></a>
             </div>
         </div>
-        <div id="level-secondary">
-            <span id="contact-links"><a href="#">Contact Us</a>|<a href="#">Legal Notice</a>|<a href="#">Terms of Use</a>|</span><span id="privacy">Privacy and information Processing Policy, etc.</span>
+        <div id="text-level-two">
+            <span id="contact-links"><a href="#">Contact Us</a>|<a href="#">Legal Notice</a>|<a href="#">Terms of Use</a>|</span>
+            <div id="privacy">Privacy and information Processing Policy, etc.</div>
         </div>
-        <div id="level-corporate"><sup>&copy;</sup>2018 WCGW Corporation</div>
-        <div id="level-bottom">
+        <div id="text-level-three"><div id="corporate"><sup>&copy;</sup>2018 WCGW Corporation</div></div>
+        <div id="text-level-four">
             <p>RC Trademarks and Copyrights do not exist. This site is fictitous. Robots are likely no cause for concern.</p>
         </div>
      
