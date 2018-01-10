@@ -8,6 +8,7 @@ const HeaderLinks = styled.nav`
   & > a {
     margin-left: 1vw;
     font-size: .6rem;
+    text-decoration: none;
     color: #1BA3CC;
   }
   // iPad Query

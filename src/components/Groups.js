@@ -5,6 +5,7 @@ import logos from './logo.JSON'
 
 const StyledGroups = styled.div`
 height: 53vh;
+width: 100vw;
 background: grey;
 color: maroon;
 text-align: center;

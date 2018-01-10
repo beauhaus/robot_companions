@@ -24,3 +24,17 @@ const Profile = () => (
 )
 
 export default Profile;
+
+
+/*
+.true {
+  background-color: rgb(50, 76, 97);
+  color: greenyellow;
+}
+
+.false {
+  background-color: #420505;
+  color: #b8b8b8;
+}
+
+*/

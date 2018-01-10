@@ -14,6 +14,18 @@ const css for modal = styled.div`
 
 /*********************** Onboarding Modal ***********************/
  
+.true {
+  background-color: rgb(50, 76, 97);
+  color: greenyellow;
+  /* border: 1px solid greenyellow; */
+}
+.false {
+  background-color: #420505;
+  color: #b8b8b8;
+  border: 1px solid red;
+}
+
+
 .modal {
   /* display: none; */
   position: fixed;

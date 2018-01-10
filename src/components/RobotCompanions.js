@@ -10,23 +10,7 @@ import Footer from './Footer';
 import Header from './Header'
 
 const StyledApp = styled.div`
-// * {
-//     box-sizing: border-box;
-//     font-size: 24px;
-//     padding: 0;
-//     margin: 0;
-//   }
-  
-//   body {
-//     position: relative;
-//     font-family: 'Orbitron', sans-serif;
-//     color: rgb(19, 218, 184);
-  
-//   }
-//   a {
-//   text-decoration: none;
-//   }
-  
+  width: 100vw;
 `
 
 class RobotCompanions extends React.Component {

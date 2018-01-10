@@ -6,8 +6,10 @@ const StyledFooter = styled.footer`
 background: linear-gradient(210deg, #1d3642 20%, #549cbd 100%);
 background: linear-gradient(210deg, #1d3642 20%, black 100%);
 font-family: "Trebuchet MS", sans-serif;
+
     color: #b8b8b8;
     height: 24vh;
+    width: 100vw;
     display: grid;
     grid-template-columns: 1fr 82vw 1fr;
     grid-template-rows: 1fr repeat(4, 3.5vh) 1fr;
