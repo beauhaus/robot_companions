@@ -12,7 +12,6 @@ const StyledEmailChecker = styled.div`
 const EmailLabel = styled.label`
     background-color: ${props =>props.isTrue? "green":"red"};
     color: wheat;
-    background:#brown; /* ??????*/
     transition:all 1s ease;
 }
 `
