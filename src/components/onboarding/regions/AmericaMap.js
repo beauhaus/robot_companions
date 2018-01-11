@@ -77,10 +77,9 @@ PAC-pacific (HI, AK inclusive)
 NEC-northeast coast
 MID-midatlantic coast
 SAC-southatlantic coast
+
 ESC-eastsouthcentral
-
 ENC-eastnorthcentral
-
 WNC-westnorthcentral
 
 WSC-westsouthcentral
