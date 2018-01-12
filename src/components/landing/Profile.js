@@ -123,6 +123,12 @@ padding-top: 8%;
          }
 }
 `
+/**
+ * A "state-less" component that simply contains a picture and some text.
+ * The only remarkable thing is the behavior of the <section>s at the breakpoints.
+ * 
+ * I don't love the positioning or size of the image and plan to fix it.
+ */
 const Profile = () => (
     <StyledProfile className="profile">
         <StyledProfileContainer className="profile-container">

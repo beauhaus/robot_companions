@@ -17,7 +17,9 @@ const StyledMenu = styled.div`
     color: wheat;
     z-index: 50;
 `
-
+/**
+ * 
+ */
 const MobileMenu = () => {
         return (
             <StyledMenu>

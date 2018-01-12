@@ -12,7 +12,12 @@ import Header from './Header'
 const StyledApp = styled.div`
   width: 100vw;
 `
-
+/**
+ * RobotCompanions wraps around the entire collection of components
+ * for the landing page.
+ * This component, itself, is further wrapped by RouterWrapper.js one level up
+ * the folder tree (along side <Signup/>)
+ */
 class RobotCompanions extends React.Component {
     render() {
         return (

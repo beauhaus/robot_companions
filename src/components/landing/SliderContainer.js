@@ -1,7 +1,8 @@
 import React from 'react';
-import SliderVid from './SliderVid';
 import styled from 'styled-components';
-import preload from './data';
+
+import SliderVid from './SliderVid';
+import gifArray from './data';
 
 const StyledSliderContainer = styled.div`
     height: 57.5vh;
@@ -51,46 +52,39 @@ left: 4vw;
 const FwdBtn = styled.button`
 right: 4vw;
 `
+
+/**
+ * The methods below, bound to the buttons clip the last item off the array and place it at zeroth
+ * & visa-versa. Each then places this modified Array onto state which is passed as props to the SliderVid Component
+ * so that it knows what order of slides to display.
+ */
 class SliderContainer extends React.Component {
     constructor(props) {
         super(props);
         this.incrementVid = this.incrementVid.bind(this);
         this.decrementVid = this.decrementVid.bind(this);
-        this.state = {
-            count: 0,
-            range: ''
-        };
+        this.state = { gifArray };
     }
 
     incrementVid() {
-        this.setState((prevState) => {
-            return { count: prevState.count + 1 }
-        })
-        const fwd = (arr) => {
-            let popped = arr.pop();
-            arr.unshift(popped);
-            return this.state.range;
-        }
-        fwd(preload)
+        let gifList = this.state.gifArray;
+        let popped = gifList.pop();
+        gifList.unshift(popped);
+        this.setState(prevState => ({gifArray: prevState.gifArray}))
     }
 
     decrementVid() {
-        this.setState((prevState) => {
-            return { count: prevState.count - 1 }
-        })
-        const bkwd = (arr) => {
-            let shifted = arr.shift();
-            this.state.range = arr.push(shifted);
-            return this.state.range;
-        }
-        bkwd(preload)
+        let gifList = this.state.gifArray;
+        let shifted = gifList.shift();
+        gifList.push(shifted);
+        this.setState(prevState => ({gifArray: prevState.gifArray}))
     }
 
     render() {
         return (
             <StyledSliderContainer>
                 <BackBtn id="bkwd" onClick={this.incrementVid} >&lt;</BackBtn>
-                <SliderVid id="slider-vid" range={this.nuarr} cue={this.state.range} />
+                <SliderVid id="slider-vid" gifArray={this.state.gifArray}/>
                 <FwdBtn id="fwd" onClick={this.decrementVid} >&gt;</FwdBtn>
             </StyledSliderContainer>
 

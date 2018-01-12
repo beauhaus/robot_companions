@@ -12,10 +12,17 @@ background: url(./img/buddies.jpg) no-repeat center center;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  // tablet query
-  @media screen and (max-width: 768px) {
+  & #icon-section {
+    //   border: 2px dashed red;
+      & img {
+          width: 12vw;
+      }
+  }
+
+  @media screen and (max-width: 768px) {    //tablet query  
     height: 52vh;
-    // border: 1px solid fuchsia;
+    border: 1px solid fuchsia;
+    padding: 10% 0;
     & > .partnership-container {
         // background: brown;
         width: 80vw;
@@ -28,8 +35,8 @@ background: url(./img/buddies.jpg) no-repeat center center;
         }
     }
   }
-  // iPhone Query
-  @media screen and (max-width: 376px) {
+  
+  @media screen and (max-width: 376px) {   // iPhone Query 
     height: 86vh;
     text-align: center;
     
@@ -40,7 +47,7 @@ background: url(./img/buddies.jpg) no-repeat center center;
         
         width: 100vw;
         // justify-content: space-around;
-        padding-top: 6vh;
+        padding-top: 3vh;
         & #text-section {
             margin: 0;
             // border: 2px solid orange;
@@ -59,9 +66,10 @@ background: url(./img/buddies.jpg) no-repeat center center;
             text-align: center;
             // background: brown;
             margin: 0 auto;
+
         }
         & img {
-            width: 20vw;
+            width: 30vw;
         }
     }
   }
@@ -95,11 +103,19 @@ padding-top: 8%;
         color: black;
     }
     & img {
+        width: 15vw;
         box-shadow: 4px 4px 6px 3px rgba(0,0,0,0.8);
-        margin: 0 10vw;
+        margin:  0 10vw;
+        // border: 2px solid fuchsia;
     }
 }
 `
+/**
+ * A "Stateless functional" component that does nothing very interesting.
+ * I tried to mimic the design of http://baseball.doosan.com/ as closely 
+ * as possible. This component's breakpoints and styling are an attempt to
+ * accomplish this.
+ */
 
 const Partnership = () => (
     <StyledPartnership className="partnership" id="partnership">
