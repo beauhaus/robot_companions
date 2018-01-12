@@ -1,6 +1,8 @@
 import React from 'react';
 /**Styled Component */
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+
 
 const StyledFooter = styled.footer`
 background: linear-gradient(210deg, #1d3642 20%, #549cbd 100%);
@@ -13,6 +15,7 @@ font-family: "Trebuchet MS", sans-serif;
     display: grid;
     grid-template-columns: 1fr 82vw 1fr;
     grid-template-rows: 1fr repeat(4, 3.5vh) 1fr;
+    position: relative;
 
     &>#one {/*test*/
     //  background: grey;
@@ -100,12 +103,26 @@ font-family: "Trebuchet MS", sans-serif;
      }
     }
 
-// phone query
-  @media screen and (max-width: 376px) {
+
+    
+  @media screen and (max-width: 768px) {   // tablet query
+// FIXME Entire Query needs attention
+    &  button {
+        width: 16vw;
+        height: 5vh;
+        margin-left: -8vw;
+    }
+  }
+
+  @media screen and (max-width: 376px) {    // phone query
       text-weight: lighter;
       height: 35vh;
-    grid-template-rows: 1fr repeat(3, 3.5vh) 8vh 1fr;
+    grid-template-rows: 5vh repeat(3, 3.5vh) 8vh 1fr;
     grid-gap: 15px;
+    & button {
+        width: 30vw;
+        margin-left: -15vw;
+    }
     & > #text-level-top {
         position: relative;
         text-align: center;
@@ -170,19 +187,63 @@ font-family: "Trebuchet MS", sans-serif;
 }
 `
 
-/*
-CENTERING EXAMPLE
+/**
+ * centering
+ * 
 .ctr-example2 {
   width: 40vw;
   position: absolute;
   left: 50%;
   margin-left: -20vw;
 }
-*/
+ */
+
+const StyledJoinBtn = styled.button`
+    
+        background-color: black;
+        color: #1BA3CC;
+        position: absolute;
+        top: 1vh;
+        left: 50vw;
+        width: 10vw;
+        height: 5vh;
+        margin-left: -5vw;
+        border: 0.5px solid #1BA3CC;
+        &:hover {
+            box-shadow: 0px 0px 5px 2px white;
+            color: white;
+            border: 1px solid maroon;
+        }
+        & > :visited {
+            color: #1BA3CC;
+        }
+        & > #link-text {
+            text-decoration: none;
+            font-weight: lighter;
+            font-size: 1.3rem;
+            &:hover {
+                color: white;
+            }
+        }
+`
+
+/**
+ * Dead-simple Client-side route. (Simple Link to Signup Page)
+ * FIXME: Styling may be a bit over-the-top.
+ */
+
+const JoinUs = () => (
+    <StyledJoinBtn>
+        <Link id="link-text" to="/Signup">JOIN US</Link>
+    </StyledJoinBtn>
+)
+
+
 
 const Footer = () => (
     <StyledFooter>       
         <div id="text-level-top">
+        
             <img id="footer-left-icon" src="./img/horiz-icon.svg" alt="horizontal icon" />
             <div id="footer-icon-links">
             <a id="git-link" href="https://github.com/Beauvelop/2-page-app"><img id="git-logo" src="./img/git-logo.png" alt="git-logo" /></a>
@@ -198,13 +259,8 @@ const Footer = () => (
         <div id="text-level-four">
             <p>RC Trademarks and Copyrights do not exist. This site is fictitous. Robots are likely no cause for concern.</p>
         </div>
-     
-
-
+        <JoinUs id="join-link"/>
     </StyledFooter>
 
 )
 export default Footer;
-
-
-

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import { Link } from 'react-router-dom';
 import ValidateUser from './ValidateUser';
 import HomestateSVGContainer from './HomestateSVGContainer';
 
@@ -25,6 +25,16 @@ height: 100vw;
 }
 `
 
+const HomeLink = () => (
+    <div>
+        <Link to="/">Home</Link>
+    </div>
+)
+const TestLink = () => (
+    <button>
+        <Link id="test-link" to="/Test">TEST LINK</Link>
+    </button>
+)
 
 class Signup extends React.Component {
     constructor(props) {
@@ -37,11 +47,10 @@ class Signup extends React.Component {
     render() {
         return (
             <StyledSignup>
-                <HomestateSVGContainer/>
-                <br />
-                <hr/>
-                <br />
-                <ValidateUser/>
+                <HomeLink />
+                <TestLink/>
+                <HomestateSVGContainer />
+                <ValidateUser />
             </StyledSignup>
         )
     }

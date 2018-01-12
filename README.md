@@ -6,12 +6,13 @@
 |:-----------|:-------|:-------|
 |**Slider**|handcoded|***√***|
 |**Responsivity**|media queries|***iPad,iPhone7,8,X(with some sizing problems),GalaxyS5***|
-|**layout**|CSS Grid|***√***|
+|**Layout**|CSS Grid|***√***|
+|**CSS Reset**|Normalize|***√***|
 |**Authentification**|npm-validator|***√***|
-|**react**|16.0.0|***√***|
-|**webpack**|watch/web-server|***√***|
+|**React**|16.0.0|***√***|
+|**Webpack**|watch/web-server|***√***|
 |**babel-core**|env,react|***√***|
-|**routes**|one|*Pending*|
+|**Routes**|one(plus one for components)|***√***|
 |**TabIndex Attrs**|a-tags and btns|*Pending*|
 
 
