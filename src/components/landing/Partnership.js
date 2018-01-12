@@ -21,7 +21,7 @@ background: url(./img/buddies.jpg) no-repeat center center;
 
   @media screen and (max-width: 768px) {    //tablet query  
     height: 52vh;
-    border: 1px solid fuchsia;
+    // border: 1px solid fuchsia;
     padding: 10% 0;
     & > .partnership-container {
         // background: brown;
@@ -58,18 +58,22 @@ background: url(./img/buddies.jpg) no-repeat center center;
             font-size: 1rem;
         }
         & p {
-        
            width: 98vw;
            line-height: 2;
+           font-size: .8rem;
         }
         & #icon-section {
-            text-align: center;
-            // background: brown;
+            height: 30vh;
+            // text-align: center;
             margin: 0 auto;
-
+            position: relative;
         }
         & img {
-            width: 30vw;
+            margin: -2vh auto;
+            // position: absolute;
+            min-width: 25vw;
+            // height: 27vh;
+            // border: 2px solid blue;
         }
     }
   }

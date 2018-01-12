@@ -8,7 +8,7 @@ width: 100vw;
 color: black
 background-color: grey;
 // border: 2px solid navy;
-background: url(./img/buddies.jpg) no-repeat center center; 
+background: url(./img/profile-background.jpg) no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

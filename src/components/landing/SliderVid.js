@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
+
+// FIXME: Too many queries
+
 const StyledSliderVid = styled.div`
     margin: 0 auto;
     width: 87vw;
@@ -10,16 +13,15 @@ const StyledSliderVid = styled.div`
     grid-gap: 0.5%;
     overflow: hidden;
     // border: 1px solid fuchsia;
-    // tablet query
-    @media screen and (max-width: 768px) {
+
+    @media screen and (max-width: 768px) {    // tablet query
     grid-auto-columns:33%;
     grid-gap: 1%;
     }
-    //phone query
-    @media screen and (max-width: 376px) {
+
+    @media screen and (max-width: 376px) {    //phone query
     grid-auto-columns: 100%;
     grid-gap: 1%;
-    
     }
 `
 const PicFrame = styled.section`
@@ -54,8 +56,8 @@ const PicFrame = styled.section`
     font-size: 0.6em;
     z-index: 20;
   }
-// tablet query
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 768px) {  // tablet query
+
       & img#media {
           height: 25vw;
         }
@@ -63,14 +65,16 @@ const PicFrame = styled.section`
             bottom: -8.5vh;
         }
     }
-// phone query
-@media screen and (max-width: 376px) {
+
+@media screen and (max-width: 376px) {   // phone query
     & > img#media {
     width: 80vw;
     height: 50vw;
     } 
     & > p {
+        text-align: center;
         bottom: -20vh;
+        font-size: 1rem;
     }
 }
 `
