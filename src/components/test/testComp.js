@@ -14,6 +14,7 @@ const HomeLink = () => (
         <Link to="/">Home</Link>
     </div>
 )
+
 class TestComp extends React.Component {
     constructor(props) {
         super(props)

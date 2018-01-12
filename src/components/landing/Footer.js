@@ -198,47 +198,20 @@ font-family: "Trebuchet MS", sans-serif;
 }
  */
 
-const StyledJoinBtn = styled.button`
-    
-        background-color: black;
-        color: #1BA3CC;
-        position: absolute;
-        top: 1vh;
-        left: 50vw;
-        width: 10vw;
-        height: 5vh;
-        margin-left: -5vw;
-        border: 0.5px solid #1BA3CC;
-        &:hover {
-            box-shadow: 0px 0px 5px 2px white;
-            color: white;
-            border: 1px solid maroon;
-        }
-        & > :visited {
-            color: #1BA3CC;
-        }
-        & > #link-text {
-            text-decoration: none;
-            font-weight: lighter;
-            font-size: 1.3rem;
-            &:hover {
-                color: white;
-            }
-        }
-`
 
 /**
  * Dead-simple Client-side route. (Simple Link to Signup Page)
  * FIXME: Styling may be a bit over-the-top.
  */
 
-const JoinUs = () => (
-    <StyledJoinBtn>
-        <Link id="link-text" to="/Signup">JOIN US</Link>
-    </StyledJoinBtn>
-)
+// const JoinUs = () => (
+//     <StyledJoinBtn>
+//         <Link id="link-text" to="/Signup">JOIN US</Link>
+//     </StyledJoinBtn>
+// )
 
 
+// <JoinUs id="join-link"/>
 
 const Footer = () => (
     <StyledFooter>       
@@ -259,8 +232,7 @@ const Footer = () => (
         <div id="text-level-four">
             <p>RC Trademarks and Copyrights do not exist. This site is fictitous. Robots are likely no cause for concern.</p>
         </div>
-        <JoinUs id="join-link"/>
-    </StyledFooter>
-
-)
+        </StyledFooter>
+        
+    )
 export default Footer;
