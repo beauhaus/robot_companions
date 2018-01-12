@@ -42,7 +42,7 @@ const StyledJoinBtn = styled.button`
         // mix-blend-mode: color-burn;
         mix-blend-mode: hard-light;
         // mix-blend-mode: soft-light;
-        mix-blend-mode: difference; √
+        mix-blend-mode: difference;
         // mix-blend-mode: exclusion;
         // mix-blend-mode: color;
         // mix-blend-mode: luminosity;
