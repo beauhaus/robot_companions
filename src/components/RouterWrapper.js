@@ -71,14 +71,14 @@ const StyledRetroBtn = styled.button`
         color: #1BA3CC;
 
         position: fixed;
-        top: 45vw;
+        top: 35vw;
         // top: 10vw;           // good for tablet
         right: 1vw;
         width: 2vw;
-        height: 10vw;
+        height: 25vw;
 
         top: 50%;
-        margin-top: -5vw;
+        margin-top: -17.5vw;
 
         z-index: 50;
         mix-blend-mode: difference;
@@ -113,9 +113,9 @@ const JoinUs = () => (
 )
 
 const RetroSignup = () => (
-    <StyledTestBtn>
-        <Link id="link-text" to="/test">RetroSignup</Link>
-    </StyledTestBtn>
+    <StyledRetroBtn>
+        <Link id="link-text" to="/test">RETRO  SIGNUP</Link>
+    </StyledRetroBtn>
 )
 
 /**
@@ -129,7 +129,8 @@ const Routes = (
     <BrowserRouter>
         <div>
         <JoinUs/>
-        <RetroSignupComponent/>
+        <Signup/>
+        <RetroSignup/>
         <Switch>
             <Route path="/" component={RobotCompanionsApp} exact={true} />
             <Route path="/signup" component={Signup} />
