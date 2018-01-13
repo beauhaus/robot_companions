@@ -19,51 +19,87 @@ import Test from './test/testComp'
         404 ~ <Link to="/">Go back</Link>
     </div>
 )
+
 const StyledJoinBtn = styled.button`
     
-        
-        color: white;
-        border: 1px solid coral;
+        background: transparent;
+        border: .25px solid coral;
         text-decoration: none;
-
         color: #1BA3CC;
+
         position: fixed;
-        // margin-bottom: 2vh;
-        top: 20vh;
-        z-index: 100;
-        // mix-blend-mode: hue; x
-        // mix-blend-mode: multiply;  x
-        // mix-blend-mode: saturation;
-        // mix-blend-mode: screen;
-        // mix-blend-mode: overlay;
-        // mix-blend-mode: darken;
-        // mix-blend-mode: lighten;
-        // mix-blend-mode: color-dodge;
-        // mix-blend-mode: color-burn;
-        mix-blend-mode: hard-light;
-        // mix-blend-mode: soft-light;
+        top: 45vw;
+        // top: 10vw;           // good for tablet
+        left: 1vw;
+        width: 2vw;
+        height: 10vw;
+
+        top: 50%;
+        margin-top: -5vw;
+
+        z-index: 50;
         mix-blend-mode: difference;
-        // mix-blend-mode: exclusion;
-        // mix-blend-mode: color;
-        // mix-blend-mode: luminosity;
-    
-        // left: 50vw;
-        // width: 10vw;
-        // height: 5vh;
-        // margin-left: -5vw;
-        // border: 0.5px solid #1BA3CC;
-        // &:hover {
-        //     box-shadow: 0px 0px 5px 2px white;
-        //     color: white;
-        //     border: 1px solid maroon;
-        // }
+        &:hover {
+            box-shadow: 0px 0px 5px 2px white;
+            mix-blend-mode: difference;
+            // mix-blend-mode: luminosity;
+
+            color: white;
+            border: 1px solid maroon;
+        }
         & > :visited {
             color: #1BA3CC;
         }
         & > #link-text {
+            color: inherit;
+            word-break: break-all;
             text-decoration: none;
             font-weight: lighter;
-            font-size: 1.3rem;
+            font-size: 2vw;
+            letter-spacing: 0.1rem;
+            &:hover {
+                color: white;
+            }
+        }
+`
+
+const StyledTestBtn = styled.button`
+    
+        background: transparent;
+        border: .25px solid coral;
+        text-decoration: none;
+        color: #1BA3CC;
+
+        position: fixed;
+        top: 45vw;
+        // top: 10vw;           // good for tablet
+        right: 1vw;
+        width: 2vw;
+        height: 10vw;
+
+        top: 50%;
+        margin-top: -5vw;
+
+        z-index: 50;
+        mix-blend-mode: difference;
+        &:hover {
+            box-shadow: 0px 0px 5px 2px white;
+            mix-blend-mode: difference;
+            // mix-blend-mode: luminosity;
+
+            color: white;
+            border: 1px solid maroon;
+        }
+        & > :visited {
+            color: #1BA3CC;
+        }
+        & > #link-text {
+            color: inherit;
+            word-break: break-all;
+            text-decoration: none;
+            font-weight: lighter;
+            font-size: 2vw;
+            letter-spacing: 0.1rem;
             &:hover {
                 color: white;
             }
@@ -72,8 +108,14 @@ const StyledJoinBtn = styled.button`
 
 const JoinUs = () => (
     <StyledJoinBtn>
-        <Link id="link-text" to="/Signup">JOIN US</Link>
+        <Link id="link-text" to="/Signup">JOIN</Link>
     </StyledJoinBtn>
+)
+
+const Testing = () => (
+    <StyledTestBtn>
+        <Link id="link-text" to="/test">TEST</Link>
+    </StyledTestBtn>
 )
 
 /**
@@ -87,6 +129,7 @@ const Routes = (
     <BrowserRouter>
         <div>
         <JoinUs/>
+        <Testing/>
         <Switch>
             <Route path="/" component={RobotCompanionsApp} exact={true} />
             <Route path="/signup" component={Signup} />

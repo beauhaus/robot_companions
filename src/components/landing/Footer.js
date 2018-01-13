@@ -187,17 +187,6 @@ font-family: "Trebuchet MS", sans-serif;
 }
 `
 
-/**
- * centering
- * 
-.ctr-example2 {
-  width: 40vw;
-  position: absolute;
-  left: 50%;
-  margin-left: -20vw;
-}
- */
-
 
 /**
  * Dead-simple Client-side route. (Simple Link to Signup Page)
