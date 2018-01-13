@@ -1,30 +1,36 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import NEC from './NEC' 
-import MID from './MID'
-import SAC from './SAC'
-import ENC from './ENC'
-import ESC from './ESC'
-import WNC from './WNC'
-import WSC from './WSC'
-import MTN from './MTN'
-import PAC from './PAC'
+// import NEC from './NEC' 
+// import MID from './MID'
+// import SAC from './SAC'
+// import ENC from './ENC'
+// import ESC from './ESC'
+// import WNC from './WNC'
+// import WSC from './WSC'
+// import MTN from './MTN'
+// import PAC from './PAC'
 import InputPanel from './InputPanel';
 
 
 const StyledTestMap = styled.div`
 position: relative;
+h1 {
+    float:right;
+
+}
     & #tv-panel {              //section
         position: relative;
         width: 40vw;
         height: 100vh;
+        box-shadow: 5px, 5px 20px 14px black;
             & > #screen-container-div {
             position: absolute;
-            width: 40vw;
+            width: 35vw;
             top: 10vh;
             border-radius: 40px;
             margin-left: -15vw;
             left: 50%;
+            // box-shadow: 5px, 5px 20px 14px black;
             & #americaMapFrame {
                 & #interlace {
                     stroke-width: 1px;
@@ -121,18 +127,9 @@ class TestMap extends React.Component {
         return (
             <StyledTestMap>
                 <button onClick={this.handleClick}>Submit State</button>
-                <h1>{this.state.region && "Please choose your home state."}</h1>
-                <InputPanel />
+                <h1 id="home-prompt">{this.state.region && "Please choose your home state."}</h1>
+                <InputPanel homeregion={this.state.region}/>
 
-                    {this.state.region === "NEC" && <NEC />}
-                    {this.state.region === "MID" && <MID />}
-                    {this.state.region === "SAC" && <SAC />}
-                    {this.state.region === "ENC" && <ENC />}
-                    {this.state.region === "ESC" && <ESC />}
-                    {this.state.region === "WNC" && <WNC />}
-                    {this.state.region === "WSC" && <WSC />}
-                    {this.state.region === "MTN" && <MTN />}
-                    {this.state.region === "PAC" && <PAC />}
                 <section id="tv-panel">
                     <div id="screen-container-div">
 
