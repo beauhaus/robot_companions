@@ -2,7 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledMID = styled.div`
-  width: 100vw;
+  width: 100%;
+  color: pink;
+  
   & > button {
       background: skyblue;
       margin: 1vh 2vw;
@@ -32,7 +34,7 @@ class MID extends React.Component {
                 <button id="PA" onClick={this.handleClick}>PA</button>
                 <button id="MD" onClick={this.handleClick}>MD</button>
                 <button id="VA" onClick={this.handleClick}>VA</button>
-                {this.state.home && <h1>You chose {`${this.state.home}`}</h1>}
+                {this.state.home && <h1 id="home-result-alert">You chose {`${this.state.home}`}</h1>}
             </StyledMID>
         )
     }

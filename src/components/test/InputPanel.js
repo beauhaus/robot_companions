@@ -1,15 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import NEC from './NEC' 
-import MID from './MID'
-import SAC from './SAC'
-import ENC from './ENC'
-import ESC from './ESC'
-import WNC from './WNC'
-import WSC from './WSC'
-import MTN from './MTN'
-import PAC from './PAC'
 
 
 const StyledInputPanel = styled.div`
@@ -32,13 +23,16 @@ box-shadow: inset -10px 5px 10px 14px black;
     display: grid;
     grid-template-columns: 50vw auto;
     grid-template-rows: 1fr;
+    &  div {
+       position: absolute;
+       width: 100%;
 
-
-    & > button {
-       
-        
-        z-index: 20;
-        border: 5px solid purple;
+       border: 1px solid fuchsia;
+        z-index: 80;
+        & >h1 {
+            font-size: .8rem;
+            color: white;
+        }
     }
 }
 & #ridge-container {
@@ -168,17 +162,7 @@ class InputPanel extends React.Component {
                 <div className="ridge"></div>                
  
                 </div>
-                <div id="home-btn-display">
-                    {this.props.homeregion === "NEC" && <NEC />}
-                    {this.props.homeregion === "MID" && <MID />}
-                    {this.props.homeregion === "SAC" && <SAC />}
-                    {this.props.homeregion === "ENC" && <ENC />}
-                    {this.props.homeregion === "ESC" && <ESC />}
-                    {this.props.homeregion === "WNC" && <WNC />}
-                    {this.props.homeregion === "WSC" && <WSC />}
-                    {this.props.homeregion === "MTN" && <MTN />}
-                    {this.props.homeregion === "PAC" && <PAC />}
-                </div>
+               
             </StyledInputPanel>
         )
     }

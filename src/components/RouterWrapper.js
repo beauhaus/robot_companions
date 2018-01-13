@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 import Signup from './onboarding/Signup';
 // import 'normalize.css/normalize.css'
-import Test from './test/testComp'
+import RetroSignupComponent from './test/RetroSignupComponent'
 // import { Switch } from '../../../../../Library/Caches/typescript/2.6/node_modules/@types/react-router';
 
 
@@ -63,7 +63,7 @@ const StyledJoinBtn = styled.button`
         }
 `
 
-const StyledTestBtn = styled.button`
+const StyledRetroBtn = styled.button`
     
         background: transparent;
         border: .25px solid coral;
@@ -112,9 +112,9 @@ const JoinUs = () => (
     </StyledJoinBtn>
 )
 
-const Testing = () => (
+const RetroSignup = () => (
     <StyledTestBtn>
-        <Link id="link-text" to="/test">TEST</Link>
+        <Link id="link-text" to="/test">RetroSignup</Link>
     </StyledTestBtn>
 )
 
@@ -129,11 +129,11 @@ const Routes = (
     <BrowserRouter>
         <div>
         <JoinUs/>
-        <Testing/>
+        <RetroSignupComponent/>
         <Switch>
             <Route path="/" component={RobotCompanionsApp} exact={true} />
             <Route path="/signup" component={Signup} />
-            <Route path="/test" component={Test} />
+            <Route path="/test" component={RetroSignupComponent} />
             <Route component={NotFound} />
         </Switch>
         </div>

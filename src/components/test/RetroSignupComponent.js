@@ -2,7 +2,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import TestMap from './TestMap'
+import MapFrame from './MapFrame'
+import InputPanel from './InputPanel'
 import { Link } from 'react-router-dom';
 
 
@@ -17,7 +18,7 @@ const HomeLink = () => (
     </div>
 )
 
-class TestComp extends React.Component {
+class RetroSignupComponent extends React.Component {
     constructor(props) {
         super(props)
         // console.log("props", props.love)
@@ -27,10 +28,11 @@ class TestComp extends React.Component {
         return (
             <StyledTest>
             <HomeLink />
-                <TestMap/>
+                <InputPanel/>
+                <MapFrame/>
             </StyledTest>
         )
     }
 }
 
-export default TestComp;
+export default RetroSignupComponent;
