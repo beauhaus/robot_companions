@@ -1,7 +1,8 @@
+
 import React from 'react';
 import styled from 'styled-components';
 
-const StyledMID = styled.div`
+const StyledESC = styled.div`
   width: 100vw;
   & > button {
       background: skyblue;
@@ -9,8 +10,8 @@ const StyledMID = styled.div`
       padding: 1%;
   }
 `
-// MIDATLANTIC STATES
-class MID extends React.Component {
+// EAST SOUTH CENTRAL STATES
+class ESC extends React.Component {
     constructor(props) {
         super(props)
         const home = '';
@@ -25,17 +26,15 @@ class MID extends React.Component {
     }
     render() {
         return (
-            <StyledMID>
-                <button id="NY" onClick={this.handleClick}>NY</button>
-                <button id="NJ" onClick={this.handleClick}>NJ</button>
-                <button id="DE" onClick={this.handleClick}>DE</button>
-                <button id="PA" onClick={this.handleClick}>PA</button>
-                <button id="MD" onClick={this.handleClick}>MD</button>
-                <button id="VA" onClick={this.handleClick}>VA</button>
+            <StyledESC>
+                <button id="KY" onClick={this.handleClick}>KY</button>
+                <button id="TN" onClick={this.handleClick}>TN</button>
+                <button id="MS" onClick={this.handleClick}>MS</button>
+                <button id="AL" onClick={this.handleClick}>AL</button>
                 {this.state.home && <h1>You chose {`${this.state.home}`}</h1>}
-            </StyledMID>
+            </StyledESC>
         )
     }
 }
 
-export default MID;
+export default ESC;
