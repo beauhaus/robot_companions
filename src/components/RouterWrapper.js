@@ -64,7 +64,6 @@ const StyledJoinBtn = styled.button`
 `
 
 const StyledRetroBtn = styled.button`
-    
         background: transparent;
         border: .25px solid coral;
         text-decoration: none;
@@ -125,11 +124,11 @@ const RetroSignup = () => (
  */
 
 
+// <Signup/>
 const Routes = (
     <BrowserRouter>
         <div>
         <JoinUs/>
-        <Signup/>
         <RetroSignup/>
         <Switch>
             <Route path="/" component={RobotCompanionsApp} exact={true} />
