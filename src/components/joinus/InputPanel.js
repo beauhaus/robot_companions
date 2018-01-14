@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import ValidateUser from './ValidateUser';
 
-
-
 const StyledInputPanel = styled.div`
 position: absolute;
 top: 10vh;
@@ -12,67 +10,43 @@ height: 80vh;
 right: 1vw;
 overflow-X: hidden;
 border: 20px solid #97958c;
-box-shadow: inset -10px 5px 10px 14px black;
-& #home-btn-display {
-    background: #545d63;
-    position: relative;
-    box-shadow: inset 0px 4px 15px 5px rgba(0,0,0,0.5);
-    width: 94vw;
-    height 10vw;
-    bottom: 0;
-    opacity: 1;
-    display: grid;
-    grid-template-columns: 50vw auto;
-    grid-template-rows: 1fr;
-
-    &  div {
-       position: absolute;
-       width: 100%;
-
-       border: 1px solid fuchsia;
-        z-index: 80;
-        & >h1 {
-            font-size: .8rem;
-            color: white;
-        }
-    }
-}
-& #ridge-container {
-    // position: absolute;
+& #inner-shadow {
+    box-shadow: inset -2px 2px 10px 2px rgba(0,0,0,0.5);
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
+    height: 100%;
+    z-index: 4;
+}
+& #ridge-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 3;
 }
 & .ridge {
-    filter: blur(2px);
-    opacity: 0.8;
-    width: 105%;
+    filter: blur(1px);
+    z-index: 2;
+    width: 102%;
     margin-left: -5px;
-    height: 15px;
-    border: 2.5px solid #b4b2a6;
+    height: 2vh;
+    border: .5vh solid #b4b2a6;
     border-top-color: rgba(0,0,0,0.5);
     background: #b4b2a6;
-    box-shadow: inset 0px -5px 5px 0px rgba(0,0,0,0.7);
+    box-shadow: inset 0px -.5vh .1vh 0px rgba(0,0,0,0.7);
 }
 `
-const ValidateLight = styled.div`
-    position: absolute;
-     width: 8vw;
-     height: 4vh;
-     border: 4px solid #858370;
-     background: #2e302e;  //default color
-     box-shadow: -3px 3px 5px 3px rgba(0,0,0,.3);
-     border-radius: 2px;
-     z-index: 10;
-     right: 2vw;
-     text-align: center;
-     line-height: .8;
-     #validate-user-comp { 
-         width: 40vw;
-         background: green;
-         margin-left: 50vw;
-     }
-`
+
+const TextureMaker = () => (
+    <div>
+    <div id="inner-shadow"></div>
+        <div id="ridge-container">
+            {[...Array(37).keys()].map((item, idx) =>
+                <div key={idx} className="ridge"></div>)}
+        </div>
+    </div>
+)
 
 
 class InputPanel extends React.Component {
@@ -86,46 +60,12 @@ class InputPanel extends React.Component {
         this.setState({
             home: e.target.id
         })
-        // console.log(this.state.home)
     }
     render() {
-
-        // <ValidateLight id="homeLight"/>
         return (
             <StyledInputPanel>
-              
+                <TextureMaker />
                 <ValidateUser id="validate-user-comp"/>
-
-              
-
-
-                <div id="ridge-container">
-                <div className="ridge"></div>
-                <div className="ridge"></div>
-                <div className="ridge"></div>
-                <div className="ridge"></div>
-                <div className="ridge"></div>
-                <div className="ridge"></div>
-                <div className="ridge"></div>
-                <div className="ridge"></div>
-                <div className="ridge"></div>
-                <div className="ridge"></div>
-                <div className="ridge"></div>
-                <div className="ridge"></div>
-                <div className="ridge"></div>
-                <div className="ridge"></div>
-                <div className="ridge"></div>
-                <div className="ridge"></div>
-                <div className="ridge"></div>
-                <div className="ridge"></div>
-                <div className="ridge"></div>
-                <div className="ridge"></div>
-                <div className="ridge"></div>                
-                <div className="ridge"></div>
-                <div className="ridge"></div>                
- 
-                </div>
-               
             </StyledInputPanel>
         )
     }

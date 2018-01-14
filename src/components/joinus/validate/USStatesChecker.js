@@ -9,29 +9,8 @@ const StyledUSStatesChecker = styled.div`
     color: #1c1841;
 `
 const USStatesCheckerLabel = styled.label`
-        background-color: ${props =>(props.isTrue? "green":"orangered")};
-        width: 10vw;
-        height: 4.5vh;
-        position: absolute;
-        right: 0;
-        border: 4px solid #858370;
-        box-shadow: -3px 3px 5px 3px rgba(0,0,0,.3);
-        border-radius: 2px;
-        text-align: center;
-        font-family: sans-serif;
-        font-size: .6rem;
-        color: black;
-        line-height: 2;
-        transition: all 1s ease;
-    & input {
-        height: 4vh;
-        font-size: 1rem;
-        position: absolute;
-        right: 12vw;
-        background: grey;
-        border: 2px solid tan;
-    }
-}
+        background-color: ${props =>(props.isTrue? "green":"#7a2929")};
+        background-image: rgba(0,0,0,0.5);
 `
 class USStatesChecker extends React.Component {
     constructor(props) {
