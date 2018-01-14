@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import ValidateUser from './ValidateUser';
 
 
 
@@ -66,46 +67,10 @@ const ValidateLight = styled.div`
      right: 2vw;
      text-align: center;
      line-height: .8;
-     &#firstNameLight {
-        top: 8vh;
-        &::after {
-            font-family: sans-serif;
-            font-size: .6rem;
-            color: rgba(36, 41, 36, 0.8);
-            color: black;
-            content: "First Name";
-        }
-    }
-    &#lastNameLight {
-        top: 20vh;
-        &::after {
-            font-family: sans-serif;
-            font-size: .6rem;
-            color: rgba(36, 41, 36, 0.8);
-            color: black;
-            content: "Last Name";
-        }
-    }
-    &#emailLight {
-        top: 32vh;
-        &::after {
-            font-family: sans-serif;
-            font-size: .6rem;
-            color: rgba(36, 41, 36, 0.8);
-            color: black;
-            content: "Email";
-        }
-    }
-    &#zipLight {
-         top: 44vh;
-
-         &::after {
-             font-family: sans-serif;
-             font-size: .6rem;
-             color: rgba(36, 41, 36, 0.8);
-             /* color: black; */
-             content: "Zip Code";
-         }
+     #validate-user-comp { 
+         width: 40vw;
+         background: green;
+         margin-left: 50vw;
      }
 `
 
@@ -128,10 +93,8 @@ class InputPanel extends React.Component {
         // <ValidateLight id="homeLight"/>
         return (
             <StyledInputPanel>
-                <ValidateLight id="firstNameLight" />
-                <ValidateLight id="lastNameLight" />
-                <ValidateLight id="emailLight" />
-                <ValidateLight id="zipLight" />
+              
+                <ValidateUser id="validate-user-comp"/>
 
               
 
