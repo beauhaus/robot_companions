@@ -22,7 +22,6 @@ class ENC extends React.Component {
         this.setState({
             home: e.target.id
         })
-        // console.log(this.state.home)
     }
     render() {
         return (

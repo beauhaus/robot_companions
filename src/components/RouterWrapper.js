@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 import Signup from './onboarding/Signup';
 // import 'normalize.css/normalize.css'
-import RetroSignupComponent from './test/RetroSignupComponent'
+import RetroSignupComponent from './joinus/RetroSignupComponent'
 // import { Switch } from '../../../../../Library/Caches/typescript/2.6/node_modules/@types/react-router';
 
 
@@ -113,7 +113,7 @@ const JoinUs = () => (
 
 const RetroSignup = () => (
     <StyledRetroBtn>
-        <Link id="link-text" to="/test">RETRO  SIGNUP</Link>
+        <Link id="link-text" to="/joinus">RETRO  SIGNUP</Link>
     </StyledRetroBtn>
 )
 
@@ -123,8 +123,6 @@ const RetroSignup = () => (
  * begin with with "/".
  */
 
-
-// <Signup/>
 const Routes = (
     <BrowserRouter>
         <div>
@@ -133,7 +131,7 @@ const Routes = (
         <Switch>
             <Route path="/" component={RobotCompanionsApp} exact={true} />
             <Route path="/signup" component={Signup} />
-            <Route path="/test" component={RetroSignupComponent} />
+            <Route path="/joinus" component={RetroSignupComponent} />
             <Route component={NotFound} />
         </Switch>
         </div>

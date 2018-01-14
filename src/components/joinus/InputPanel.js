@@ -23,6 +23,7 @@ box-shadow: inset -10px 5px 10px 14px black;
     display: grid;
     grid-template-columns: 50vw auto;
     grid-template-rows: 1fr;
+
     &  div {
        position: absolute;
        width: 100%;
@@ -40,7 +41,6 @@ box-shadow: inset -10px 5px 10px 14px black;
     top: 0;
     left: 0;
     width: 100%;
-    
 }
 & .ridge {
     filter: blur(2px);

@@ -34,6 +34,17 @@
 + HOSTING!
 
 
+## Last day TODOS
+
++ WCGW at footer on mobile
++ port signup to retro signup
++ consider buttons with labels for states that appear upon region click
++ replace acronyms with full names of regions in "monitor"
++ folder tree for each region
++ comment code for component nodes. Be short and to the point.
++ glitch animation on monitor? --Only if there's time...
+
+
 
 ## CLI commands
 

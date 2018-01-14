@@ -4,7 +4,12 @@ import styled from 'styled-components';
 import InputPanel from './InputPanel';
 import RegionMap from './RegionMap';
 
-
+/**
+ * Map frame is for easthetics. It offers an alternative to the drop-down menu.
+ * I wanted to render a vignette on the monitor. This effect would render buttons
+ * unclickable (despite z-indexing). I solved the problem by reducing the opacity
+ * on the map so as to convey a sense of depth.
+ */
 const StyledMapFrame = styled.div`
 position: relative;
 
