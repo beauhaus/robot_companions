@@ -69,7 +69,37 @@ box-shadow: 5px, 5px 20px 14px black;
             }
         }
     }
+svg> path#glitch-line {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(400px);
+  stroke-width: 4px;
+  stroke: #00a100;
+  animation: glitch 10s 3s infinite;
+}
+
+
+@keyframes glitch {
+    0% { transform: translateY(500px);
+         opacity: 0;
+         stroke-width: 0;
+     }
+     50% {
+         opacity: .05;
+         stroke-width: 140px;
+      }
+    100% { 
+        transform: translateY(-2000px);
+        opacity: 0;
+    }
+}
 `
+
+const GlitchLine = () => (
+    <svg width="600" height="600" viewBox="0 0 600 600">
+        <path  id="glitch-line" d="M0 260.5h600"  />
+    </svg>
+)
 
 class MapFrame extends React.Component {
     constructor(props) {
@@ -86,6 +116,7 @@ class MapFrame extends React.Component {
                             viewBox="0 0 600 600"
                             preserveAspectRatio="xMinYMin meet"
                         >
+
                             <linearGradient id="screen-gradient" x1="125.9854" x2="562.9851" y1="387.4971" y2="166.497" gradientUnits="userSpaceOnUse">
                                 <stop offset="0" stopColor="#333" />
                                 <stop offset="1" stopColor="#395b5c" />
@@ -98,19 +129,20 @@ class MapFrame extends React.Component {
                                 <path className="interlacer" strokeLinejoin="bevel" d="M557 601.5H38.7v-.7c-7.3 0-14.5-1.8-20.7-5.2l-.4-.1h563.8l.2-.6c-7.5 4.1-16.6 6.4-25.5 6.4" />
                                 <path className="interlacer" d="M598 573.5H1.7c.5 0 .5 1.7.8 2.5.8 1.8.6 2.5 2.6 2.5h583c2.1 0 4.1-.2 6.2-.2.2 0 .6 0 .9-.1 1.2-.4 2.3-3.7 2.3-5.1M-2 562.5h602.1-.5c0 1-.1 4.4-1.4 4.8-.2.1-.5.1-.7.1-.7 0-1.4.1-2.1.1H2.1c-1.6 0-1.3-.5-1.7-1.9-.4-1.2-1.6-2.2-1.8-3.5m590.9 26.4c-191.8.5-384.6.5-576.5.5-2 0-4-1-5-2s-1-3-1-3c194.9-1 390.7 0 585.6-.5m-.6-.2c-.6 1.6-2.8 3.4-2.5 5m-591-36.8h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601zm0-10h601v5h-601z" />
                             </g>
+                            <GlitchLine/>
 
                         </svg>
 
                         <div id="inner-glow-overlay">
-                            <RegionMap id="region-map"/>
+                            <RegionMap id="region-map" />
                         </div>
-                        
+
                     </div>
                 </section>
             </StyledMapFrame>
         )
     }
-    
+
 }
 
 export default MapFrame;
