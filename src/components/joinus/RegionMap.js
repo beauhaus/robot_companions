@@ -59,8 +59,10 @@ svg > svg .home-result{
         }
     }
 }
-    svg > svg> text#chosen {
-        fill: coral;
+    svg > svg> text {
+        fill: rgba(255, 156, 121, 0.4);
+        transform: scale(1.5, 2) translate(-10vw, 10vh);
+        
         }
     svg > svg path{
         stroke-width: 0.5px;

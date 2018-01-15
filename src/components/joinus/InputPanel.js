@@ -41,7 +41,7 @@ const TextureMaker = () => (
     <div>
     <div id="inner-shadow"></div>
         <div id="ridge-container">
-            {[...Array(37).keys()].map((item, idx) =>
+            {[...Array(40).keys()].map((item, idx) =>
                 <div key={idx} className="ridge"></div>)}
         </div>
     </div>
