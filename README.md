@@ -108,6 +108,7 @@ Engagement ought to be engaging.
 
 
 So instead of this:
+<<<<<<< HEAD
 
 ![drop-down](./readmeImg/drop.png "dropdown")
 
