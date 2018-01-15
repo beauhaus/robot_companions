@@ -9,7 +9,7 @@ import USStatesChecker from './validate/USStatesChecker';
 
 const StyledValidateUser = styled.div`
     position: absolute;
-    top: 2vh;
+    top: 6vh;
     right 2vw;
     z-index: 4;
     color: #1c1841;
@@ -51,17 +51,3 @@ const ValidateUser = () => (
 )
 
 export default ValidateUser;
-
-
-/*
-.true {
-  background-color: rgb(50, 76, 97);
-  color: greenyellow;
-}
-
-.false {
-  background-color: #420505;
-  color: #b8b8b8;
-}
-
-*/

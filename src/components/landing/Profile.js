@@ -130,7 +130,7 @@ padding-top: 8%;
  * I don't love the positioning or size of the image and plan to fix it.
  */
 const Profile = () => (
-    <StyledProfile className="profile">
+    <StyledProfile className="profile" id="profile">
         <StyledProfileContainer className="profile-container">
             <section id="profile-pic-section">
                 <img id="profile-image" src="./img/profile-pic.jpg" alt="profile-pic" />

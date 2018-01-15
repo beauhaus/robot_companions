@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 
 const StyledMobileLinks = styled.div`
     text-align: left;
@@ -13,13 +14,25 @@ const StyledMobileLinks = styled.div`
         text-decoration: none;
     }
 `
+// <Route path="/joinus" component={RetroSignupComponent} />
+const RetroSignupComponent = () => (
+    <button>
+        <Link id="link-text" to="/joinus">RETRO  SIGNUP</Link>
+    </button>
+)
 
 const MobileLinks = () => {
     return (
-        <StyledMobileLinks>
-            <a href="#">RC Partnership</a>
-            <a href="#">RC Profile</a>
-        </StyledMobileLinks>
+        <BrowserRouter>
+            <div>
+                <StyledMobileLinks>
+                    <RetroSignupComponent />
+                    <a href="#partnership">RC Partnership</a>
+                    <a href="#profile">RC Profile</a>
+                </StyledMobileLinks>
+                <Route path="/joinus" component={RetroSignupComponent} />
+            </div>
+        </BrowserRouter>
     )
 }
 

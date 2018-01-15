@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom'; /*necessary?*/
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import RobotCompanionsApp from './landing/RobotCompanions';
 import styled from 'styled-components';
-
-import Signup from './onboarding/Signup';
+import Header from './landing/Header';
+// import Signup from './onboarding/Signup';
 // import 'normalize.css/normalize.css'
 import RetroSignupComponent from './joinus/RetroSignupComponent'
 // import { Switch } from '../../../../../Library/Caches/typescript/2.6/node_modules/@types/react-router';
@@ -13,20 +13,18 @@ import RetroSignupComponent from './joinus/RetroSignupComponent'
 /**
  * Client-side route. (Any 'wrong' URL leads here)
  */
-
  const NotFound = () => (
     <div>
         404 ~ <Link to="/">Go back</Link>
     </div>
 )
 
-const StyledJoinBtn = styled.button`
-    
+// This has mix-blend-mode to interact a bit with background
+const JoinUsButton = styled.button`
         background: transparent;
         border: .25px solid coral;
         text-decoration: none;
         color: #1BA3CC;
-
         position: fixed;
         top: 45vw;
         // top: 10vw;           // good for tablet
@@ -36,14 +34,11 @@ const StyledJoinBtn = styled.button`
 
         top: 50%;
         margin-top: -5vw;
-
         z-index: 50;
         mix-blend-mode: difference;
         &:hover {
             box-shadow: 0px 0px 5px 2px white;
             mix-blend-mode: difference;
-            // mix-blend-mode: luminosity;
-
             color: white;
             border: 1px solid maroon;
         }
@@ -63,58 +58,12 @@ const StyledJoinBtn = styled.button`
         }
 `
 
-const StyledRetroBtn = styled.button`
-        background: transparent;
-        border: .25px solid coral;
-        text-decoration: none;
-        color: #1BA3CC;
 
-        position: fixed;
-        top: 35vw;
-        // top: 10vw;           // good for tablet
-        right: 1vw;
-        width: 2vw;
-        height: 25vw;
-
-        top: 50%;
-        margin-top: -17.5vw;
-
-        z-index: 50;
-        mix-blend-mode: difference;
-        &:hover {
-            box-shadow: 0px 0px 5px 2px white;
-            mix-blend-mode: difference;
-            // mix-blend-mode: luminosity;
-
-            color: white;
-            border: 1px solid maroon;
-        }
-        & > :visited {
-            color: #1BA3CC;
-        }
-        & > #link-text {
-            color: inherit;
-            word-break: break-all;
-            text-decoration: none;
-            font-weight: lighter;
-            font-size: 2vw;
-            letter-spacing: 0.1rem;
-            &:hover {
-                color: white;
-            }
-        }
-`
-
-const JoinUs = () => (
-    <StyledJoinBtn>
-        <Link id="link-text" to="/Signup">JOIN</Link>
-    </StyledJoinBtn>
-)
 
 const RetroSignup = () => (
-    <StyledRetroBtn>
-        <Link id="link-text" to="/joinus">RETRO  SIGNUP</Link>
-    </StyledRetroBtn>
+    <JoinUsButton>
+        <Link id="link-text" to="/joinus">JOIN</Link>
+    </JoinUsButton>
 )
 
 /**
@@ -124,11 +73,9 @@ const RetroSignup = () => (
 const Routes = (
     <BrowserRouter>
         <div>
-        <JoinUs/>
         <RetroSignup/>
         <Switch>
             <Route path="/" component={RobotCompanionsApp} exact={true} />
-            <Route path="/signup" component={Signup} />
             <Route path="/joinus" component={RetroSignupComponent} />
             <Route component={NotFound} />
         </Switch>

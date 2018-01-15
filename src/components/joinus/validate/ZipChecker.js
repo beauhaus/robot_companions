@@ -10,9 +10,12 @@ https://stackoverflow.com/questions/160550/zip-code-us-postal-code-validation
 const StyledZipChecker = styled.div`
     height: 10vh;
     color: #1c1841;
+    & input::placeholder {
+        color: #c4bfad;
+    }
 `
 const ZipLabel = styled.label`
-    background-color: ${props =>(props.isTrue? "green":"orangered")};
+    background-color: ${props =>(props.isTrue? "green":"#7a2929")};
 `
 class ZipChecker extends React.Component {
     constructor(props) {
@@ -37,7 +40,7 @@ class ZipChecker extends React.Component {
     `)}
             <ZipLabel isTrue={this.state.zipBool} 
             >Zip Code 
-                <input onChange={this.handleZip} type="text" />
+                <input onChange={this.handleZip} type="text" placeholder="Zipcode"/>
             </ZipLabel>
         </StyledZipChecker>
         )

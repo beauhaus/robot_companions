@@ -11,21 +11,25 @@ import RegionMap from './RegionMap';
  * on the map so as to convey a sense of depth.
  */
 const StyledMapFrame = styled.div`
-position: relative;
+position: absolute;
+top: 2vh;
+width: 50vw;
 
-    & #tv-panel {              //section
-        position: relative;
-        width: 40vw;
-        height: 100vh;
-        box-shadow: 5px, 5px 20px 14px black;
-            & > #screen-container-div {
+box-shadow: 5px, 5px 20px 14px black;
+
+& #tv-panel {              //section
+    position: relative;
+    width: 50vw;
+    height: 100vh;
+    & > #screen-container-div {
+        // border: 2px solid fuchsia;
             position: absolute;
             width: 35vw;
-            top: 10vh;
+            top: 20vh;
             border-radius: 40px;
             margin-left: -15vw;
             left: 50%;
-            // box-shadow: 5px, 5px 20px 14px black;
+            box-shadow: 5px, 5px 20px 14px black;
             & #americaMapFrame {
                 & #interlace {
                     stroke-width: 1px;

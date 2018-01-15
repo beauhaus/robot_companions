@@ -47,40 +47,26 @@ svg {
 }
 
 // rule for state labels in svg monitor "buttons"
-svg > svg .home-result > text {
-    font-size: 50px;
-    fill: #FFF;
-    font-family:'Arial-Black', sans-serif;
-    transform: scale(1, .5);
+svg > svg .home-result{
+        & > text {
+        font-size: 50px;
+        fill: #FFF;
+        opacity: .6;
+        font-family:'Arial-Black', sans-serif;
+        transform: scale(1, .5);
+        &:hover {
+         opacity: 1;
+        }
+    }
 }
-svg > svg> text#chosen {
-    fill: coral;
-}
-
+    svg > svg> text#chosen {
+        fill: coral;
+        }
+    svg > svg path{
+        stroke-width: 0.5px;
+        stroke: lightgreen;
+    }
 `
-
-/**
- * THere are 50 states
- * into categories used by the US Census.
- * 
- * User clicks on a region which produces a collection of states in inputPanel
- * NB: The term "home" in (classes & IDs) is used instead of "state" to avoid
- * confusion with React's use of the word "state".
- * 
- * Naming System for IDs:
- * 
- *    --- "NEC" = New England Coast
- *    --- "MID" = Mid-Atlantic States
- *    --- "SAC" = South-Atlantic Coast
- *    --- "ESC" = East-South Central
- *    --- "ENC" = East-North Central
- *    --- "WNC" = West-North Central
- *    --- "MTN" = Mountain
- *    --- "PAC" = Pacific States
- */
-const homeOptionsDisplay = (input) => {
-    console.log("from funk: options: ", input);
-}
 
 
 class RegionMap extends React.Component {
@@ -88,7 +74,6 @@ class RegionMap extends React.Component {
         super(props)
         const home = ''; /* necessary?*/
         this.handleRegionClick = this.handleRegionClick.bind(this);
-        this.handleHomeClick = this.handleHomeClick.bind(this);
         this.state = {
             region: '',
             home: ''
@@ -98,15 +83,6 @@ class RegionMap extends React.Component {
 
     // HI and AK are grouped together & are part of PAC
     handleRegionClick(e) {
-        if (e.target.id === "cal" || e.target.id === "HIAK") {
-            e.target.id = "PAC";
-        }
-        this.setState({
-            region: e.target.id,
-            home: ''
-        })
-    }
-    handleHomeClick(e) {
         if (e.target.id === "cal" || e.target.id === "HIAK") {
             e.target.id = "PAC";
         }

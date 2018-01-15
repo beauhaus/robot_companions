@@ -6,38 +6,54 @@ import validator from 'validator';
 
 const StyledLastNameChecker = styled.div`
     height: 10vh;
-    // background: #cfcfcf;
     color: #1c1841;
+    & input::placeholder {
+        color: #c4bfad;
+    }
 `
 const LastNameLabel = styled.label`
-    background-color: ${props =>(props.isTrue? "green":"orangered")};
+    background-color: ${props => (props.isTrue ? "green" : "#7a2929")};
 `
 class LastNameChecker extends React.Component {
     constructor(props) {
         super(props);
         this.handleLastName = this.handleLastName.bind(this);
         this.state = {
-            LastNameBool: ''
+            lastNameBool: ''
         }
     }
 
+    /**
+     * HandleLastName disallows entry of trailing empty spaces.
+     * It allows for apostrophes & dashes in last names.
+     * If user were to enter name then delete it, (setState already having been 
+     * changed to "true"), state would remain true. This first if block
+     * addresses this issue verifying whether the string is true.
+     */
     handleLastName(e) {
-        const verifiedLastName = /(^[a-zA-Z-']*$)/.test(e.target.value.trim());
-        this.setState({
-            LastNameBool: verifiedLastName
-        });
+        let userEntry = e.target.value;
+        if (!userEntry) {
+            this.setState({
+                lastNameBool: userEntry
+            });
+        } else {
+            const verifiedLastName = /(^[a-zA-Z-']*$)/.test(userEntry);
+            console.log("t.s.ln: ", this.state)
+
+            this.setState((prevState) =>({
+                lastNameBool: verifiedLastName
+            }));
+        }
     }
+
     render() {
         return (
-        <StyledLastNameChecker className="LastNameChecker">
-    {console.log(`
-        this.state.LastNameBool: ${this.state.LastNameBool}
-    `)}
-            <LastNameLabel isTrue={this.state.LastNameBool} 
-            >Last Name 
-                <input onChange={this.handleLastName} type="text" />
-            </LastNameLabel>
-        </StyledLastNameChecker>
+            <StyledLastNameChecker className="LastNameChecker">
+                <LastNameLabel isTrue={this.state.lastNameBool}
+                >Last Name
+                <input onChange={this.handleLastName} type="text" placeholder="Last Name" />
+                </LastNameLabel>
+            </StyledLastNameChecker>
         )
     }
 }

@@ -5,12 +5,13 @@ import validator from 'validator';
 
 const StyledUSStatesChecker = styled.div`
     height: 10vh;
-    // background: #cfcfcf;
     color: #1c1841;
+    & input::placeholder {
+        color: #c4bfad;
+    }
 `
 const USStatesCheckerLabel = styled.label`
         background-color: ${props =>(props.isTrue? "green":"#7a2929")};
-        background-image: rgba(0,0,0,0.5);
 `
 class USStatesChecker extends React.Component {
     constructor(props) {
@@ -32,7 +33,15 @@ class USStatesChecker extends React.Component {
             "NM", "NY", "NC", "ND", "ND", 
             "OH", "OK", "OR", "PA", "RI", 
             "SC", "SD", "TN", "TX", "UT", 
-            "VT", "VA", "WV", "WI", "WY"
+            "VT", "VA", "WV", "WI", "WY","ALABAMA",
+            "ALASKA","ARIZONA","ARKANSAS","CALIFORNIA","COLORADO","CONNECTICUT",
+            "DELAWARE","FLORIDA","GEORGIA","HAWAII","IDAHO","ILLINOIS","INDIANA",
+            "IOWA","KANSAS","KENTUCKY","LOUISIANA","MAINE","MARYLAND","MASSACHUSETS",
+            "MICHIGAN","MINNESOTA","MISSISSIPPI","MISSOURI","MONTANA","NEBRASKA",
+            "NEVADA","NEW HAMPSHIRE","NEW JERSEY","NEW MEXICO","NEW YORK",
+            "NORTH CAROLINA","NORTH DAKOTA","OHIO","OKLAHOMA","OREGON","PENNSYLVANIA",
+            "RHODE ISLAND","SOUTH CAROLINA","SOUTH DAKOTA","TENNESSEE","TEXAS","UTAH",
+            "VERMONT","VIRGINIA","WASHINGTON","WEST VIRGINIA","WISCONSIN","WYOMING"
         ];
 
         var verifiedUSStatesChecker =  validator.isIn(e.target.value.toUpperCase(), fiftyStates);
@@ -48,7 +57,7 @@ class USStatesChecker extends React.Component {
     `)}
             <USStatesCheckerLabel isTrue={this.state.usStatesBool} 
             >US State 
-                <input onChange={this.handleUSStatesChecker} type="text" />
+                <input onChange={this.handleUSStatesChecker} type="text" placeholder="State of residence"/>
             </USStatesCheckerLabel>
         </StyledUSStatesChecker>
         )

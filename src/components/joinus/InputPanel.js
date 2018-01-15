@@ -4,11 +4,11 @@ import ValidateUser from './ValidateUser';
 
 const StyledInputPanel = styled.div`
 position: absolute;
-top: 10vh;
-width: 98vw;
+top: 12vh;
+width: 94vw;
 height: 80vh;
-right: 1vw;
-overflow-X: hidden;
+right: 3vw;
+overflow: hidden;
 border: 20px solid #97958c;
 & #inner-shadow {
     box-shadow: inset -2px 2px 10px 2px rgba(0,0,0,0.5);
@@ -22,7 +22,6 @@ border: 20px solid #97958c;
 & #ridge-container {
     width: 100%;
     height: 100%;
-    overflow: hidden;
     z-index: 3;
 }
 & .ridge {

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 
 const HeaderLinks = styled.nav`
   text-align: right;
@@ -24,9 +25,11 @@ const HeaderLinks = styled.nav`
 `
 
 const NavLinks = () => (
-    <HeaderLinks>
-            <a href="#">RC PARTNERSHIP</a>
-            <a href="#">RC PROFILE</a>
-    </HeaderLinks>
+    <BrowserRouter>
+      <HeaderLinks>
+            <a href="#partnership">RC PARTNERSHIP</a>
+            <a href="#profile">RC PROFILE</a>
+      </HeaderLinks>
+    </BrowserRouter>
 )
 export default NavLinks;

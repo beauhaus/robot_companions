@@ -7,9 +7,12 @@ import validator from 'validator';
 const StyledEmailChecker = styled.div`
     height: 10vh;
     color: #1c1841;
+    & input::placeholder {
+        color: #c4bfad;
+    }
 `
 const EmailLabel = styled.label`
-background-color: ${props =>(props.isTrue? "green":"orangered")};
+background-color: ${props =>(props.isTrue? "green":"#7a2929")};
 }
 `
 class EmailChecker extends React.Component {
@@ -35,7 +38,7 @@ class EmailChecker extends React.Component {
         <StyledEmailChecker className="EmailChecker">
             <EmailLabel isTrue={this.state.emailBool} 
             >Email 
-                <input onChange={this.handleEmail} type="text" />
+                <input onChange={this.handleEmail} type="text" placeholder="Enter Email"/>
             </EmailLabel>
         </StyledEmailChecker>
         )

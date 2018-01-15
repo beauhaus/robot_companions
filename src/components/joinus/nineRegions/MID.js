@@ -68,9 +68,7 @@ class MID extends React.Component {
             <path fill="url(#bottom-left)" d="M35 505h116v90H35z" />
             <text  id="MD" x="55" fillOpacity="0.7"  y="1120" onClick={this.handleClick}>MD</text>
             <path fill="#3B548B" d="M173 505h115v90H173z" />
-            <text  id="VA" x="200" y="1120" onClick={this.handleClick}>
-            VA
-            </text>
+            <text  id="VA" x="200" y="1120" onClick={this.handleClick}>VA</text>
             <path fill="#ADAD0E" d="M312 505h115v90H312z" />
             <text id="UT" x="330" y="1120" onClick={this.handleClick}>WV</text>
            </g>
