@@ -109,7 +109,9 @@ The signup should be welcoming and fun, I think.
 Engagement ought to be engaging.
 
 So instead of this:
-<!-- ![drop-down](./readmeImg/drop.png =200x "dropdown") -->
-
-<!-- ![drop](./readmeImg/drop.png =250x) -->
+test1
+![drop-down](./readmeImg/drop.png =200x "dropdown")
+test2
+![drop](./readmeImg/drop.png =250x) -->
+test3
 <img src="./readmeImg/drop.jpg" alt="Drop" style="width: 200px;"/>
