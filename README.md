@@ -100,16 +100,34 @@ The heaviest cost is, of course, the page-weight.
 
 I wanted to give a kind of sinister--but--satirical feel to the idea of AI and the coming "robo-pocalypse"...
 
-![Image One](./readmeImg/map1.png "First Test Readme Image")
-
 I really dislike the look of drop-downs and have often felt that websites use such a dull way to get info from the user.
 
 The signup should be welcoming and fun, I think.
 
 Engagement ought to be engaging.
 
-So instead of this:
-<!-- ![drop-down](./readmeImg/drop.png =200x "dropdown") -->
 
-<!-- ![drop](./readmeImg/drop.png =250x) -->
-<img src="./readmeImg/drop.jpg" alt="Drop" style="width: 200px;"/>
+So instead of this:
+
+![drop-down](./readmeImg/drop.png "dropdown")
+
+
+I opted for this:
+![Image One](./readmeImg/map1.png "First Test Readme Image")
+
+I really like it. It's both Ugly and Beautiful at the same time.
+
+![map detail](./readmeImg/mapdetail.png "map detail")
+
+I was watching Stanley Kubrick's 2001 and I really liked the drab and deliberately ugly colors...
+
+They have always kind of haunted me. --Even the typography... I saw this film when it was so dated... but the concept was so futuristic. I really enjoy the visual/conceptual clash...
+
+I used these two images:
+
+![oldskype](./readmeImg/oldSkype.png "old skype")
+![hal900](./readmeImg/hal9000.jpg "Hal 9000")
+
+Here's an SVG done for this site.
+
+![rc-hal900](./readmeImg/rc-hal.png "RC Hal")
