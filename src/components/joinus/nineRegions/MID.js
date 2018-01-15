@@ -71,6 +71,8 @@ class MID extends React.Component {
             <text  id="VA" x="200" y="1120" onClick={this.handleClick}>
             VA
             </text>
+            <path fill="#ADAD0E" d="M312 505h115v90H312z" />
+            <text id="UT" x="330" y="1120" onClick={this.handleClick}>WV</text>
            </g>
         {this.state.home && <text id="chosen" x="200" y="65" >{`You've chosen ${this.state.home}`}</text>}
     </svg>

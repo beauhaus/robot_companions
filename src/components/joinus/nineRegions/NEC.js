@@ -75,6 +75,9 @@ class NEC extends React.Component {
 
                 <path fill="url(#bottom-left)" d="M35 505h116v90H35z" />
                 <text id="CT" x="55" fillOpacity="0.7"  y="1120" onClick={this.handleClick}>CT</text>
+                <path fill="#3B548B" d="M173 505h115v90H173z" />
+                <text  id="VA" x="200" y="1120" onClick={this.handleClick}>RI</text>
+    
             </g>
             {this.state.home && <text id="chosen" x="200" y="65" >{`You've chosen ${this.state.home}`}</text>}
         </svg>
