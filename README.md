@@ -36,12 +36,11 @@
 
 ## Last day TODOS
 
-+ WCGW at footer on mobile
-+ port signup to retro signup
-+ consider buttons with labels for states that appear upon region click
-+ replace acronyms with full names of regions in "monitor"
-+ folder tree for each region
-+ comment code for component nodes. Be short and to the point.
++ port signup to retro signup  √
++ consider buttons with labels for states that appear upon region click √
++ replace acronyms with full names of regions in "monitor" --(rejected... went with other design)
++ folder tree for each region √
++ comment critical code.√
 + glitch animation on monitor? --Only if there's time...
 
 
@@ -49,6 +48,13 @@
 ## CLI commands
 
 + yarn run build
+
+
+
+image test
+robot_companions/readmeImg/map1.png
+
+![Image One](./readmeImg/map1.png "First Test Readme Image")
 
 
 
