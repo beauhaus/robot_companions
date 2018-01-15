@@ -112,6 +112,6 @@ So instead of this:
 test1
 ![drop-down](./readmeImg/drop.png =200x "dropdown")
 test2
-![drop](./readmeImg/drop.png =250x) -->
+![drop](./readmeImg/drop.png) -->
 test3
 <img src="./readmeImg/drop.jpg" alt="Drop" style="width: 200px;"/>
