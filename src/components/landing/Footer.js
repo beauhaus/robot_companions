@@ -188,19 +188,7 @@ font-family: "Trebuchet MS", sans-serif;
 `
 
 
-/**
- * Dead-simple Client-side route. (Simple Link to Signup Page)
- * FIXME: Styling may be a bit over-the-top.
- */
 
-// const JoinUs = () => (
-//     <StyledJoinBtn>
-//         <Link id="link-text" to="/Signup">JOIN US</Link>
-//     </StyledJoinBtn>
-// )
-
-
-// <JoinUs id="join-link"/>
 
 const Footer = () => (
     <StyledFooter>       
@@ -209,8 +197,8 @@ const Footer = () => (
             <img id="footer-left-icon" src="./img/horiz-icon.svg" alt="horizontal icon" />
             <div id="footer-icon-links">
             <a id="git-link" href="https://github.com/Beauvelop/2-page-app"><img id="git-logo" src="./img/git-logo.png" alt="git-logo" /></a>
-            <a id="twitter-link" href="https://github.com/Beauvelop/2-page-app"><img id="twitter-logo" src="./img/twitter-logo.jpg" alt="git-logo" /></a>
-            <a id="codepen-link" href="https://codepen.io/beau_dev/"><img id="codepen-logo" src="./img/codepen-logo.png" alt="git-logo" /></a>
+            <a id="twitter-link" href="https://codepen.io/beau_dev/"><img id="twitter-logo" src="./img/twitter-logo.jpg" alt="git-logo" /></a>
+            <a id="codepen-link" href="https://github.com/Beauvelop/robot_companions"><img id="codepen-logo" src="./img/codepen-logo.png" alt="git-logo" /></a>
             </div>
         </div>
         <div id="text-level-two">

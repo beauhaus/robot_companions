@@ -1,13 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom'; /*necessary?*/
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
-import RobotCompanionsApp from './landing/RobotCompanions';
 import styled from 'styled-components';
-import Header from './landing/Header';
-// import Signup from './onboarding/Signup';
-// import 'normalize.css/normalize.css'
+import RobotCompanionsApp from './landing/RobotCompanions';
+// import Header from './landing/Header';
+
 import RetroSignupComponent from './joinus/RetroSignupComponent'
-// import { Switch } from '../../../../../Library/Caches/typescript/2.6/node_modules/@types/react-router';
 
 
 /**
@@ -19,7 +17,7 @@ import RetroSignupComponent from './joinus/RetroSignupComponent'
     </div>
 )
 
-// This has mix-blend-mode to interact a bit with background
+// This CTA has a blend-mode to interact a bit with background
 const JoinUsButton = styled.button`
         background: transparent;
         border: .25px solid coral;

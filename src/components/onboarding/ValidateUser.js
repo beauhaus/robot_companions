@@ -24,17 +24,3 @@ const ValidateUser = () => (
 )
 
 export default ValidateUser;
-
-
-/*
-.true {
-  background-color: rgb(50, 76, 97);
-  color: greenyellow;
-}
-
-.false {
-  background-color: #420505;
-  color: #b8b8b8;
-}
-
-*/
