@@ -30,6 +30,7 @@ class LastNameChecker extends React.Component {
      * changed to "true"), state would remain true. This first if block
      * addresses this issue verifying whether the string is true.
      */
+
     handleLastName(e) {
         let userEntry = e.target.value;
         if (!userEntry) {
@@ -51,7 +52,8 @@ class LastNameChecker extends React.Component {
             <StyledLastNameChecker className="LastNameChecker">
                 <LastNameLabel isTrue={this.state.lastNameBool}
                 >Last Name
-                <input onChange={this.handleLastName} type="text" placeholder="Last Name" />
+                <input onChange={this.handleLastName}  type="text" placeholder="Last Name" />
+                
                 </LastNameLabel>
             </StyledLastNameChecker>
         )

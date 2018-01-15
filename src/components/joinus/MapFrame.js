@@ -6,10 +6,16 @@ import RegionMap from './RegionMap';
 
 /**
  * Map frame is for easthetics. It offers an alternative to the drop-down menu.
- * I wanted to render a vignette on the monitor. This effect would render buttons
- * unclickable (despite z-indexing). I solved the problem by reducing the opacity
- * on the map so as to convey a sense of depth.
+ * Layers producing the entire screen are as follows(from bottom to top):
+ * Grey-green monitor with gradient SVG-> Lines of interlacing evenly dispersed SVG->
+ * Div overlay with inset box-shadow HTML -> americaMap & buttons SVG placed on top.
+ * 
+ * I dialed back the opacity for the top layer to produce an effect of interaction
+ * with the layers beneath.
+ * 
+ * This would, of course, be an accessibility nightmare for users with poor vision.
  */
+
 const StyledMapFrame = styled.div`
 position: absolute;
 top: 2vh;
