@@ -119,8 +119,6 @@ const RetroSignup = () => (
 
 /**
  * Very bascic functionality of react-router-dom Static Routing & client-side Routing. 
- * "exact" prevents rendering of all components that
- * begin with with "/".
  */
 
 const Routes = (
