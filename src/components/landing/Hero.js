@@ -13,45 +13,62 @@ const StyledHeroSection = styled.div`
     grid-template-columns: auto 1fr auto;
     grid-template-rows: auto 1fr auto;
     overflow: hidden;
-    // tablet query
-  @media screen and (max-width: 768px) {
+
+   @media screen and (max-width: 768px) {  // tablet query
     grid-template-rows: 1vh 1vh 1fr;
     height: 28vh;
-  }
-  // iPhone query
-  @media screen and (max-width: 375px) {
+    .hero-text {
+        font-size: 1.8rem;
+        grid-row: 1;
+        grid-column: 2;
+        margin-top: 8vh;
+    }
+    & > #watch-vid-btn {
+        top: 50%;
+
+        width: 40vw;
+        margin-left: -20vw;
+        height: 6vh;    
+    }
+}
+@media screen and (max-width: 375px) {     // iPhone query
     font-size: 1.5rem;
     height: 45vh;
     text-align: center;
-   }   
+    #hero-text {
+        margin-top: 8vh;
+        text-align: center;
+        &#hero-text {
+            font-size: 2rem;
+        }    
+    }
+    #watch-vid-btn {
+        font-size: .8rem;
+        width: 80vw;
+        height: 10vh;
+        padding: 2vh;
+        top: 55%;
+        left: 50%;
+        margin-left: -40vw;  
+        }
+    }
 `
 
 const HeroText = styled.h1`
     mix-blend-mode: color-dodge;
     color: #ecc7c7;
-    font-size: 2.5rem;
     font-weight: lighter;
     margin: auto;
     grid-row: 2;
     grid-column: 2;  
     margin-top: 18vh;
+    &#hero-text {
+        font-size: 2.5rem;
+    }
   ${StyledHeroSection}:hover & {
-    color: white;
+        color: white;
+      }
   }
-  // tablet query
-  @media screen and (min-width: 768px) {
-    font-size: 1.8rem;
-    grid-row: 1;
-    grid-column: 2;
-    margin-top: 8vh;
-
-  }
-  // iPhone query
-  @media screen and (max-width: 375px) {
-    font-size: 1.5rem;
-    margin-top: 8vh;
-    text-align: center;
-   }   
 `
 
 const WatchVidBtn = styled.button`
@@ -75,27 +92,10 @@ const WatchVidBtn = styled.button`
         transform: scale(1.1);
         transition: transform .2s; 
        }
-    // tablet query
-    @media screen and (max-width: 768px) {
-       top: 50%;
-       width: 40vw;
-       margin-left: -20vw;
-       height: 6vh;
-    }
-    // iPhone query
-    @media screen and (max-width: 375px) {
-        
-        width: 80vw;
-        height: 10vh;
-        padding: 2vh;
-        top: 55%;
-        left: 50%;
-        margin-left: -40vw;        
-    }   
 `
 const Hero = () => (
     <StyledHeroSection className="hero-section">
-        <HeroText className="hero-text">ROBOT COMPANIONS</HeroText>
+        <HeroText id="hero-text" className="hero-text">ROBOT COMPANIONS</HeroText>
         <WatchVidBtn id="watch-vid-btn">WATCH VIDEO</WatchVidBtn>
         <HeroVid />
     </StyledHeroSection>

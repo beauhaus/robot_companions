@@ -75,26 +75,24 @@ svg> g> path#glitch-line {      // THIS CONTROLS GLITCH ANIMATION
 //   stroke-width: 4px;
 //   stroke: #00a100;
 //   stroke: grey;
-  animation: glitch 10s 3s infinite;
+  animation: glitch 20s 3s infinite;
 }
 
 
 @keyframes glitch {
     0% { 
-        transform: translateY(500px);
+        transform: translateY(1000px);
      }
     100% { 
-        transform: translateY(-2000px);
+        transform: translateY(-2500px);
     }
 }
 `
-// <svg width="600" height="600" viewBox="0 0 600 600">
-//     <path  id="glitch-line" d="M0 260.5h600"  />
-// </svg>
+
 
 const GlitchLine = () => (
     <svg width="600" height="600">
-    <g opacity=".2">
+    <g opacity=".1">
       <linearGradient id="glitch-gradient" x1="296.5005" x2="296.5005" y1="395" y2="234.0005" gradientUnits="userSpaceOnUse">
         <stop offset="0" stopColor="transparent" stopOpacity="0"/>
         <stop offset=".5" stopColor="#37ae5d" stopOpacity=".5"/>

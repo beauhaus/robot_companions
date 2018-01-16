@@ -17,11 +17,40 @@ const StyledSliderVid = styled.div`
     @media screen and (max-width: 768px) {    // tablet query
     grid-auto-columns:33%;
     grid-gap: 1%;
+   & > section {
+        & > img#media {
+            height: 25vw;
+            margin-top: -5vh;
+        }
+        & > h3 {
+            font-size: .9rem;
+        }
+        & > p {
+            bottom: -10vh;
+            font-size: .8rem;
+            text-align: center;
+        }
+      }
     }
 
     @media screen and (max-width: 376px) {    //phone query
-    grid-auto-columns: 100%;
-    grid-gap: 1%;
+        grid-auto-columns: 100%;
+        grid-gap: 1%;
+        // display:none;
+        & > section {
+            & > img#media {
+                width: 70vw;
+                height: 50vw;            
+            }
+        & > h3 {
+            font-size: .9rem;
+        }
+        & > p {
+            width: 88vw;
+            bottom: -15vh;
+            font-size: .8rem;
+        }
+        }
     }
 `
 const PicFrame = styled.section`
@@ -56,27 +85,6 @@ const PicFrame = styled.section`
     font-size: 0.6em;
     z-index: 20;
   }
-    @media screen and (max-width: 768px) {  // tablet query
-
-      & img#media {
-          height: 25vw;
-        }
-        & p {
-            bottom: -8.5vh;
-        }
-    }
-
-@media screen and (max-width: 376px) {   // phone query
-    & > img#media {
-    width: 80vw;
-    height: 50vw;
-    } 
-    & > p {
-        text-align: center;
-        bottom: -20vh;
-        font-size: 1rem;
-    }
-}
 `
 
 /**

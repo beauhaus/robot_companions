@@ -17,14 +17,7 @@ font-family: "Trebuchet MS", sans-serif;
     grid-template-rows: 1fr repeat(4, 3.5vh) 1fr;
     position: relative;
 
-    &>#one {/*test*/
-    //  background: grey;
-     grid-column: 1/-1;
-     grid-row: 1;
-    }
-
     & > #text-level-top {
-    //  background: rgba(2,2,2,0.5);
      grid-column: 2/3;
      grid-row: 2;
      position: relative;
@@ -81,32 +74,27 @@ font-family: "Trebuchet MS", sans-serif;
         text-decoration: underline;
         }
      }
-
     }
-    
     &>#text-level-three{ 
         grid-column: 2/3;
         grid-row: 4;
-       & > div#corporate, sup {
+        padding: 4px 0;
+       & > div#corporate, sup {            
             text-align: right;
             font-size: .5rem;
         }
     }
 
     & > #text-level-four {
-    //  background: rgba(62,32,72,0.5);
-     grid-column: 2/3;
-     grid-row: 5;
+        grid-column: 2/3;
+        grid-row: 5;
      & p {
         font-size: .5rem;
         text-align: right;
      }
     }
 
-
-    
-  @media screen and (max-width: 768px) {   // tablet query
-// FIXME Entire Query needs attention
+@media screen and (max-width: 768px) {   // tablet query
     &  button {
         width: 16vw;
         height: 5vh;
@@ -117,8 +105,8 @@ font-family: "Trebuchet MS", sans-serif;
   @media screen and (max-width: 376px) {    // phone query
       text-weight: lighter;
       height: 35vh;
-    grid-template-rows: 5vh repeat(3, 3.5vh) 8vh 1fr;
-    grid-gap: 15px;
+      grid-template-rows: 5vh repeat(3, 3.5vh) 8vh 1fr;
+      grid-gap: 15px;
     & button {
         width: 30vw;
         margin-left: -15vw;
@@ -134,15 +122,12 @@ font-family: "Trebuchet MS", sans-serif;
             width: 40vw;
             left: 50%;
             margin-left: -20vw;
-            // margin: 0 auto;
-            // border: 1px solid wheat;
             justify-content: space-between;
             & a {
-                    & img {
-                        height: 90%;
-                    }
+                & img {
+                    height: 90%;
                 }
-
+            }
         }
     }
     & > #text-level-two {
@@ -160,29 +145,22 @@ font-family: "Trebuchet MS", sans-serif;
             left: 41vw;
             width: 82vw;
             text-align: center;
-            // border: 1px solid white;
         }
-        
-        
     }
     & > #text-level-three {
         text-align: center;
         grid-row: 4;
         & > #corporate {
-            // color: red;
             display: inline-block;
             text-align: center;
             margin-top: 3vh;
         }
     }
     & > #text-level-four{
-        // position: relative;
-        // border: 1px solid yellow;
         & p {
             text-align: center;
             margin-top: 2vh;
         }
-
     }
 }
 `

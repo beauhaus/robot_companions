@@ -6,8 +6,13 @@ const StyledSlider = styled.div`
     width: 100vw;
     height: 57.5vh;
     z-index: 5;
-    display: grid;
     position: relative;
+    @media screen and (max-width: 768px) {   //tablet query
+        height: 45vh;
+    }
+    @media screen and (max-width: 376px) {    //phone query
+        height: 65vh;
+    }
 `
 /**
  * This div is the third 'Level' of the site. I chose to use .gifs to mimic

@@ -5,7 +5,7 @@ import SliderVid from './SliderVid';
 import gifArray from './data';
 
 const StyledSliderContainer = styled.div`
-    height: 57.5vh;
+    height: 100%;
     background: #8e8e8e;
     z-index: 5;
     display: grid;
@@ -27,23 +27,18 @@ const StyledSliderContainer = styled.div`
         text-fill-color:  #1BA3CC; 
         text-stroke: 1px #420505; 
     }
-    //Tablet Query
-    @media screen and (min-width: 768px) {
+
+    @media screen and (max-width: 768px) {   //tablet query
         top: 25%;
+        height: 35vh;
+        font-size: 2.4rem;
         &#fwd {
             right: 2vw;
         }
         &#bkwd {
             left: 2vw;
-        }
-        
-        
-        
+        }   
     }
-// iPhone Query
-@media screen and (max-width: 376px) {
-
-}
 `
 const BackBtn = styled.button`
 left: 4vw;
