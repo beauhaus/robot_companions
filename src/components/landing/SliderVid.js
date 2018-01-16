@@ -90,9 +90,7 @@ const PicFrame = styled.section`
 /**
  * This component exploits the powers  "grid-auto-colums" property which, on a tablet & phones will come in handy display only a range of divs.
  * Worth noting is that the entire array is always being rendered. grid-auto-colums just restricts what is painted to the browser.
- * Full disclosure: I've never done this sort of thing --So I have never done this sort of thing & have no idea whether it would be considered "hacky".
- * Though it's nice not to carry the weight of Owl Carousel (http://baseball.doosan.com/) & it doesn't make http requests,
- * I prefer Owl Carousel, tho.
+ * Though it's nice not to carry the weight of Owl Carousel (http://baseball.doosan.com/) & it doesn't make the http request.
  */
 class SliderVid extends React.Component {
     render(props) {

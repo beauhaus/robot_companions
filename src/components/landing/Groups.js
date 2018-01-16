@@ -7,18 +7,17 @@ const StyledGroups = styled.div`
 height: 53vh;
 width: 100vw;
 background: grey;
-color: maroon;
 text-align: center;
 position: relative;
 margin: 0;
 & > h1 {
     color: black;
     position: absolute;
-    top: 12vh;
+    top: 5vh;
     width: 60vw;
     left: 50%;
     margin-left: -30vw;
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: lighter;
     & > span {
         color: #831212;
@@ -31,16 +30,13 @@ margin: 0;
     position: absolute;
 }
 
-// tablet query
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 768px) {    // tablet query
       height: 38vw;
-      
       & > h1 {
-          top: 5vh;
-          font-size: 1.4rem;
+          top: 2vh;
+          font-size: 1.8rem;
       }
       & > #groups-container {
-        //   border: 2px solid orangered;
           top: 10vh;
           margin: 0;
           left: 0;
@@ -52,7 +48,6 @@ margin: 0;
 @media screen and (max-width: 376px) {
     height: 58vh;
     & > #groups-container {
-   //   border: 2px solid orangered;   
         top: 15vh;
         margin: 0;
         left: 0;
@@ -60,7 +55,6 @@ margin: 0;
         & > #fwd-arrow, #rwd-arrow {
         background: grey;
         display: block;
-        
         font-size: 3rem;
         font-weight: bold;
         width: 2vw;

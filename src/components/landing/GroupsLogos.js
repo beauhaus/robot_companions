@@ -11,9 +11,15 @@ left: 0;
     display: grid;
     grid-template-columns: auto;
     justify-content: space-around;
-//phone query
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 768px) {    // tablet query
+    & div > p {
+        bottom: 5vh;
+        
+    }
+}
+
+@media screen and (max-width: 376px) {   //phone query
     height: 35vh;
     grid-auto-columns: 60%;
     overflow: hidden;
@@ -23,13 +29,16 @@ left: 0;
             height: 5vh;
             width: 20vw;
             left: 50%;
-            margin-top: 2vh;
+            font-size: .7rem;
+            font-weight: bold;
+            margin-top: 5vh;
             margin-left -10vw;
             top: 28vh;
         }
     }
 
 }
+
 `
 const LogoFrame = styled.div`
     position: relative;
@@ -53,16 +62,7 @@ const LogoFrame = styled.div`
         margin-left -4vw;
         font-weight: bold;
     }
-// tablet query
-@media screen and (max-width: 768px) {
-    & > p {
-        bottom: 1vh;
-        font-weight: lighter;
-    }
-}
 `
-
-//FIXME: the p tagged txt containers perhaps ought to have height 100% so that they resize for the phone
 
 class GroupsLogos extends React.Component {
     render(props) {

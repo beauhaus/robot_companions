@@ -4,34 +4,37 @@ import styled from 'styled-components';
 const StyledPartnership = styled.div`
 height: 86vh;
 width: 100vw;
-color: black
 background-color: grey;
-// border: 2px solid navy;
 background: url(./img/buddies.jpg) no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   & #icon-section {
-    //   border: 2px dashed red;
       & img {
-          width: 12vw;
+        width: 14vw;
+        box-shadow: 4px 4px 6px 3px rgba(0,0,0,0.8);
+        margin:  0 10vw;    
       }
   }
 
   @media screen and (max-width: 768px) {    //tablet query  
     height: 52vh;
-    // border: 1px solid fuchsia;
     padding: 10% 0;
     & > .partnership-container {
-        // background: brown;
         width: 80vw;
-        padding-top: 3vh;
+        padding-top: 0;
         & h1, span {
-            font-size: 1.2rem;
+            font-size: 1.7rem;
         }
         & p {
-            font-size: 0.6rem;
+            font-size: 0.75rem;
+        }
+    }
+    & #icon-section {
+        padding-top: 3vh;
+        & img {
+            width: 16vw;
         }
     }
   }
@@ -39,78 +42,65 @@ background: url(./img/buddies.jpg) no-repeat center center;
   @media screen and (max-width: 376px) {   // iPhone Query 
     height: 86vh;
     text-align: center;
-    
-    // border: 1px solid fuchsia;
     & > .partnership-container {
-        // background: brown;
         flex-direction: column;
-        
         width: 100vw;
-        // justify-content: space-around;
         padding-top: 3vh;
         & #text-section {
             margin: 0;
-            // border: 2px solid orange;
-            width: 100vw;
+            width: 100%;
         }
-        & h1, span {
-            text-align: center;
-            font-size: 1rem;
+        & h1{
+            width: 100%;
+            font-size: 1.7rem;
+            font-weight: bold;
+            & > span {
+                font-size: 1.7rem;
+                font-weight: bold;
+            }
         }
         & p {
-           width: 98vw;
            line-height: 2;
            font-size: .8rem;
         }
         & #icon-section {
             height: 30vh;
-            // text-align: center;
             margin: 0 auto;
-            position: relative;
-        }
-        & img {
-            margin: -2vh auto;
-            // position: absolute;
-            min-width: 25vw;
-            // height: 27vh;
-            // border: 2px solid blue;
+            & > img {
+                width: 22vw;
+            }
         }
     }
   }
 `
 const StyledPartnershipContainer = styled.article`
-margin: auto;
-color: #1d2535;
-padding: 2vh 1vw;
-// border: 2px solid maroon;
-height: 100%;
-width: 68vw;
-display: flex;
-flex-direction: row;
-justify-content: space-around;
-padding-top: 8%;
+    margin: 0 auto;
+    color: #1d2535;
+    padding: 0 1vw;
+    height: 100%;
+    width: 68vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 4%;
 & > section {
     width: 50%;
     & h1 {
         font-size: 2rem;
         color: #1d2535;
+        font-weight: lighter;
         & > span {
             color: #831212;
             font-size: 2rem;
         }
     }
     & p {
-        margin-top: 2vh;
-        line-height: 3;
+        width: 98%;
+        margin-top: -2vh;
+        line-height: 2.5;
         font-family: sans-serif;
         font-size: 0.7rem;
         color: black;
-    }
-    & img {
-        width: 15vw;
-        box-shadow: 4px 4px 6px 3px rgba(0,0,0,0.8);
-        margin:  0 10vw;
-        // border: 2px solid fuchsia;
     }
 }
 `

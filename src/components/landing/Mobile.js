@@ -5,13 +5,12 @@ import MobileMenu from './MobileMenu';
 
 const StyledMobile = styled.header`
     position: fixed;
-    height: 9.5vh;
+    height: 10vh;
     right: 0;
     width: 18vw;
     z-index: 50;
     top: 0;
-
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 420px) {
     display: none;
 }
 `
@@ -19,27 +18,26 @@ const StyledMobile = styled.header`
 const StyledHamburger = styled.button`
     position: fixed;
     top: 0;
-    right: 4px;
+    right: 0;
+    width: 80px;
     height: 9.7vh;
     font-size: 2rem;
     padding: 0 3vw;
     background: teal;
-    color: wheat;
+    color: grey;
     z-index: 51;
-    border-width: 0;
 `
 const CloseBtn = styled.button`
     position: fixed;
-    right: 1vw;
+    right: 0;
     top: 0;
-    width: 18vw;
+    width: 80px;
     height: 9.7vh;
     font-size: 2rem;
     padding: 0 3vw;
     background: teal;
-    color: wheat;
+    color: grey;
     z-index: 52;
-    border-width: 0;
 `
 class Mobile extends React.Component {
     constructor(props) {
