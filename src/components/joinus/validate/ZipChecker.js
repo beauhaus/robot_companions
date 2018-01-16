@@ -17,7 +17,12 @@ const StyledZipChecker = styled.div`
 `
 const ZipLabel = styled.label`
     background-color: ${props =>(props.isTrue? "green":"#7a2929")};
-`
+    @media screen and (max-width: 376px) {      // iPhone query
+        top:  55vh;
+        left: 0vw;
+        width: 95vw;
+    }
+    `
 class ZipChecker extends React.Component {
     constructor(props) {
         super(props);

@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom'; /*necessary?*/
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import styled from 'styled-components';
 import RobotCompanionsApp from './landing/RobotCompanions';
-// import Header from './landing/Header';
-
 import RetroSignupComponent from './joinus/RetroSignupComponent'
 
 
@@ -23,12 +21,12 @@ const JoinUsButton = styled.button`
         border: .25px solid coral;
         color: coral;
         position: fixed;
-        left: 1vw;
+        left: 0;
         height: 20vh;
         margin-top: -10vh;  
         width: 2vw;
         top: 50%;
-        z-index: 50;
+        z-index: 20;
         mix-blend-mode: difference;
         &:hover {
             box-shadow: 0px 0px 5px 1px white;
@@ -40,7 +38,6 @@ const JoinUsButton = styled.button`
             color: #1BA3CC;
         }
         & > #link-text {
-            // color: black;
             word-break: break-all;
             font-family: "Quicksand", sans-serif;
             text-decoration: none;
@@ -51,9 +48,26 @@ const JoinUsButton = styled.button`
                 color: white;
             }
         }
+
+@media screen and (max-width: 768px) {      // tablet query
+    width: 5vw;
+    height: 22vh;
+    margin-top: -11vh;  
+    & > #link-text {
+        font-size: 2rem;
+    }
+}
+// FIXME: that heinous 2px line at right is back!
+// (look at grid in slider as culprit.)
+@media screen and (max-width: 376px) {      // iPhone Query
+    width: 10vw;
+    height: 24vh;
+    margin-top: -12vh;  
+    & > #link-text {
+        font-size: 2rem;
+    }
+}
 `
-
-
 
 const RetroSignup = () => (
     <JoinUsButton>

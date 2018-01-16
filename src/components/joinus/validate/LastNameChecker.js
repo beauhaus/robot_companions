@@ -14,6 +14,12 @@ const StyledLastNameChecker = styled.div`
 `
 const LastNameLabel = styled.label`
     background-color: ${props => (props.isTrue ? "green" : "#7a2929")};
+    @media screen and (max-width: 376px) {      // iPhone query
+        top:  10vh;
+        left: 0vw;
+        width: 95vw;
+    
+    }
 `
 class LastNameChecker extends React.Component {
     constructor(props) {

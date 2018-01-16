@@ -13,6 +13,11 @@ const StyledUSStatesChecker = styled.div`
 `
 const USStatesCheckerLabel = styled.label`
         background-color: ${props =>(props.isTrue? "green":"#7a2929")};
+        @media screen and (max-width: 376px) {      // iPhone query
+            top:  40vh;
+            left: 0vw;
+            width: 95vw;
+        }
 `
 class USStatesChecker extends React.Component {
     constructor(props) {

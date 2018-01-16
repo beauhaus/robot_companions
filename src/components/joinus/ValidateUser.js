@@ -42,11 +42,35 @@ const StyledValidateUser = styled.div`
         background: grey;
         border: 2px solid tan;
     }
+    @media screen and (max-width: 376px) {      // iPhone query
+      
+            border: 2px solid purple;
+            width: 100%;
+            height: 80vh;
+            top: 10vh;
+            right: -50vw;
+            position: absolute;
+            & > div > label {
+                right: -3vw;
+                width: 20vw;
+                height: 5vh;
+                margin-top: 2vh;
+                & > input {
+                    margin-top: 5vh;
+                    // display: fixed;
+                    right: -42vw;
+                    height: 8vh;
+                    width: 70vw;
+                    font-size: 1.5rem;
+                }
+            }
+      
+    }
 `
 
 const ValidateUser = () => (
     <StyledValidateUser className="styled-valid-user">
-        <FirstNameChecker />
+        <FirstNameChecker id="first-name-check"/>
         <LastNameChecker />
         <EmailChecker />
         <ZipChecker />

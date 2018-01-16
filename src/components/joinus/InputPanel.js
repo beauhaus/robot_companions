@@ -5,11 +5,14 @@ import ValidateUser from './ValidateUser';
 const StyledInputPanel = styled.div`
 position: absolute;
 top: 12vh;
-width: 94vw;
+width: 45vw;
 height: 80vh;
-right: 3vw;
+right: 2.5vw; // use same in desktop for map!*****
+// left: 2.5vw;
 overflow: hidden;
 border: 20px solid #97958c;
+border-radius: 2px;
+box-shadow: 2px 2px 8px 3px rgba(0,0,0,0.5);
 & #inner-shadow {
     box-shadow: inset -2px 2px 10px 2px rgba(0,0,0,0.5);
     position: absolute;
@@ -25,7 +28,7 @@ border: 20px solid #97958c;
     z-index: 3;
 }
 
-/* DON'T TOUCH */
+/* DON'T TOUCH!! */
 & .ridge {
     filter: blur(1px);
     z-index: 2;
@@ -36,13 +39,20 @@ border: 20px solid #97958c;
     background: wheat;
     box-shadow: inset 0px -1vh .5vh 0px darkgrey;
 }
+@media screen and (max-width: 768px) {      // tablet query
+}
+
+@media screen and (max-width: 376px) {      // iPhone Query
+     width: 100%;
+     position: absolute;
+}
 `
 
 const TextureMaker = () => (
     <div>
-    <div id="inner-shadow"></div>
+        <div id="inner-shadow"></div>
         <div id="ridge-container">
-            {[...Array(70).keys()].map((item, idx) =>
+            {[...Array(80).keys()].map((item, idx) =>
                 <div key={idx} className="ridge"></div>)}
         </div>
     </div>
@@ -63,12 +73,25 @@ class InputPanel extends React.Component {
     }
     render() {
         return (
-            <StyledInputPanel>
-                <TextureMaker />
-                <ValidateUser id="validate-user-comp"/>
+            <StyledInputPanel id="styled-input-panel">
+                <TextureMaker id="texture-maker"/>
+                <ValidateUser id="validate-user-comp" />
             </StyledInputPanel>
         )
     }
 }
 
 export default InputPanel;
+
+
+
+/*
+
+@media screen and (max-width: 768px) {      // tablet query
+}
+// FIXME: that heinous 2px line at right is back!
+// (look at grid in slider as culprit.)
+@media screen and (max-width: 376px) {      // iPhone Query
+ 
+}
+*/

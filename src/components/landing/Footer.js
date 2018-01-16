@@ -103,6 +103,7 @@ font-family: "Trebuchet MS", sans-serif;
   }
 
   @media screen and (max-width: 376px) {    // phone query
+      width: 100%;
       text-weight: lighter;
       height: 35vh;
       grid-template-rows: 5vh repeat(3, 3.5vh) 8vh 1fr;

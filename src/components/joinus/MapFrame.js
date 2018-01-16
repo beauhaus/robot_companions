@@ -69,22 +69,20 @@ box-shadow: 5px, 5px 20px 14px black;
         }
     }
 
-/*(pre-uglification) this is still janky*/
+/*(pre-uglification(?)) this is still janky*/
 svg> g> path#glitch-line {      // THIS CONTROLS GLITCH ANIMATION
   transform: translateY(400px);
-//   stroke-width: 4px;
-//   stroke: #00a100;
-//   stroke: grey;
+
   animation: glitch 20s 3s infinite;
 }
 
 
 @keyframes glitch {
-    0% { 
-        transform: translateY(1000px);
-     }
+    // 0% { 
+    //     transform: translateY(1500px);
+    //  }
     100% { 
-        transform: translateY(-2500px);
+        transform: translateY(-1000px);
     }
 }
 `
@@ -109,7 +107,7 @@ class MapFrame extends React.Component {
     }
     render() {
         return (
-            <StyledMapFrame>
+            <StyledMapFrame id="map-frame-container">
 
                 <section id="tv-panel">
                     <div id="screen-container-div">

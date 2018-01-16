@@ -15,6 +15,11 @@ const StyledFirstNameChecker = styled.div`
 `
 const FirstNameLabel = styled.label`
     background-color: ${props =>(props.isTrue? "green":"#7a2929")};
+    @media screen and (max-width: 376px) {      // iPhone query
+        top: -5vh;
+        left: 0;
+        width: 95vw;
+    }
 `
 
 class FirstNameChecker extends React.Component {

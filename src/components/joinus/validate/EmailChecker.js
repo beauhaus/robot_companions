@@ -14,6 +14,11 @@ const StyledEmailChecker = styled.div`
 `
 const EmailLabel = styled.label`
 background-color: ${props =>(props.isTrue? "green":"#7a2929")};
+@media screen and (max-width: 376px) {      // iPhone query
+    top:  25vh;
+    left: 0vw;
+    width: 95vw;
+}
 }
 `
 class EmailChecker extends React.Component {
@@ -32,9 +37,7 @@ class EmailChecker extends React.Component {
         });
     }
     render() {
-        // {console.log(`
-        //     this.state.emailBool: ${this.state.emailBool}
-        // `)}
+
         return (
         <StyledEmailChecker className="EmailChecker">
             <EmailLabel isTrue={this.state.emailBool} 
