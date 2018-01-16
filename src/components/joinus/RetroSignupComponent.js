@@ -59,7 +59,7 @@ background: linear-gradient(35deg, black 0%, #15151d 100%);
 }
     
 @media screen and (max-width: 376px) {      // iPhone query
-    height: 150vh;       // **** ON PHONES THIS MUST CHANGE*****
+    height: 100vh;       // **** ON PHONES THIS MUST CHANGE*****
     overflow: visible;
   
  & a {
