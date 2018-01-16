@@ -24,16 +24,17 @@ border: 20px solid #97958c;
     height: 100%;
     z-index: 3;
 }
+
+/* DON'T TOUCH */
 & .ridge {
     filter: blur(1px);
     z-index: 2;
     width: 102%;
     margin-left: -5px;
-    height: 2vh;
-    border: .5vh solid #b4b2a6;
-    border-top-color: rgba(0,0,0,0.5);
-    background: #b4b2a6;
-    box-shadow: inset 0px -.5vh .1vh 0px rgba(0,0,0,0.7);
+    height: 8px;
+    border: 2px solid grey;
+    background: wheat;
+    box-shadow: inset 0px -1vh .5vh 0px darkgrey;
 }
 `
 
@@ -41,7 +42,7 @@ const TextureMaker = () => (
     <div>
     <div id="inner-shadow"></div>
         <div id="ridge-container">
-            {[...Array(40).keys()].map((item, idx) =>
+            {[...Array(70).keys()].map((item, idx) =>
                 <div key={idx} className="ridge"></div>)}
         </div>
     </div>

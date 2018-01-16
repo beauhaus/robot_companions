@@ -32,6 +32,10 @@ const StyledValidateUser = styled.div`
     }
     & input {
         position: absolute;
+        font-family: Courier, sans-serif;
+        color: rgba(0,0,0,.7);
+        font-weight: bold;
+        box-shadow: inset -1px 1px 6px 2px rgba(0,0,0,.5);
         right: 12vw;
         height: 4vh;
         font-size: 1rem;
@@ -41,7 +45,7 @@ const StyledValidateUser = styled.div`
 `
 
 const ValidateUser = () => (
-    <StyledValidateUser className="profile">
+    <StyledValidateUser className="styled-valid-user">
         <FirstNameChecker />
         <LastNameChecker />
         <EmailChecker />

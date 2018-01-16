@@ -21,21 +21,17 @@ import RetroSignupComponent from './joinus/RetroSignupComponent'
 const JoinUsButton = styled.button`
         background: transparent;
         border: .25px solid coral;
-        text-decoration: none;
-        color: #1BA3CC;
+        color: coral;
         position: fixed;
-        top: 45vw;
-        // top: 10vw;           // good for tablet
         left: 1vw;
+        height: 20vh;
+        margin-top: -10vh;  
         width: 2vw;
-        height: 10vw;
-
         top: 50%;
-        margin-top: -5vw;
         z-index: 50;
         mix-blend-mode: difference;
         &:hover {
-            box-shadow: 0px 0px 5px 2px white;
+            box-shadow: 0px 0px 5px 1px white;
             mix-blend-mode: difference;
             color: white;
             border: 1px solid maroon;
@@ -44,11 +40,12 @@ const JoinUsButton = styled.button`
             color: #1BA3CC;
         }
         & > #link-text {
-            color: inherit;
+            // color: black;
             word-break: break-all;
+            font-family: "Quicksand", sans-serif;
             text-decoration: none;
             font-weight: lighter;
-            font-size: 2vw;
+            font-size: 1.2rem;
             letter-spacing: 0.1rem;
             &:hover {
                 color: white;

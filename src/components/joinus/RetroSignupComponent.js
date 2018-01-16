@@ -13,25 +13,45 @@ position: relative;
 background: linear-gradient(35deg, black 0%, #15151d 100%);
   width: 100vw;
   height: 100vh;
+  margin: 0 auto auto 0;
   overflow: hidden;
   & a {
-      text-decoration: none;
-      text-align: center;
       font-family: "Quicksand", sans-serif;
+      text-decoration: none;
+      color: teal;
       font-weight: lighter;
       position: absolute;
-      width: 30vw;
-      left: 50%;
-      top: 2vw;
-      margin-left: -15vw;
-      font-size: 1rem;
-      color: teal;
-      z-index: 140;
+      width: 15vw;
+      right: 50vw;
+      margin-right: -7.5vw;
+      top: 2vh;
+      height: 8vh;
+      text-align: center;
+      font-size: 1.4rem;
+      z-index: 20;
+        &:hover {
+            color: white;
+        }
+        // iPhone query
+        @media screen and (max-width: 376px) {
+            right: 20vw;
+            top: 3vh;
+        }
   }
+  
 `
+
+
+
+
+
+
+
+
+
 const HomeLink = () => (
     <div >
-        <Link to="/">Home</Link>
+        <Link to="/">HOME</Link>
     </div>
 )
 
@@ -39,7 +59,7 @@ const HomeLink = () => (
 // A simple container for signup
 
 const RetroSignupComponent = () => (
-    <SignupContainer>
+    <SignupContainer className="signup-container">
         <JoinHeader />
         <HomeLink id="home-link"/>
         <InputPanel />

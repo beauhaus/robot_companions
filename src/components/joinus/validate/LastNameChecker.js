@@ -9,6 +9,7 @@ const StyledLastNameChecker = styled.div`
     color: #1c1841;
     & input::placeholder {
         color: #c4bfad;
+        font-family: "Quicksand", sans-serif;
     }
 `
 const LastNameLabel = styled.label`

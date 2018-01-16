@@ -23,7 +23,7 @@ const StyledHeader = styled.header`
         & > img {
             height: 100%;
             grid-row: 1/-1;
-            grid-collumn: 1;
+            grid-column: 1;
             border: 1px solid grey;
         }
     }

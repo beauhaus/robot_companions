@@ -48,7 +48,7 @@ box-shadow: 5px, 5px 20px 14px black;
                 top: 0;
                 left: 0;
                 z-index: 10;
-                box-shadow: inset -10px 10px 50px 10px rgba(0,0,0,0.9);
+                box-shadow: inset -10px 10px 50px 5px rgba(0,0,0,0.9);
                 border: 8px solid black;
                 width: 100%;
                 height: 100%;
@@ -56,7 +56,6 @@ box-shadow: 5px, 5px 20px 14px black;
                 & > #americaMap {
                     opacity: 0.6;
                     & > #americaRegions {
-
                         & > .home {
                             opacity: 0.2;
                             &:hover {
@@ -69,12 +68,13 @@ box-shadow: 5px, 5px 20px 14px black;
             }
         }
     }
-svg> path#glitch-line {
-  position: absolute;
-  bottom: 0;
+
+
+svg> path#glitch-line {      // THIS CONTROLS GLITCH ANIMATION
   transform: translateY(400px);
   stroke-width: 4px;
-  stroke: #00a100;
+//   stroke: #00a100;
+  stroke: grey;
   animation: glitch 10s 3s infinite;
 }
 
