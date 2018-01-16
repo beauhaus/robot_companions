@@ -60,17 +60,12 @@ const JoinUsButton = styled.button`
 // FIXME: that heinous 2px line at right is back!
 // (look at grid in slider as culprit.)
 @media screen and (max-width: 376px) {      // iPhone Query
-    width: 10vw;
-    height: 24vh;
-    margin-top: -12vh;  
-    & > #link-text {
-        font-size: 2rem;
-    }
+    display: none;
 }
 `
 
 const RetroSignup = () => (
-    <JoinUsButton>
+    <JoinUsButton >
         <Link id="link-text" to="/joinus">JOIN</Link>
     </JoinUsButton>
 )

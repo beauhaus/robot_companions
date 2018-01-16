@@ -34,7 +34,8 @@ background: linear-gradient(35deg, black 0%, #15151d 100%);
         }
     }
 
-// These queries may violate the single-responsibility-principle, but I'm really tired.
+// FIXME: These queries violate the single-responsibility***
+
 @media screen and (max-width: 768px) {      // tablet query
     & > #styled-input-panel {
         width: 90vw;
