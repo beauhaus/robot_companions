@@ -43,7 +43,6 @@ const StyledValidateUser = styled.div`
         border: 2px solid tan;
     }
     @media screen and (max-width: 376px) {      // iPhone query
-      
             width: 100%;
             height: 80vh;
             top: 10vh;

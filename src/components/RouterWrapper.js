@@ -63,10 +63,10 @@ const JoinUsButton = styled.button`
     display: none;
 }
 `
-
+//FixME: this is hacky****
 const RetroSignup = () => (
     <JoinUsButton >
-        <Link id="link-text" to="/joinus">JOIN</Link>
+        <Link id="link-text" to="/joinus">JO<br />I<br />N</Link>
     </JoinUsButton>
 )
 
