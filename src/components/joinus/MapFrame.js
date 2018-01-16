@@ -69,36 +69,40 @@ box-shadow: 5px, 5px 20px 14px black;
         }
     }
 
-
-svg> path#glitch-line {      // THIS CONTROLS GLITCH ANIMATION
+/*(pre-uglification) this is still janky*/
+svg> g> path#glitch-line {      // THIS CONTROLS GLITCH ANIMATION
   transform: translateY(400px);
-  stroke-width: 4px;
+//   stroke-width: 4px;
 //   stroke: #00a100;
-  stroke: grey;
+//   stroke: grey;
   animation: glitch 10s 3s infinite;
 }
 
 
 @keyframes glitch {
-    0% { transform: translateY(500px);
-         opacity: 0;
-         stroke-width: 0;
+    0% { 
+        transform: translateY(500px);
      }
-     50% {
-         opacity: .05;
-         stroke-width: 140px;
-      }
     100% { 
         transform: translateY(-2000px);
-        opacity: 0;
     }
 }
 `
+// <svg width="600" height="600" viewBox="0 0 600 600">
+//     <path  id="glitch-line" d="M0 260.5h600"  />
+// </svg>
 
 const GlitchLine = () => (
-    <svg width="600" height="600" viewBox="0 0 600 600">
-        <path  id="glitch-line" d="M0 260.5h600"  />
-    </svg>
+    <svg width="600" height="600">
+    <g opacity=".2">
+      <linearGradient id="glitch-gradient" x1="296.5005" x2="296.5005" y1="395" y2="234.0005" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stopColor="transparent" stopOpacity="0"/>
+        <stop offset=".5" stopColor="#37ae5d" stopOpacity=".5"/>
+        <stop offset="1" stopColor="transparent" stopOpacity="0"/>
+      </linearGradient>
+      <path id="glitch-line" fill="url(#glitch-gradient)" d="M-3 234h599v161H-3z"/>
+    </g>
+  </svg>
 )
 
 class MapFrame extends React.Component {
