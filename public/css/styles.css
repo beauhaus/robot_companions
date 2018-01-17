@@ -13,3 +13,17 @@
     font-family: 'Orbitron', sans-serif;
     overflow-x: hidden;
   }
+
+  .test {
+      color: #1d1c1c;
+  }
+
+  @media screen and (max-width: 768px) {   /*tablet query*/
+
+  }
+
+  @media screen and (max-width: 375px) {   /*phone query*/
+    :root {
+        --base: 20px;
+    }
+  }
