@@ -34,7 +34,7 @@ background: linear-gradient(35deg, black 0%, #15151d 100%);
         }
     }
 
-// FIXME: These queries violate the single-responsibility***
+// FIXME: These queries violate single-responsibility***
 
 @media screen and (max-width: 768px) {      // tablet query
     & > #styled-input-panel {

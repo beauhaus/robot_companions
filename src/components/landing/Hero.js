@@ -41,8 +41,7 @@ const StyledHeroSection = styled.div`
     }
 
     & #watch-vid-btn {
-        font-size: .8rem;
-        font-size: calc(var(--base) * X);
+        font-size: calc(var(--base));
         width: 80vw;
         height: 10vh;
         padding: 2vh;
@@ -62,12 +61,11 @@ const HeroText = styled.h1`
     grid-column: 2;  
     margin-top: 18vh;
     &#hero-text {
-        font-size: 2.5rem;
-        font-size: calc(var(--base) * X);
+        font-size: calc(var(--base) * 2.4);
     }
-  ${StyledHeroSection}:hover & {
-        color: white;
-      }
+    ${StyledHeroSection}:hover & {
+            color: white;
+        }
   }
 `
 
@@ -75,14 +73,13 @@ const WatchVidBtn = styled.button`
     background-color: transparent;
     color: #ecb875;
     border: 1px solid #ecb875;
-    font-size: .5rem;
-    font-size: calc(var(--base) * X);
+    font-size: calc(var(--base) * .4);
     border-radius: 200px;
     position: absolute;
     width: 24vw;
     height: 8vh;
     padding: 2vh;
-    top: 55%;
+    top: 65%;
     left: 50%;
     margin-left: -12vw;
     z-index: 12;

@@ -17,7 +17,7 @@ margin: 0;
     width: 60vw;
     left: 50%;
     margin-left: -30vw;
-    font-size: 2.2rem;
+    font-size: calc(var(--base)* 1.8);
     font-weight: lighter;
     & > span {
         color: #831212;
@@ -34,7 +34,8 @@ margin: 0;
       height: 38vw;
       & > h1 {
           top: 2vh;
-          font-size: 1.8rem;
+          font-size: calc(var(--base)* 2.2);
+          
       }
       & > #groups-container {
           top: 10vh;
@@ -44,8 +45,8 @@ margin: 0;
           width: 100vw;
       }
 }
-// phone query
-@media screen and (max-width: 376px) {
+
+@media screen and (max-width: 376px) {      // phone query
     height: 58vh;
     & > #groups-container {
         top: 15vh;
@@ -55,7 +56,7 @@ margin: 0;
         & > #fwd-arrow, #rwd-arrow {
         background: grey;
         display: block;
-        font-size: 3rem;
+        font-size: calc( var(--base)* 2.2);
         font-weight: bold;
         width: 2vw;
         border-width: 0;

@@ -27,16 +27,15 @@ left: 0;
         height: 45vh;
         & > p {
             height: 5vh;
-            width: 20vw;
+            width: 22vw;
             left: 50%;
-            font-size: .7rem;
+            font-size: calc(var(--base) * .75);
             font-weight: bold;
-            margin-top: 5vh;
+            margin-top: 2vh;
             margin-left -10vw;
             top: 28vh;
         }
     }
-
 }
 
 `
