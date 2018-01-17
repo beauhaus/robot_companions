@@ -18,32 +18,31 @@ const StyledHeroSection = styled.div`
     grid-template-rows: 1vh 1vh 1fr;
     height: 28vh;
     .hero-text {
-        font-size: 1.8rem;
+
+        font-size: calc(var(--base) * 1.4);
         grid-row: 1;
         grid-column: 2;
         margin-top: 8vh;
     }
     & > #watch-vid-btn {
         top: 50%;
-
         width: 40vw;
         margin-left: -20vw;
         height: 6vh;    
     }
 }
-@media screen and (max-width: 375px) {     // iPhone query
-    font-size: 1.5rem;
+@media screen and (max-width: 376px) {     // iPhone query
     height: 45vh;
     text-align: center;
-    #hero-text {
+    &  > h1#hero-text {
         margin-top: 8vh;
         text-align: center;
-        &#hero-text {
-            font-size: 2rem;
-        }    
+        font-size: calc(var(--base) * 2);
     }
-    #watch-vid-btn {
+
+    & #watch-vid-btn {
         font-size: .8rem;
+        font-size: calc(var(--base) * X);
         width: 80vw;
         height: 10vh;
         padding: 2vh;
@@ -64,6 +63,7 @@ const HeroText = styled.h1`
     margin-top: 18vh;
     &#hero-text {
         font-size: 2.5rem;
+        font-size: calc(var(--base) * X);
     }
   ${StyledHeroSection}:hover & {
         color: white;
@@ -76,6 +76,7 @@ const WatchVidBtn = styled.button`
     color: #ecb875;
     border: 1px solid #ecb875;
     font-size: .5rem;
+    font-size: calc(var(--base) * X);
     border-radius: 200px;
     position: absolute;
     width: 24vw;

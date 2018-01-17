@@ -13,7 +13,6 @@ const StyledSliderVid = styled.div`
     grid-auto-columns: 24.75%;
     grid-gap: 0.5%;
     overflow: hidden;
-    // border: 1px solid fuchsia;
 
     @media screen and (max-width: 768px) {    // tablet query
     grid-auto-columns:33%;
@@ -25,8 +24,6 @@ const StyledSliderVid = styled.div`
         }
         & > h3 {
             font-size: calc(var(--base) * .85);
-            // border: 2px solid fuchsia;
-
         }
         & > p {
             top: 22vh;
@@ -47,17 +44,13 @@ const StyledSliderVid = styled.div`
                 height: 50vw;            
             }
         & > h3 {
-            // font-size: .9rem;
-            // font-size: calc(var(--base) * X);
-
+            font-size: calc(var(--base) * 1.2);
         }
         & > p {
             width: 88vw;
-            bottom: -15vh;
-            // font-size: .8rem;
-            // font-size: calc(var(--base) * X);
-
-        }
+            top: 34vh;
+            font-size: calc(var(--base) * 1);
+            }
         }
     }
 `
@@ -73,7 +66,6 @@ const PicFrame = styled.section`
    & > img {
        width: 100%;
        height: 100%;
-    //    border: 1px solid red;
     } 
   & > h3 {
     font-size: 0.6em;

@@ -104,8 +104,7 @@ Onboarding and signup is a critical process. If a first-visit to a site is a fir
 
 Engagement ought to be engaging. So, let's pump up that oxyticin!
 
-Therefore,  instead of this...
-<<<<<<< HEAD
+Therefore,  instead of a conventional drop-down
 
 ![drop-down](./readmeImg/drop.png "dropdown")
 
