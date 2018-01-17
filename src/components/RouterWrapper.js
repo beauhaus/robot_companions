@@ -42,8 +42,8 @@ const JoinUsButton = styled.button`
             font-family: "Quicksand", sans-serif;
             text-decoration: none;
             font-weight: lighter;
-            font-size: 1.2rem;
-            letter-spacing: 0.1rem;
+            font-size: calc(var(--base)*1);
+            letter-spacing: calc(var(--base)*.1);
             &:hover {
                 color: white;
             }
@@ -54,16 +54,22 @@ const JoinUsButton = styled.button`
     height: 22vh;
     margin-top: -11vh;  
     & > #link-text {
-        font-size: 2rem;
+        font-size: calc(var(--base)*2);
     }
 }
 // FIXME: that heinous 2px line at right is back!
 // (look at grid in slider as culprit.)
 @media screen and (max-width: 376px) {      // iPhone Query
-    display: none;
+    width: 9vw;
+    height: 30vh;
+    color: white;
+    border: 1px solid green;
+    mix-blend-mode: normal;
+    z-index: 51;
 }
 `
-//FixME: this is hacky****
+// FIXME: this is hacky**** variable width of letters produces unpredictable results according to
+// variable width across breakpoints.
 const RetroSignup = () => (
     <JoinUsButton >
         <Link id="link-text" to="/joinus">JO<br />I<br />N</Link>

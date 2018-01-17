@@ -17,7 +17,7 @@ background: url(./img/buddies.jpg) no-repeat center center;
         margin:  0 10vw;    
       }
   }
-
+  
   @media screen and (max-width: 768px) {    //tablet query  
     height: 52vh;
     padding: 10% 0;
@@ -25,10 +25,10 @@ background: url(./img/buddies.jpg) no-repeat center center;
         width: 80vw;
         padding-top: 0;
         & h1, span {
-            font-size: 1.7rem;
+            font-size: calc(var(--base) * 1.6);
         }
         & p {
-            font-size: 0.75rem;
+            font-size: calc(var(--base) * .65);
         }
     }
     & #icon-section {
@@ -52,16 +52,16 @@ background: url(./img/buddies.jpg) no-repeat center center;
         }
         & h1{
             width: 100%;
-            font-size: 1.7rem;
+            font-size: calc(var(--base) * 1.7);
             font-weight: bold;
             & > span {
-                font-size: 1.7rem;
+                font-size: calc(var(--base) * 1.7)
                 font-weight: bold;
             }
         }
         & p {
            line-height: 2;
-           font-size: .8rem;
+           font-size: calc(var(--base) * .7);
         }
         & #icon-section {
             height: 30vh;
@@ -86,12 +86,12 @@ const StyledPartnershipContainer = styled.article`
 & > section {
     width: 50%;
     & h1 {
-        font-size: 2rem;
+        font-size: calc(var(--base) * 1.7);
         color: #1d2535;
         font-weight: lighter;
         & > span {
             color: #831212;
-            font-size: 2rem;
+            font-size: calc(var(--base) * 1.7);
         }
     }
     & p {
@@ -99,7 +99,7 @@ const StyledPartnershipContainer = styled.article`
         margin-top: -2vh;
         line-height: 2.5;
         font-family: sans-serif;
-        font-size: 0.7rem;
+        font-size: calc(var(--base) * .65);
         color: black;
     }
 }

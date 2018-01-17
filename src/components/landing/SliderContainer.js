@@ -31,7 +31,6 @@ const StyledSliderContainer = styled.div`
     @media screen and (max-width: 768px) {   //tablet query
         top: 25%;
         height: 35vh;
-        font-size: 2.4rem;
         &#fwd {
             right: 2vw;
         }

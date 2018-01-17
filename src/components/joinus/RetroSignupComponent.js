@@ -27,7 +27,7 @@ background: linear-gradient(35deg, black 0%, #15151d 100%);
       top: 2vh;
       height: 8vh;
       text-align: center;
-      font-size: 1.4rem;
+      font-size: var(--base);
       z-index: 20;
         &:hover {
             color: white;

@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 
-// FIXME: Too many queries
+// FIXME: A thorny issue persists with <p>s * according to volume of text, a gap is visible at some descriptions
+// Solved with a "top: " value rather than a "bottom: " value.
 
 const StyledSliderVid = styled.div`
     margin: 0 auto;
@@ -23,11 +24,14 @@ const StyledSliderVid = styled.div`
             margin-top: -5vh;
         }
         & > h3 {
-            font-size: .9rem;
+            font-size: calc(var(--base) * .85);
+            // border: 2px solid fuchsia;
+
         }
         & > p {
-            bottom: -10vh;
-            font-size: .8rem;
+            top: 22vh;
+            font-size: calc(var(--base) * .8);
+            margin-top: 0;
             text-align: center;
         }
       }
@@ -43,12 +47,16 @@ const StyledSliderVid = styled.div`
                 height: 50vw;            
             }
         & > h3 {
-            font-size: .9rem;
+            // font-size: .9rem;
+            // font-size: calc(var(--base) * X);
+
         }
         & > p {
             width: 88vw;
             bottom: -15vh;
-            font-size: .8rem;
+            // font-size: .8rem;
+            // font-size: calc(var(--base) * X);
+
         }
         }
     }
@@ -77,12 +85,12 @@ const PicFrame = styled.section`
   }
   & > p {
     position: absolute;
-    bottom: -12vh;
+    top: 30vh;
     font-family: Arial, sans-serif;
     word-wrap: break-word;
     color: #301010;
     line-height: 1.5;
-    font-size: 0.6em;
+    font-size: calc(var(--base) * .5);
     z-index: 20;
   }
 `

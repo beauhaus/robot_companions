@@ -15,16 +15,19 @@ background: url(./img/profile-background.jpg) no-repeat center center;
   background-size: cover;
   @media screen and (max-width: 768px) {      // tablet query
     height: 42vh;
+    
     & > .profile-container {
         justify-content: space-between;
         width: 85vw;
-        & > section#profile-pic-section {
-            & > img {
-                margin-left: 2vw;
-                width: 32vw;
+        & > section {
+            padding-top 4vw;
+            &#profile-pic-section {
+                & > img {
+                    width: 35vw;
+                }
             }
         }
-    }
+     }
   }
   @media screen and (max-width: 376px) {      // iPhone Query
     height: 90vh;
@@ -39,7 +42,7 @@ background: url(./img/profile-background.jpg) no-repeat center center;
               padding: 0;
               width: 100%;
               & h1, span {
-                  font-size: 1.6rem;
+                  font-size: calc(var(--base)*1.6); 
               }
           }
           & #profile-pic-section {
@@ -64,21 +67,21 @@ const StyledProfileContainer = styled.article`
     justify-content: space-around;
     padding: 2% auto;
 & > section {
+    padding: 12vh 5%;
+    width: 50%;
     &#text-section {
         & p {
             line-height: 2.1;
             font-family: sans-serif;
-            font-size: 0.7rem;
+            font-size: calc(var(--base) * 0.65);
             }        
     }
-    padding: 2vh 5%;
-    width: 50%;
     & h1 {
-        font-size: 2rem;
+        font-size:  calc(var(--base) * 1.6);
         color: #1d2535;
         & > span {
             color: #831212;
-            font-size: 2rem;
+            font-size: calc(var(--base) * 1.6);
         }
     }
     & img {
@@ -88,6 +91,8 @@ const StyledProfileContainer = styled.article`
     }
 }
 `
+
+
 /**
  * A "state-less" component that simply contains a picture and some text.
  * The only remarkable thing is the behavior of the <section>s at the breakpoints.

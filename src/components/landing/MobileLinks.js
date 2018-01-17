@@ -14,23 +14,16 @@ const StyledMobileLinks = styled.div`
         text-decoration: none;
     }
 `
-// <Route path="/joinus" component={RetroSignupComponent} />
-const RetroSignupComponent = () => (
-    <button>
-        <Link id="link-text" to="/joinus">RETRO  SIGNUP</Link>
-    </button>
-)
+
 
 const MobileLinks = () => {
     return (
         <BrowserRouter>
             <div>
                 <StyledMobileLinks>
-                    <RetroSignupComponent />
                     <a href="#partnership">RC Partnership</a>
                     <a href="#profile">RC Profile</a>
                 </StyledMobileLinks>
-                <Route path="/joinus" component={RetroSignupComponent} />
             </div>
         </BrowserRouter>
     )

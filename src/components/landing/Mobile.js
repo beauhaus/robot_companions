@@ -21,23 +21,26 @@ const StyledHamburger = styled.button`
     right: 0;
     width: 80px;
     height: 9.7vh;
-    font-size: 2rem;
+    font-size: calc(var(--base) * 2.2);
     padding: 0 3vw;
-    background: teal;
-    color: grey;
+    background: transparent;
+    color: #a71313;
     z-index: 51;
+    border-width: 0;
 `
+
 const CloseBtn = styled.button`
     position: fixed;
     right: 0;
     top: 0;
     width: 80px;
     height: 9.7vh;
-    font-size: 2rem;
+    font-size: calc(var(--base) * 2.2);
     padding: 0 3vw;
-    background: teal;
-    color: grey;
+    background: rgb(54, 52, 52);
+    color: #a71313;
     z-index: 52;
+    border-width: 0;
 `
 class Mobile extends React.Component {
     constructor(props) {

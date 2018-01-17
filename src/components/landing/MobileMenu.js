@@ -13,7 +13,7 @@ const StyledMenu = styled.div`
     width: 100vw;
     // overflow: hidden;
     text-align: center;
-    background: rgba(54, 52, 52, 1);
+    background: rgb(54, 52, 52);
     color: wheat;
     z-index: 50;
 `

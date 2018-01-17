@@ -8,7 +8,7 @@ const HeaderLinks = styled.nav`
   grid-row: 2;
   & > a {
     margin-left: 1vw;
-    font-size: .6rem;
+    font-size: var(--base)/2;
     text-decoration: none;
     color: #1BA3CC;
   }
