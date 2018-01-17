@@ -53,7 +53,6 @@ font-family: "Trebuchet MS", sans-serif;
 }
 
     &>#text-level-two {
-    //  background: rgba(62,62,12,0.5);
     grid-column: 2/3;
     grid-row: 3;
     text-align: right;
@@ -63,7 +62,7 @@ font-family: "Trebuchet MS", sans-serif;
     & div, span, a, a:visited, a:focus {
         color: #b8b8b8;
         margin: 0 .2vw;
-        font-size: .5rem;
+        font-size: calc(var(--base)* .5)
      }
      & a:hover {
         text-decoration: underline;
@@ -81,7 +80,7 @@ font-family: "Trebuchet MS", sans-serif;
         padding: 4px 0;
        & > div#corporate, sup {            
             text-align: right;
-            font-size: .5rem;
+            font-size: calc(var(--base)* .5);
         }
     }
 
@@ -89,7 +88,7 @@ font-family: "Trebuchet MS", sans-serif;
         grid-column: 2/3;
         grid-row: 5;
      & p {
-        font-size: .5rem;
+        font-size: calc(var(--base)* .5);
         text-align: right;
      }
     }
@@ -175,9 +174,9 @@ const Footer = () => (
         
             <img id="footer-left-icon" src="./img/horiz-icon.svg" alt="horizontal icon" />
             <div id="footer-icon-links">
-            <a id="git-link" href="https://github.com/Beauvelop/2-page-app"><img id="git-logo" src="./img/git-logo.png" alt="git-logo" /></a>
-            <a id="twitter-link" href="https://codepen.io/beau_dev/"><img id="twitter-logo" src="./img/twitter-logo.jpg" alt="git-logo" /></a>
-            <a id="codepen-link" href="https://github.com/Beauvelop/robot_companions"><img id="codepen-logo" src="./img/codepen-logo.png" alt="git-logo" /></a>
+            <a id="git-link" href="https://github.com/Beauvelop/robot_companions"><img id="git-logo" src="./img/git-logo.png" alt="git-logo" /></a>
+            <a id="twitter-link" href="https://twitter.com/beau_dev"><img id="twitter-logo" src="./img/twitter-logo.jpg" alt="git-logo" /></a>
+            <a id="codepen-link" href="https://codepen.io/beau_dev/"><img id="codepen-logo" src="./img/codepen-logo.png" alt="git-logo" /></a>
             </div>
         </div>
         <div id="text-level-two">

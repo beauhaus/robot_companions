@@ -25,7 +25,7 @@ const StyledValidateUser = styled.div`
         border-radius: 2px;
         text-align: center;
         font-family: sans-serif;
-        font-size: .6rem;
+        font-size: calc(var(--base)* .45);
         color: #1d1c1c;
         line-height: 2;
         transition: all 1s ease;
@@ -34,15 +34,23 @@ const StyledValidateUser = styled.div`
         position: absolute;
         font-family: Courier, sans-serif;
         color: rgba(0,0,0,.7);
-        font-weight: bold;
         box-shadow: inset -1px 1px 6px 2px rgba(0,0,0,.5);
-        right: 12vw;
+        right: 15vw;
         height: 4vh;
-        font-size: 1rem;
+        font-size: calc(var(--base) * .8);        
         background: grey;
         border: 2px solid tan;
     }
-    @media screen and (max-width: 376px) {      // iPhone query
+
+    @media screen and (max-width: 768px) {            //tablet query
+        & > div > label {
+            & > input {
+                font-size: calc(var(--base));
+            }
+        }
+    }
+
+    @media screen and (max-width: 376px) {             // iPhone query
             width: 100%;
             height: 80vh;
             top: 10vh;
@@ -55,11 +63,10 @@ const StyledValidateUser = styled.div`
                 margin-top: 2vh;
                 & > input {
                     margin-top: 5vh;
-                    // display: fixed;
                     right: -42vw;
                     height: 8vh;
                     width: 70vw;
-                    font-size: 1.5rem;
+                    font-size: calc(var(--base)* .8);
                 }
             }
       

@@ -28,7 +28,9 @@ box-shadow: 5px, 5px 20px 14px black;
     width: 50vw;
     height: 100vh;
     & > #screen-container-div {
-        // border: 2px solid fuchsia;
+        &:hover {
+            cursor: pointer;
+        }
             position: absolute;
             width: 35vw;
             top: 20vh;

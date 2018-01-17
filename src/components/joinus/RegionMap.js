@@ -11,13 +11,13 @@ import MTN from './nineRegions/MTN'
 import PAC from './nineRegions/PAC'
 import NEC from './nineRegions/NEC'
 
+// cursor: pointer; // seems not to work
+// https://stackoverflow.com/questions/26672936/cursor-pointer-on-svg-element-is-not-working
+// Solution: putting it on mapframe --it's just a div, after all. //
+
 const StyledRegionMap = styled.div`
 position: relative;
 height: 100%;
-// & #home-result {
-//     border: 3px solid fuchsia;
-// }
-
 
 svg {
     & #home-prompt {
@@ -100,6 +100,7 @@ class RegionMap extends React.Component {
                     viewBox="0 0 600 600"
                     preserveAspectRatio="xMinYMin meet"
                 >
+                
 
                     <g id="americaRegions" strokeMiterlimit="10">
                         <g className="home" >
