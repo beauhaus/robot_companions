@@ -26,7 +26,7 @@ margin: 0;
 }
 & #fwd-arrow, #rwd-arrow {
     display: none;
-    z-index: 5; /* concealing images beneath ( in carousel on phones)*/
+    z-index: 5; /* This is for concealing images beneath ( in carousel on phones)*/
     position: absolute;
 }
 
@@ -35,7 +35,6 @@ margin: 0;
       & > h1 {
           top: 2vh;
           font-size: calc(var(--base)* 2.2);
-          
       }
       & > #groups-container {
           top: 10vh;
@@ -48,6 +47,9 @@ margin: 0;
 
 @media screen and (max-width: 376px) {      // phone query
     height: 58vh;
+    & > h1 {
+        font-size: calc( var(--base)* 1.8);
+    }
     & > #groups-container {
         top: 15vh;
         margin: 0;
