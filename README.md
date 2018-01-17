@@ -17,6 +17,8 @@
 |**production build/hosted**|"yarn run build:prod"|***√***|
 |**normalized**|normalize.css|***√***|
 |**TabIndex Attrs**|a-tags and btns|*Pending*|
+|**CSS Variables**|in :root{} of stylesheet|*Pending*|
+
 
 
 ## Ambitions for this project:
@@ -33,18 +35,12 @@
 + landscape breakpoints for iphones. --> Now, they look pretty awful.
 + reworking of the color palette and typography.
 + prep data inputs for back-end storage.
-+ HOSTING!
-
 
 ## Pre-launch TODOS
 
-+ port signup to retro signup  √
-+ consider buttons with labels for states that appear upon region click √
-+ replace acronyms with full names of regions in "monitor" --(rejected... went with other design)
-+ folder tree for each region √
-+ comment critical code.√
-+ glitch animation on monitor? --Only if there's time...
-
+local-host renders a font 1/3rd the size of hosted site. Therefore,
+css var to be changed from 20 to 30px prior to "build:prod" command &
+push to servers for hosted site.
 
 
 ## CLI commands
@@ -57,12 +53,12 @@
 # Notes, Context & some features
 
 The coding challenge was simply to clone the general style of the following website & to add a second page with
-user validation
-First Name
-Last Name (with dashes and apostrophes)
-email
-US zipcode
-US States Dropdown
+- user validation
+- First Name
+- Last Name (with dashes and apostrophes)
+- email
+- US zipcode
+- US States Dropdown
 
 [Doosan Baseball](http://baseball.doosan.com/)
 
@@ -83,9 +79,10 @@ It has nowhere near the functionality that the jQuery Owl-Carousel plugin has (u
 
 I was as ambitious to do a youtube API... but I didn't want to get too into the weeds with trying to do something impressive--while missing the core points of the coding that was requested which was sign-up and user validation.
 
-This lead me to the choice of theme/content.
 
 ### The content
+
+I wanted to give a kind of sinister--but--satirical feel to the idea of AI and the coming "robo-pocalypse". I therefore chose this theme of images and styling.
 
 I took a risk by replacing videos with .gifs and this lead me to a robotics theme. I simply wanted people to smile when they visit.
 
@@ -97,8 +94,6 @@ The larger-(more serious) cost comes at page-load.
 (I didn't build the slider mindful that close to 1500 images would be loading at once.)
 
 Anyway... The result is something with a theme of "shitty-robots". The Hero video is taken from videos done by a woman who works in robotics and is brilliant & funny.
-
-I wanted to give a kind of sinister--but--satirical feel to the idea of AI and the coming "robo-pocalypse"...
 
 Onboarding and signup is a critical process. If a first-visit to a site is a first meeting...the signup is an agreement to start dating. This critical process, when done well, can & ought to be an enjoyable experience. It is a welcome.
 
@@ -112,17 +107,19 @@ Therefore,  instead of a conventional drop-down
 I opted for this:
 ![Image One](./readmeImg/map2.png "First Test Readme Image")
 
-I'm happy with it. It's a cathode computer monitor & even has a glitch.
+![layers](./readmeImg/composite.jpg "Layered Map")
 
-I was watching Stanley Kubrick's 2001 and I really liked the drab and deliberately ugly colors...
+-------------------------
+
+I'm happy with it. It's a cathode computer monitor with a glitch.
+
+(Recently watched Stanley Kubrick's 2001 and I really liked the drab and deliberately ugly colors...)
 
 I used these two images for reference:
 
 ![oldskype](./readmeImg/oldSkype.png "old skype")
 ![hal900](./readmeImg/hal9000.jpg "Hal 9000")
 
-![layers](./readmeImg/composite.jpg "Layered Map")
-The Monitor
 ___________
 + base SVG layer with drab linear gradient
 + (SVG) single-pixel-wide horizontal lines depicting deinterlacing
@@ -132,12 +129,15 @@ ___________
 + (SVG) buttons with corresponding states appear on click.
 + (SVG) finally a resulting "You've chosen VA..." appears offset in the map.
 
-This has been the most fun coding yet. There's still much, much more to do.
+
+-----------------
+
+This has been I'm having a lot of fun doing this. (And I won't stop :) )
 
 
 
-Here's an SVG done for this site.
 
+Here is an icon in svg (illustrator) I did for this site.
 ![rc-hal900](./readmeImg/rc-hal.png "RC Hal")
 
 
