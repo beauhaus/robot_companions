@@ -22,7 +22,7 @@ height: 100%;
 svg {
     & #home-prompt {
         fill: #72794d;
-        fill: fuchsia;
+        fill: fuchsia; //   remove this !
     }
     & #americaRegions {
         & text {
@@ -158,14 +158,3 @@ class RegionMap extends React.Component {
 }
 
 export default RegionMap;
-
-/*
-      <g id="home-display">
-  
-                        {this.state.region &&<Test/>}
-
-                        <text x="250" y="455"  fill="#00FF00" stroke="#00FFFF" strokeMiterlimit="10" fontFamily="'MyriadPro-Regular'" fontSize="40">{this.state.region}</text>
-                    </g>
-                    {this.state.region && <text id="home-prompt" x="50" y="465">Please choose your home state.</text>}
-              
-*/

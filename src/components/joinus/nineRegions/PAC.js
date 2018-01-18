@@ -1,15 +1,6 @@
-
 import React from 'react';
 import styled from 'styled-components';
 
-const StyledPAC = styled.div`
-  width: 100vw;
-  & > button {
-      background: skyblue;
-      margin: 1vh 2vw;
-      padding: 1%;
-  }
-`
 //PACIFIC STATES
 class PAC extends React.Component {
     constructor(props) {
@@ -79,5 +70,3 @@ class PAC extends React.Component {
 }
 
 export default PAC;
-
-

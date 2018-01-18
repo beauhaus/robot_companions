@@ -1,4 +1,3 @@
-
 import React from 'react';
 import styled from 'styled-components';
 
@@ -83,18 +82,3 @@ class WNC extends React.Component {
 }
 
 export default WNC;
-
-
-/*
- <StyledWNC>
-            <button id="ND" onClick={this.handleClick}>ND</button>
-            <button id="SD" onClick={this.handleClick}>SD</button>
-            <button id="KS" onClick={this.handleClick}>KS</button>
-            <button id="NE" onClick={this.handleClick}>NE</button>
-            <button id="MO" onClick={this.handleClick}>MO</button>
-            <button id="IA" onClick={this.handleClick}>IA</button>
-            <button id="MN" onClick={this.handleClick}>MN</button>
-                {this.state.home && <h1>You chose {`${this.state.home}`}</h1>}
-            </StyledWNC>
-
-            */

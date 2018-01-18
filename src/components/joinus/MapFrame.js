@@ -71,7 +71,7 @@ box-shadow: 5px, 5px 20px 14px black;
         }
     }
 
-/*(pre-uglification(?)) this is still janky*/
+/*FIXME: this is still janky*/
 svg> g> path#glitch-line {      // THIS CONTROLS GLITCH ANIMATION
   transform: translateY(400px);
 
@@ -80,9 +80,6 @@ svg> g> path#glitch-line {      // THIS CONTROLS GLITCH ANIMATION
 
 
 @keyframes glitch {
-    // 0% { 
-    //     transform: translateY(1500px);
-    //  }
     100% { 
         transform: translateY(-1000px);
     }

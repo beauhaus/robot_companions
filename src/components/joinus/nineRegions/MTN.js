@@ -1,15 +1,6 @@
-
 import React from 'react';
 import styled from 'styled-components';
 
-const StyledMTN = styled.div`
-  width: 100vw;
-  & > button {
-      background: skyblue;
-      margin: 1vh 2vw;
-      padding: 1%;
-  }
-`
 //MOUNTAIN STATES
 class MTN extends React.Component {
     constructor(props) {

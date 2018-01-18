@@ -1,5 +1,4 @@
 /* styled-components, Woohoo! 🎉 :) */
-
 :root {
     --base: 20px;
 }
@@ -7,23 +6,19 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-  }
+}
   body {
     width: 100vw;
     font-family: 'Orbitron', sans-serif;
     overflow-x: hidden;
   }
-
-  .test {
-      color: #1d1c1c;
-  }
-
   @media screen and (max-width: 768px) {   /*tablet query*/
-
+    :root {
+        --base: 30px;
+    }
   }
-
   @media screen and (max-width: 375px) {   /*phone query*/
     :root {
-        --base: 20px;
+        --base: 30px;
     }
   }
