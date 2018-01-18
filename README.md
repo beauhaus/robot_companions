@@ -88,7 +88,7 @@ Therefore,  instead of a conventional drop-down
 ![drop-down](./readmeImg/drop.png "dropdown")
 
 I opted for this:
-![Image One](./readmeImg/map1.png "First Test Readme Image")
+![Image One](./readmeImg/map2.png "First Test Readme Image")
 
 It's a vector display monitor with a glitch.
 
