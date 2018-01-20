@@ -1,6 +1,16 @@
 # Robot-Companions: 
 ## (User Validation app in React 16)
 
+### *font-size Production change* for **public/css/styles.css**
+
+
+```diff
+/* from LocalHost to Prod*/
+:root {
+- --base: 20px;
++ --base: 30px;
+}
+```
 ## Feature-set
 
 |<h3>Feature</h3>|<h3>Notes</h3>|<h3>Status</h3>|
@@ -168,4 +178,4 @@ Code (internal/external for sizing): -->
 
 https://www.webpagetest.org/result/180119_YP_552a762ed78cd3cf4228eb1163d2b67f/
 
-7. **I used id's **for accurate targeting in components which, I forgot, you should never do. It completely defeats the purpose of reuse. (--What use is a component if it's only usable in one place?).
+7. **I used id's** for accurate targeting in components which, I forgot, you should never do. It completely defeats the purpose of reuse. (--What use is a component if it's only usable in one place?).

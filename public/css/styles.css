@@ -1,7 +1,13 @@
 /* styled-components, Woohoo! 🎉 :) */
 :root {
-    --base: 20px;
+  /* Local-host*/
+  --base: 20px;
+
+  /*production build*/
+  /* --base: 30px; */
 }
+
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -12,13 +18,10 @@
     font-family: 'Orbitron', sans-serif;
     overflow-x: hidden;
   }
+
   @media screen and (max-width: 768px) {   /*tablet query*/
-    :root {
-        --base: 30px;
-    }
+    
   }
-  @media screen and (max-width: 375px) {   /*phone query*/
+  /* @media screen and (max-width: 375px) {   phone query
     :root {
-        --base: 30px;
-    }
-  }
+        /* --base: 30px; */

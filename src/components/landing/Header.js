@@ -12,29 +12,33 @@ const StyledHeader = styled.header`
     width: 100vw;
     z-index: 20;
     border-bottom: 1px solid #6b1212;
+    display: grid;
+    grid-template-columns: 1fr 86vw 1fr;
+    grid-template-rows: 1fr 6vh 1fr;
     & > div.header-content-container {
-        width: 86vw;
-        height: 6vh;
-        margin: 1vh 7vw;
+        grid-column: 2;
+        grid-row: 2;
         display: grid;
-        grid-template-columns: 1fr  25vw;
-        grid-template-rows: repeat(3, 1fr);
-        // border: 1px solid yellow;
+        grid-template-columns: 14vw auto 28vw;
         & > img {
             height: 100%;
-            grid-row: 1/-1;
-            grid-column: 1;
             border: 1px solid grey;
         }
     }
-    // tablet query
-    @media screen and (min-width: 768px) {
+
+    @media screen and (min-width: 768px) {     // tablet query
         & > div.header-content-container {
-            grid-template-columns: 1fr  45vw;
+            grid-template-columns: 1fr 45vw;
+            & .header-links {
+                & a {
+                    margin-left: 3vw;
+                    font-size: calc(var(--base) * .6);
+                }
+            }
         }
     }
-    // iPhone query
-    @media screen and (max-width: 376px) {
+
+    @media screen and (max-width: 376px) {    // iPhone query
         height: 10vh;
         & > div img#header-icon {
             position: absolute;
@@ -43,7 +47,7 @@ const StyledHeader = styled.header`
             height: 100%;
             border-width: 0;
         }
-        & > #header-links{
+        & > .header-links{
             display: none;
         }
      }
@@ -55,7 +59,7 @@ const Header = () => (
     <StyledHeader className="default-header" id="default-header">
         <div className="header-content-container">
             <img id="header-icon" src="img/horiz-icon.svg" alt="brand-icon" />
-            <HeaderLinks id="header-links"/>
+            <HeaderLinks/>
             <Mobile/>
         </div>
     </StyledHeader>
