@@ -19,24 +19,17 @@ const StyledHeader = styled.header`
         grid-column: 2;
         grid-row: 2;
         display: grid;
-        grid-template-columns: 14vw auto 28vw;
+        grid-template-columns: 14vw 25vw auto;
+        & > .header-links {
+            grid-column: -1;
+            text-align: right;
+        }
         & > img {
             height: 100%;
             border: 1px solid grey;
         }
     }
 
-    @media screen and (min-width: 768px) {     // tablet query
-        & > div.header-content-container {
-            grid-template-columns: 1fr 45vw;
-            & .header-links {
-                & a {
-                    margin-left: 3vw;
-                    font-size: calc(var(--base) * .6);
-                }
-            }
-        }
-    }
 
     @media screen and (max-width: 376px) {    // iPhone query
         height: 10vh;
@@ -47,7 +40,7 @@ const StyledHeader = styled.header`
             height: 100%;
             border-width: 0;
         }
-        & > .header-links{
+        & .header-links {
             display: none;
         }
      }

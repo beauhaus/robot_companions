@@ -3,6 +3,13 @@
 
 ### *font-size Production change* for **public/css/styles.css**
 
+## PLEASE NOTE:
+
+### *Media Queries are, at this moment, being revised*
+#### Thanks for your patience.
+#### Should be back up by Sunday am
+-- (Jan. 20)
+------------
 
 ```diff
 /* from LocalHost to Prod*/
