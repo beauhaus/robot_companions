@@ -9,11 +9,11 @@ const HeroBGVid = styled.video`
     max-height: 52vh;
     mix-blend-mode: multiply;
     object-fit: cover;
-    /* object-position: top 75%; */
     height: initial; 
     display: initial;
-    // iPhone query
-    @media screen and (max-width: 375px) {
+
+    /* Art-direction to zoom in on detail of video */
+    @media screen and (max-width: 375px) {       // iPhone query
       top: 4vh;
       transform: scale(1.5);
      }   
@@ -28,7 +28,7 @@ class HeroVid extends React.Component {
 
     render() {
         return (
-            <HeroBGVid id="hero-bg-vid" loop autoPlay>
+            <HeroBGVid loop autoPlay>
                 <source src={this.state.videoURL} type="video/mp4" />
                 <source src={this.state.videoURL} type="video/ogg" />
                 This Browser cannot display this video type.

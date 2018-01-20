@@ -3,51 +3,67 @@ import styled from 'styled-components';
 import HeroVid from './HeroVid';
 
 const StyledHeroSection = styled.div`
-    font-family: 'Orbitron', sans-serif;
     margin-top: 8vh;
     width: 100vw;
     height: 52vh;
     background: #5e2318;
     position: relative;
     display: grid;
-    grid-template-columns: auto 1fr auto;
-    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 1fr auto 1fr;
     overflow: hidden;
-
-   @media screen and (max-width: 768px) {  // tablet query
-    grid-template-rows: 1vh 1vh 1fr;
-    height: 28vh;
-    .hero-text {
-
-        font-size: calc(var(--base) * 1.4);
-        grid-row: 1;
+    & > .hero-content-container {
         grid-column: 2;
-        margin-top: 8vh;
+        grid-row: 2;
+        width: 80vw;
+        height: 20vh;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 1fr;
+        justify-content: space-around;
+        & > .hero-text {
+            text-align: center;
+            font-size: calc(var(--base) * 3);
+            margin: 0 auto;
+        }
+        & > button.watch-vid-btn {
+            margin: 0 auto;
+            font-size: calc(var(--base) * .8);
+            width: 30vw;
+        }
     }
-    & > #watch-vid-btn {
-        top: 50%;
-        width: 40vw;
-        margin-left: -20vw;
-        height: 6vh;    
+
+@media screen and (max-width: 768px) {  // tablet query
+    height: 28vh;
+    & > .hero-content-container {
+        height: 15vh;
+        & > .hero-text {
+            font-size: calc(var(--base) * 2.2);
+        }
+    }
+    & > .watch-vid-btn {
+        // width: 40vw;
+        height: 8vh;    
+        font-size: calc(var(--base) * .8);
     }
 }
+
 @media screen and (max-width: 376px) {     // iPhone query
     height: 45vh;
-    text-align: center;
-    &  > h1#hero-text {
-        margin-top: 8vh;
-        text-align: center;
-        font-size: calc(var(--base) * 2);
-    }
-
-    & #watch-vid-btn {
-        font-size: calc(var(--base));
-        width: 80vw;
-        height: 10vh;
-        padding: 2vh;
-        top: 55%;
-        left: 50%;
-        margin-left: -40vw;  
+    grid-template-rows: 10vh auto 1fr;
+    & > .hero-content-container {
+        width: 95vw;
+        grid-gap: 2vh;
+        height: 25vh;
+        &  > h1.hero-text {
+            font-size: calc(var(--base) * 2);
+        }
+        & > #watch-vid-btn {
+            font-size: calc(var(--base) * .8);
+            height: 10vh;
+            width: 70vw;
+            padding: 2vh;
+            }
         }
     }
 `
@@ -56,13 +72,6 @@ const HeroText = styled.h1`
     mix-blend-mode: color-dodge;
     color: #ecc7c7;
     font-weight: lighter;
-    margin: auto;
-    grid-row: 2;
-    grid-column: 2;  
-    margin-top: 18vh;
-    &#hero-text {
-        font-size: calc(var(--base) * 2.4);
-    }
     ${StyledHeroSection}:hover & {
             color: white;
         }
@@ -73,15 +82,7 @@ const WatchVidBtn = styled.button`
     background-color: transparent;
     color: #ecb875;
     border: 1px solid #ecb875;
-    font-size: calc(var(--base) * .4);
     border-radius: 200px;
-    position: absolute;
-    width: 24vw;
-    height: 8vh;
-    padding: 2vh;
-    top: 65%;
-    left: 50%;
-    margin-left: -12vw;
     z-index: 12;
     ${StyledHeroSection}:hover & {
         color: white;
@@ -93,8 +94,10 @@ const WatchVidBtn = styled.button`
 `
 const Hero = () => (
     <StyledHeroSection className="hero-section">
-        <HeroText id="hero-text" className="hero-text">ROBOT COMPANIONS</HeroText>
-        <WatchVidBtn id="watch-vid-btn">WATCH VIDEO</WatchVidBtn>
+        <div className="hero-content-container">
+            <HeroText className="hero-text">ROBOT COMPANIONS</HeroText>
+            <WatchVidBtn id="watch-vid-btn" className="watch-vid-btn">WATCH VIDEO</WatchVidBtn>
+        </div>
         <HeroVid />
     </StyledHeroSection>
 )
