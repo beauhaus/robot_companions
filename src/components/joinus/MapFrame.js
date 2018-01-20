@@ -71,10 +71,12 @@ box-shadow: 5px, 5px 20px 14px black;
         }
     }
 
-/*FIXME: this is still janky*/
+
+
+/*FIXME: this is still janky (change speed so it's less noticeable?)*/
+
 svg> g> path#glitch-line {      // THIS CONTROLS GLITCH ANIMATION
   transform: translateY(400px);
-
   animation: glitch 20s 3s infinite;
 }
 

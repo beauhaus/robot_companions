@@ -139,9 +139,9 @@ push to servers for hosted site.
 
 ## Regrets during the dev-process & high-priority issues:
 
-1. Deprioritized **media queries** during the development. As a result the layout lacks consistancy....More difficult targeting of elements, more css, more queries, less fun for the user and developer.
+1. Deprioritized **media queries** during the development. As a result the layout lacks consistency....More difficult targeting of elements, more css, more queries, less fun for the user and developer.
 
-2. **Used rems** for font-sizes only to discover later that they are, indeed, relative.Implemented Solution: Perfect use-case for  **css-variables** at :root{} in the stylesheet.
+2. **Used rems** for font-sizes. Boo! 🤮 **Implemented Solution**: Perfect use-case for  **css-variables** at :root{} in the stylesheet.
 
 3. **Too much styling** early in the dev-process. 
 --Hey, future Self, hook up the damned routes and buttons etc before you screw around with colors and typograpy!
@@ -150,3 +150,22 @@ push to servers for hosted site.
 4. Stylistically, landing page above the fold has **too much movement** for the human eye to handle. This is why covering those .gifs with static images would have been a good choice.
 
 5. **Comment more** of the major components!
+
+6. Gif **files are too big**! None are optimized! **Implemented Solution:** gzipped those puppies for a huge win (by comparison). TTP is much sooner (though, the browser/server still hates me).
+![PageSpeedTest](./readmeImg/pagespeedtest.png "Page Speed Test")
+- The lighter purple represents the original file-size of gifs.
+- Darker purple represents current files that are gzipped.
+<!-- ![Film Strip Test](./readmeImg/striptest.png "Page Speed filmstrip") -->
+
+<!-- ![test](./readmeImg/striptest.png)
+Code (internal/external for sizing): -->
+
+<img src="./readmeImg/striptest.png" width="600">
+
+**Complete load that once took 60s (!!!) now takes 20s** 
+
+--which, yes... still sucks, (but this is only after ONE pass of gzipping gifs)
+
+https://www.webpagetest.org/result/180119_YP_552a762ed78cd3cf4228eb1163d2b67f/
+
+7. **I used id's **for accurate targeting in components which, I forgot, you should never do. It completely defeats the purpose of reuse. (--What use is a component if it's only usable in one place?).
