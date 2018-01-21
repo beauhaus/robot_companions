@@ -139,22 +139,17 @@ Here is an icon in svg (illustrator) I did for this site.
 + prep data inputs for back-end storage.
 
 -----------------
-## Pre-launch TODOS
-
-local-host renders a font 1/3rd the size of hosted site. Therefore,
-css var to be changed from 20 to 30px prior to "build:prod" command &
-push to servers for hosted site.
-
------------------
 ## CLI commands
 
 + yarn run build
 + yarn run dev-server
 + yarn run build:prod
 
+-----------------
+
 # What I would do differently:
 
-## Regrets during the dev-process & high-priority issues:
+## Development process reflections & issues:
 
 1. Deprioritized **media queries** during the development. As a result the layout lacks consistency....More difficult targeting of elements, more css, more queries, less fun for the user and developer.
 
