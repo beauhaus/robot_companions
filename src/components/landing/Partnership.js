@@ -30,7 +30,6 @@ grid-template-rows: 1fr auto 1fr;
   
   @media screen and (max-width: 768px) {    //tablet query  
     height: 52vh;
-    // padding: 10% 0;
     grid-template-columns: 1fr 80vw 1fr;
     grid-template-rows: 1fr 40vh 1fr;
     & > .partnership-container {
@@ -67,12 +66,11 @@ grid-template-rows: 1fr auto 1fr;
             width: 100%;
             grid-row: 1;
         }
-        & h1{
-            width: 100%;
-            font-size: var(--base);
+        & h1 {
+            font-size: calc(var(--base) * 1.3);
             font-weight: bold;
             & > span {
-                font-size: var(--base);
+                font-size: calc(var(--base) * 1.3);
             }
         }
         & p {
