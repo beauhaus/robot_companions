@@ -7,10 +7,10 @@ const StyledMobile = styled.header`
     position: fixed;
     height: 10vh;
     right: 0;
+    top: 0;
     width: 18vw;
     z-index: 50;
-    top: 0;
-@media screen and (min-width: 420px) {
+@media screen and (min-width: 377px) { // phone query
     display: none;
 }
 `

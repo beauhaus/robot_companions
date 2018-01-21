@@ -2,8 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 
-// FIXME: A thorny issue persists with <p>s * according to volume of text, a gap is visible at some descriptions
-// Solved with a "top: " value rather than a "bottom: " value.
+/**
+ * This exploits the power of CSS fully with grid-auto-flow: columns; -- directing the implicit <Picframe/> s to simply fill to the right.
+ * rather than in one column. 
+ * "overflow: hidden;" here, is key.
+ */
 
 const StyledSliderVid = styled.div`
     margin: 0 auto;
@@ -11,78 +14,65 @@ const StyledSliderVid = styled.div`
     height: 100%;
     display: grid;
     grid-auto-columns: 24.75%;
-    grid-gap: 0.5%;
-    overflow: hidden;
-
-    @media screen and (max-width: 768px) {    // tablet query
-    grid-auto-columns:33%;
+    grid-auto-flow: column;
     grid-gap: 1%;
+    overflow: hidden;
+@media screen and (max-width: 768px) {    // tablet query
+    grid-auto-columns:33%;    
    & > section {
-        & > img#media {
-            height: 25vw;
-            margin-top: -5vh;
+       grid-template-rows: 16vh 3vh 2vh auto;             //img & h4 share a row
+       grid-gap: .5vh;
+        & > img.media {
+                height: 80%;
+                grid-rows:1/2;
+            }
+            & > h4 {
+                grid-rows: 2/3;
+                font-size: calc(var(--base) * .85);
+            }
         }
-        & > h3 {
-            font-size: calc(var(--base) * .85);
-        }
-        & > p {
-            top: 22vh;
-            font-size: calc(var(--base) * .8);
-            margin-top: 0;
-            text-align: center;
-        }
-      }
     }
 
     @media screen and (max-width: 376px) {    //phone query
         grid-auto-columns: 100%;
-        grid-gap: 1%;
-        // display:none;
         & > section {
-            & > img#media {
-                width: 70vw;
-                height: 50vw;            
+            grid-template-rows: 26vh 2vh 2vh auto;             //img & h4 share a row
+            grid-gap: 2vh;
+            & > img.media {
+                height: 100%;            
             }
-        & > h3 {
-            font-size: calc(var(--base) * 1.2);
-        }
         & > p {
-            width: 88vw;
-            top: 34vh;
-            font-size: calc(var(--base) * 1);
+            font-size: calc(var(--base)*.8);
             }
         }
     }
 `
 const PicFrame = styled.section`
-    position: relative;
-    top: 10vh;
-    grid-row: 1;
-    height: 40%;
+    height: 100%;
     width: 100%;
     text-align: center;
-    // border: 1px solid yellow;
-    
+    display: grid;
+    grid-template-rows: 30vh 1vh auto;
+    grid-gap: 0.5vh;
    & > img {
+       grid-row: 1;
        width: 100%;
-       height: 100%;
+       height: 85%;
     } 
-  & > h3 {
-    font-size: 0.6em;
-    margin-top: 2vh;
+  & > h4 {
+    grid-row: 2;
+    margin-top: -2vw;
     color: navy;
     z-index: 8;
     font-family: 'Trebuchet MS', sans-serif;
     font-weight: bold;
   }
   & > p {
-    position: absolute;
-    top: 30vh;
+    grid-row: 3;
     font-family: Arial, sans-serif;
     word-wrap: break-word;
     color: #301010;
-    line-height: 1.5;
-    font-size: calc(var(--base) * .5);
+    font-size: calc(var(--base) * .6);
     z-index: 20;
   }
 `
@@ -97,9 +87,9 @@ class SliderVid extends React.Component {
         return (
             <StyledSliderVid id="slider-inner-container">
                     {this.props.gifArray.map((pic)=> (
-                    <PicFrame key={pic.id}>
-                     <img id="media" src={`./img/${pic.src}`}  alt={`${pic.desc}`}/>
-                     <h3>{`${pic.title}`}</h3>
+                    <PicFrame className="media-frame" key={pic.id}>
+                     <img className="media" src={`./img/${pic.src}`}  alt={`${pic.desc}`}/>
+                     <h4>{`${pic.title}`}</h4>
                      <p>{`${pic.desc}`}</p>
                     </PicFrame>
                 ))

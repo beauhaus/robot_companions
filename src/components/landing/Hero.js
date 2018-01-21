@@ -42,7 +42,6 @@ const StyledHeroSection = styled.div`
         }
     }
     & > .watch-vid-btn {
-        // width: 40vw;
         height: 8vh;    
         font-size: calc(var(--base) * .8);
     }

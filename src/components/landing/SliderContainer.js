@@ -5,14 +5,12 @@ import SliderVid from './SliderVid';
 import gifArray from './data';
 
 const StyledSliderContainer = styled.div`
-    height: 100%;
-    background: #8e8e8e;
+    grid-row: 2;
     z-index: 5;
-    display: grid;
-    position: relative;
+    position: relative;    
     & > button {
         position: absolute;
-        font-size: 1.2em;
+        font-size: var(--base);
         font-weight: bold;
         top: 35%;
         transform: scaleY(1.8);
@@ -29,8 +27,6 @@ const StyledSliderContainer = styled.div`
     }
 
     @media screen and (max-width: 768px) {   //tablet query
-        top: 25%;
-        height: 35vh;
         &#fwd {
             right: 2vw;
         }
