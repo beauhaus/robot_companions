@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import GroupsLogos from './GroupsLogos';
+import logos from './logo.JSON';
+
 
 const StyledGroups = styled.div`
     height: 60vh;
@@ -9,99 +11,56 @@ const StyledGroups = styled.div`
     text-align: center;
     overflow: hidden;
     display: grid;
-    grid-template-rows: 10vh 15vh 4vh 26vh 1fr;        // divided by 60
-    grid-template-columns: 6vw 1fr 6vw;
-& > h1 {                   // ->phone as is
+    grid-template-rows: 10vh 15vh 4vh 26vh 1fr;
+    grid-template-columns: 1fr 90vw 1fr;
+& > h1 { 
+    grid-row: 2;
     grid-column: 2;
-    grid-row: 1;
     font-size: calc(var(--base)* 2.5);
     font-weight: lighter;
-    & > span {                     // ->phone as is
+    & > span { 
         color: #831212;
         font-size: inherit; 
     }
 }
-& #fwd-arrow, #rwd-arrow {
-    display: none;
-    z-index: 5; /* This is for concealing images beneath ( in carousel on phones)*/
-    position: absolute;
-}
 
-@media screen and (max-width: 768px) {    // tablet query
-    height: 28vh;
-    grid-template-columns: 1fr 90vw 1fr;
-    grid-template-rows: 2vh 6vh 2vh 12vh 1fr;
-    & > h1 {
-        grid-row: 2;                   
-      font-size: calc(var(--base)* 1.6);
-    }
-    & > .groups-container {
-                                          border: 1px solid white;
-                                          grid-column: 2;
-                                          display: grid;
-                                          grid-auto-flow: row;
+& > .groups-container {
+            grid-column: 2;
+            display: grid;
+            grid-auto-flow: row;
           & .groups-logos {  
-         justify-content: space-between;
-                                          border: 1px solid green;
-          grid-row: 1;
-          height: 12vh;
-          width: 90vw;
-          display: grid;
-          grid-template-columns:repeat(8, 10vw);
-      }
-      & .logo-frame > img {
-                                          border: 1px solid fuchsia;
-          
-          grid-template-rows: repeat(10, 1fr);
-      }
-      & .logo-frame > p {
-                                          border: 1px solid pink;
-
-          font-size: calc(var(--base)* .5);
-          font-family: Verdana, sans-serif;
-          color: black;
-          font-weight: bold;
-      }
-}
-}
-
-/*************************************************************/
-@media screen and (max-width: 768px) {    // tablet query
-      height: 28vh;
-      grid-template-columns: 1fr 90vw 1fr;
-      grid-template-rows: 2vh 6vh 2vh 12vh 1fr;
-      & > h1 {
-          grid-row: 2;                   
-        font-size: calc(var(--base)* 1.6);
-      }
-      & > .groups-container {
-                                            border: 1px solid white;
-                                            grid-column: 2;
-                                            display: grid;
-                                            grid-auto-flow: row;
-            & .groups-logos {  
-           justify-content: space-between;
-                                            border: 1px solid green;
+            justify-content: space-between;
             grid-row: 1;
             height: 12vh;
             width: 90vw;
             display: grid;
             grid-template-columns:repeat(8, 10vw);
         }
-        & .logo-frame > img {
-                                            border: 1px solid fuchsia;
-            
-            grid-template-rows: repeat(10, 1fr);
-        }
-        & .logo-frame > p {
-                                            border: 1px solid pink;
+      & .logo-frame > img {
+          grid-template-rows: repeat(10, 1fr);
+      }
+      & .logo-frame > p {
+          font-size: calc(var(--base)* .5);
+          font-family: Verdana, sans-serif;
+          color: black;
+          font-weight: bold;
+      }
+}
 
-            font-size: calc(var(--base)* .5);
-            font-family: Verdana, sans-serif;
-            color: black;
-            font-weight: bold;
-        }
-  }
+& #fwd-arrow, #rwd-arrow {
+    display: none;
+    z-index: 5;                   /* This is for concealing images beneath ( for carousel on phones )*/
+    position: absolute;
+}
+
+/*************************************************************/
+
+@media screen and (max-width: 768px) {    // tablet query
+    height: 28vh;
+    grid-template-rows: 2vh 8vh 2vh 12vh 1fr;
+    & > h1 {
+        font-size: calc(var(--base)* 1.8);
+    }
 }
 
 /**********************************************************/
