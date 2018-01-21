@@ -2,38 +2,51 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledPartnership = styled.div`
+background: url(./img/buddies.jpg) no-repeat center center; 
+background-size: cover;
 height: 86vh;
 width: 100vw;
-background-color: grey;
-background: url(./img/buddies.jpg) no-repeat center center; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  & #icon-section {
-      & img {
-        width: 14vw;
-        box-shadow: 4px 4px 6px 3px rgba(0,0,0,0.8);
-        margin:  0 10vw;    
-      }
-  }
+display: grid;
+grid-template-columns: 1fr 70vw 1fr;
+grid-template-rows: 1fr auto 1fr;
+    & .partnership-container {
+        grid-row:2;
+        grid-column: 2;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        & > section {
+            width: 100%;
+            &.icon-section {
+                display: grid;
+                grid-template-columns: 1fr auto 1fr;
+                & img {
+                    grid-column: 2;
+                  width: 14vw;
+                  box-shadow: 4px 4px 6px 3px rgba(0,0,0,0.5);
+                }
+            }
+        }
+    }
   
   @media screen and (max-width: 768px) {    //tablet query  
     height: 52vh;
-    padding: 10% 0;
+    // padding: 10% 0;
+    grid-template-columns: 1fr 80vw 1fr;
+    grid-template-rows: 1fr 40vh 1fr;
     & > .partnership-container {
-        width: 80vw;
-        padding-top: 0;
+        & section {
+            height: 40vh;
+        }
         & h1, span {
-            font-size: calc(var(--base) * 1.6);
+            font-size: calc(var(--base) * 1.5);
         }
         & p {
-            font-size: calc(var(--base) * .65);
+            font-size: calc(var(--base) * .6);
         }
     }
-    & #icon-section {
-        padding-top: 3vh;
+    & .icon-section {
         & img {
+            margin-top: 50%;
             width: 16vw;
         }
     }
@@ -42,88 +55,74 @@ background: url(./img/buddies.jpg) no-repeat center center;
   @media screen and (max-width: 376px) {   // iPhone Query 
     height: 86vh;
     text-align: center;
+    grid-template-columns: 1fr 80vw 1fr;
+    grid-template-rows: 1fr 80vh 1fr;
     & > .partnership-container {
-        flex-direction: column;
-        width: 100vw;
-        padding-top: 3vh;
-        & #text-section {
+        grid-template-rows: repeat(2, 1fr);
+        & section {
+            width: 80vw;
+        }
+        & .text-section {
             margin: 0;
             width: 100%;
+            grid-row: 1;
         }
         & h1{
             width: 100%;
-            font-size: calc(var(--base) * 1.7);
+            font-size: var(--base);
             font-weight: bold;
             & > span {
-                font-size: calc(var(--base) * 1.7)
-                font-weight: bold;
+                font-size: var(--base);
             }
         }
         & p {
            line-height: 2;
-           font-size: calc(var(--base) * .7);
+           font-size: calc(var(--base) * .55);
         }
-        & #icon-section {
-            height: 30vh;
-            margin: 0 auto;
-            & > img {
-                width: 22vw;
+        & .icon-section {
+            grid-row: 2;
+            & .profile-logo {
+                width: 20vw;
+                height: 30vh;
             }
         }
     }
   }
 `
 const StyledPartnershipContainer = styled.article`
-    margin: 0 auto;
     color: #1d2535;
-    padding: 0 1vw;
-    height: 100%;
-    width: 68vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding-top: 4%;
 & > section {
-    width: 50%;
-    & h1 {
-        font-size: calc(var(--base) * 1.7);
-        color: #1d2535;
+    & h1, span {
+        font-size: calc(var(--base) * 2.8);
         font-weight: lighter;
-        & > span {
-            color: #831212;
-            font-size: calc(var(--base) * 1.7);
-        }
+    }
+    &  h1 {
+        color: #1d2535;
+    }
+    &  span {
+        color: #831212;
     }
     & p {
-        width: 98%;
-        margin-top: -2vh;
-        line-height: 2.5;
+        line-height: 3;
         font-family: sans-serif;
-        font-size: calc(var(--base) * .65);
-        color: black;
+        font-size: calc(var(--base)* .8);
     }
 }
 `
-/**
- * A "Stateless functional" component that does nothing very interesting.
- * I tried to mimic the design of http://baseball.doosan.com/ as closely 
- * as possible. This component's breakpoints and styling are an attempt to
- * accomplish this.
- */
 
 const Partnership = () => (
-    <StyledPartnership className="partnership" id="partnership">
+    <StyledPartnership className="partnership">
         <StyledPartnershipContainer className="partnership-container">
-            <section id="text-section">
+            <section className="text-section">
                 <h1>RC <span>Partnership</span></h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptatibus tempora, officiis a sit nulla
                     harum reprehenderit ipsa assumenda ratione nobis laborum, consectetur temporibus quos, sint rerum dolore
                     a sit nulla harum ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptatibus tempora, officiis a sit nulla
                     reprehenderit ipsa assumenda.
-                    harum .</p>
+                    harum voluptatibus tempora, officiis a sit nulla.</p>
             </section>
-            <section id="icon-section">
-                <img src="./img/logo/profile-logo-sm.svg" alt="profile-logo-small" />
+            <section className="icon-section">
+                <img className="profile-logo" src="./img/logo/profile-logo-sm.svg" alt="profile-logo-small" />
             </section>
         </StyledPartnershipContainer>
     </StyledPartnership>

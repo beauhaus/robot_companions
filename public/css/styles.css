@@ -1,27 +1,22 @@
 /* styled-components, Woohoo! 🎉 :) */
 :root {
-  /* Local-host*/
   --base: 20px;
 
   /*production build*/
   /* --base: 30px; */
 }
 
-
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
-  body {
-    width: 100vw;
-    font-family: 'Orbitron', sans-serif;
-    overflow-x: hidden;
-  }
+body {
+  width: 100vw;
+  font-family: 'Orbitron', sans-serif;
+  overflow-x: hidden;
+}
 
-  @media screen and (max-width: 768px) {   /*tablet query*/
-    
-  }
-  /* @media screen and (max-width: 375px) {   phone query
-    :root {
-        /* --base: 30px; */
+.test {
+  color: rgba(255, 192, 203, 0.63)
+}
