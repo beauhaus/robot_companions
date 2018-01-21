@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import logos from './logo.JSON';
 
 const SingleLogo = styled.div`
+overflow: hidden;
+
     height: 17vh;
     width: 88vw;
     display: grid;
@@ -22,29 +24,23 @@ const SingleLogo = styled.div`
 }
 
 @media screen and (max-width: 376px) {   //phone query
-    height: 35vh;
-    width: 60vh;
-    // grid-auto-columns: 50%;
-    grid-template-columns: 80vh;
-    grid-auto-columns: 30vh;
-    grid-auto-flow: column;
-    overflow: hidden;
-    position: relative;
+    height: 37vh;
+    width: 608vw;
+    // border: 1px solid yellow;
+        grid-column: 2;
+        display: grid;
+        grid-auto-columns: 60vw;
+        grid-auto-flow: column;
+        // overflow: hidden;
     & > .logo-frame {
-        position: absolute;               
-        border: 2px solid white;
-        width: 30vh;
-        left: 50%;
-        margin-left: -15vh;                
+        width: 60vw;
+        height: 34vh;
         & > img {
-
             width: 100%;
-            // display: none;
         }
-
-        
         & > p {
-            font-size: calc(var(--base) * .75);
+            // border: 2px solid red;
+            // color: pink;
         }
     }
 }

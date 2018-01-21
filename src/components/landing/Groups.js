@@ -8,8 +8,9 @@ height: 60vh;
 width: 100vw;
 background: grey;
 text-align: center;
+overflow: hidden;
 display: grid;
-grid-template-rows: 1fr 15vh 4vh 20vh 1fr;
+grid-template-rows: 1fr 15vh 4vh 26vh 1fr;
 grid-template-columns: 6vw 1fr 6vw;
 & > h1 {
     grid-column: 2;
@@ -30,9 +31,11 @@ grid-template-columns: 6vw 1fr 6vw;
 
   @media screen and (max-width: 768px) {    // tablet query
       height: 28vh;
-      grid-template-columns: 6vw 88vw 6vw;
-      grid-template-rows: 1fr 8vh auto 12vh 1fr;
+      grid-template-columns: 1fr 80px 1fr;
+      
       & > h1 {
+          grid-row: 2;
+          background: green;
         font-size: calc(var(--base)* 1.6);
       }
       & > #groups-container {
@@ -54,14 +57,15 @@ grid-template-columns: 6vw 1fr 6vw;
 @media screen and (max-width: 376px) {      // phone query
     height: 58vh;
     width: 100vw;
-    grid-template-rows: 5vh 8vh 4vh 30vh 10vh;
-    grid-template-columns: auto 1fr auto;
+    grid-template-rows: 5vh 8vh 2vh auto 4vh;
+    grid-template-columns: 1fr 62vw 1fr;
     & > h1 {
         font-size: calc( var(--base)* 1.3);
     }
     & > #groups-container {
-        // width: 90vw;
-        background: brown;
+        & > .groups-logos {
+        }
+
         & > #fwd-arrow, #rwd-arrow {
         background: grey;
         display: block;
@@ -69,9 +73,9 @@ grid-template-columns: 6vw 1fr 6vw;
         font-weight: bold;
         border-width: 0;
         color: wheat;
-        width: 60px;
+        width: 14vw;
         height: 35vh;
-        }
+        }       
   }
 }
 `
