@@ -1,10 +1,10 @@
 [   
-    {"id":1, "src": "nasa-logo.png", "title": "NASA", "alt": "nasa-logo"},
+    {"id":1, "src": "mattel-logo.png", "title": "Mattel", "alt": "mattel-logo"},
     {"id":2, "src": "ikeas-logo.png", "title": "Ikea", "alt": "ikea-logo"},
     {"id":3, "src": "dod-logo.png", "title": "DOD", "alt": "dod-logo"},
     {"id":4, "src": "radioshack-logo.png", "title": "Radio Shack", "alt": "radioshack-logo"},
     {"id":5, "src": "darpa-logo.png", "title": "DERPA", "alt": "darpa-logo"},
     {"id":6, "src": "toysrus-logo.png", "title": "Toys 'r us", "alt": "toysrus-logo"},
     {"id":7, "src": "windows-logo.png", "title": "Microsoft", "alt": "windows-logo"},
-    {"id":8, "src": "target-logo.png", "title": "Target", "alt": "target-logo"}
+    {"id":8, "src": "js-logo.png", "title": "Javscript", "alt": "Javascript-logo"}
 ]

@@ -175,7 +175,7 @@ const Footer = () => (
             <img id="footer-left-icon" src="./img/horiz-icon.svg" alt="horizontal icon" />
             <div id="footer-icon-links">
             <a id="git-link" href="https://github.com/Beauvelop/robot_companions"><img id="git-logo" src="./img/git-logo.png" alt="git-logo" /></a>
-            <a id="twitter-link" href="https://twitter.com/beau_dev"><img id="twitter-logo" src="./img/twitter-logo.jpg" alt="git-logo" /></a>
+            <a id="twitter-link" href="https://twitter.com/beau_dev"><img id="twitter-logo" src="./img/twitter-logo.png" alt="git-logo" /></a>
             <a id="codepen-link" href="https://codepen.io/beau_dev/"><img id="codepen-logo" src="./img/codepen-logo.png" alt="git-logo" /></a>
             </div>
         </div>

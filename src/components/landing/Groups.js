@@ -4,20 +4,18 @@ import GroupsLogos from './GroupsLogos';
 import logos from './logo.JSON'
 
 const StyledGroups = styled.div`
-height: 53vh;
+height: 60vh;
 width: 100vw;
 background: grey;
 text-align: center;
-position: relative;
-margin: 0;
+display: grid;
+grid-template-rows: 1fr 15vh 4vh 20vh 1fr;
+grid-template-columns: 6vw 1fr 6vw;
 & > h1 {
+    grid-column: 2;
+    grid-row: 2;
     color: black;
-    position: absolute;
-    top: 5vh;
-    width: 60vw;
-    left: 50%;
-    margin-left: -30vw;
-    font-size: calc(var(--base)* 1.8);
+    font-size: calc(var(--base)* 2.5);
     font-weight: lighter;
     & > span {
         color: #831212;
@@ -31,39 +29,47 @@ margin: 0;
 }
 
   @media screen and (max-width: 768px) {    // tablet query
-      height: 38vw;
+      height: 28vh;
+      grid-template-columns: 6vw 88vw 6vw;
+      grid-template-rows: 1fr 8vh auto 12vh 1fr;
       & > h1 {
-          top: 2vh;
-          font-size: calc(var(--base)* 2.2);
+        font-size: calc(var(--base)* 1.6);
       }
       & > #groups-container {
-          top: 10vh;
-          margin: 0;
-          left: 0;
-          padding: 0;
-          width: 100vw;
-      }
+          & .groups-logos {
+            height: 12vh;
+        }
+          & .logo-frame > img {
+            grid-template-rows: repeat(10, 1fr);
+        }
+        & .logo-frame > p {
+            font-size: calc(var(--base)* .5);
+            font-family: Verdana, sans-serif;
+            color: black;
+            font-weight: bold;
+        }
+  }
 }
 
 @media screen and (max-width: 376px) {      // phone query
     height: 58vh;
+    width: 100vw;
+    grid-template-rows: 5vh 8vh 4vh 30vh 10vh;
+    grid-template-columns: auto 1fr auto;
     & > h1 {
-        font-size: calc( var(--base)* 1.8);
+        font-size: calc( var(--base)* 1.3);
     }
     & > #groups-container {
-        top: 15vh;
-        margin: 0;
-        left: 0;
-        width: 100vw;
+        // width: 90vw;
+        background: brown;
         & > #fwd-arrow, #rwd-arrow {
         background: grey;
         display: block;
         font-size: calc( var(--base)* 2.2);
         font-weight: bold;
-        width: 2vw;
         border-width: 0;
         color: wheat;
-        width: 90px;
+        width: 60px;
         height: 35vh;
         }
   }
@@ -71,14 +77,9 @@ margin: 0;
 `
 
 const GroupsContainer = styled.div`
-    position: relative;
-    width: 80vw;
-    height: 18vh;
-    left: 50%;
-    top: 25vh;
-    margin-left: -40vw;
+    grid-row: 4;
+    grid-column: 2;
     color: #a1a1a1;
-    padding: 0.5%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
@@ -86,7 +87,6 @@ const GroupsContainer = styled.div`
 const LogoFwd = styled.button`
     right: 0;
 `
-
 const LogoBack = styled.button`
     left: 0;
 `
@@ -126,10 +126,10 @@ class Groups extends React.Component {
     render() {
         return (
             <StyledGroups className="groups">
-                <h1>RC <span>Groups</span></h1>
+                <h1>RC <span>Business Groups</span></h1>
                 <GroupsContainer id="groups-container">
                     <LogoBack onClick={this.incrementLogo} id="fwd-arrow">&lt;</LogoBack>
-                    <GroupsLogos range={this.nuarr} cue={this.state.range} />
+                    <GroupsLogos className="groups-logos" range={this.nuarr} cue={this.state.range} />
                     <LogoFwd onClick={this.decrementLogo} id="rwd-arrow">&gt;</LogoFwd>
                 </GroupsContainer>
             </StyledGroups>
