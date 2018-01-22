@@ -7,17 +7,8 @@
 
 ### *Media Queries are, at this moment, being revised*
 #### Thanks for your patience.
-#### Should be back up by Sunday am
--- (Jan. 20)
-------------
+-- (Jan. 22)
 
-```diff
-/* from LocalHost to Prod*/
-:root {
-- --base: 20px;
-+ --base: 30px;
-}
-```
 ## Feature-set
 
 |<h3>Feature</h3>|<h3>Notes</h3>|<h3>Status</h3>|
@@ -173,6 +164,8 @@ Here is an icon in svg (illustrator) I did for this site.
 Code (internal/external for sizing): -->
 
 <img src="./readmeImg/striptest.png" width="600">
+
+*Film strip above is the first prod candidate. It is compared to the second which shows a complete load at 1/3rd the speed.*
 
 **Complete load that once took 60s (!!!) now takes 20s** 
 

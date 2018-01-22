@@ -21,8 +21,8 @@ grid-template-rows: 1fr auto 1fr;
                 grid-template-columns: 1fr auto 1fr;
                 & img {
                     grid-column: 2;
-                  width: 14vw;
-                  box-shadow: 4px 4px 6px 3px rgba(0,0,0,0.5);
+                    width: 14vw;
+                    box-shadow: 4px 4px 6px 3px rgba(0,0,0,0.5);
                 }
             }
         }
